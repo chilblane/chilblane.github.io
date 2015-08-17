@@ -59,7 +59,7 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: 'src/stylus/',
                     src: ['styles.styl'],
-                    dest: '/',
+                    dest: './',
                     ext:'.css'
                 }]
             }
