@@ -2,7 +2,54 @@
 @import jeet
 @import rupture
 
+@import reset
+
 // variables
 
-$freonBlue 		= 	#0073FF
-$vellkinOrange 	=	#ff8c00
+$freonBlue      =   #0073FF
+$vellkinOrange  =   #ff8c00
+
+// typography
+
+body
+    font-family sans-serif
+    font-size 10px
+    line-height 1.5
+    -webkit-text-size-adjust 100%
+    
+$font-scale = 1.618em
+$base-font-multiplier = 1.5
+
+h1
+    font-size $font-scale ** 3 * $base-font-multiplier
+h2
+    font-size $font-scale ** 3 * $base-font-multiplier
+h3
+    font-size $font-scale ** 2 * $base-font-multiplier
+h4
+    font-size $font-scale * $base-font-multiplier
+p, li
+    font-size $font-scale
+    
+// layout
+
+.hero
+    align()
+    width 100%
+    padding 0 5%
+    h1, p
+        text-align center
+    h1
+        font-size 9vw
+    p
+        font-size 6vw
+        text-transform lowercase
+
+footer
+    position absolute
+    bottom 0
+    width 100%
+    padding 1em 5%
+    p
+        text-align center
+        font-size 1.2em
