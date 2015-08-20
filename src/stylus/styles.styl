@@ -9,12 +9,12 @@
 $freonBlue      =   #0073FF
 $vellkinOrange  =   #ff8c00
 
+$ff-sans        =   'Work Sans', Helvetica, Arial, sans-serif
+
 // typography
 
 body
-    font-family sans-serif
-    font-size 10px
-    line-height 1.5
+    font 10px/1.5 $ff-sans
     -webkit-text-size-adjust 100%
     
 $font-scale = 1.618em
@@ -27,7 +27,7 @@ h2
 h3
     font-size $font-scale ** 2 * $base-font-multiplier
 h4
-    font-size $font-scale * $base-font-multiplier
+    font-size $font-scale ** 1 * $base-font-multiplier
 p, li
     font-size $font-scale
     
@@ -41,6 +41,7 @@ p, li
         text-align center
     h1
         font-size 9vw
+        font-weight 100
     p
         font-size 6vw
         text-transform lowercase
