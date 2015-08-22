@@ -9,6 +9,13 @@
 $freonBlue      =   #0073FF
 $vellkinOrange  =   #ff8c00
 
+$headlineColor  =   $freonBlue
+$textColor      =   darken($freonBlue, 10%)
+
+$linkColor      =   darken($vellkinOrange, 30%)
+$linkColorHover =   $vellkinOrange
+
+
 $ff-sans        =   'Work Sans', Helvetica, Arial, sans-serif
 
 // typography
@@ -31,6 +38,17 @@ h4
 p, li
     font-size $font-scale
     
+h1, h2, h3, h4, h5, h6
+    color $headlineColor
+p, li
+    color $textColor
+    
+a
+    color $linkColor
+    text-decoration none
+    &:hover, &:active
+        color $linkColorHover
+
 // layout
 
 .hero

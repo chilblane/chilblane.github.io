@@ -151,6 +151,26 @@ p,
 li {
   font-size: 1.618em;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #0073ff;
+}
+p,
+li {
+  color: #0067e6;
+}
+a {
+  color: #b36200;
+  text-decoration: none;
+}
+a:hover,
+a:active {
+  color: #ff8c00;
+}
 .hero {
   position: absolute;
   -webkit-transform-style: preserve-3d;
