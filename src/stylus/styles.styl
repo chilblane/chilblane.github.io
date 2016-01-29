@@ -4,71 +4,24 @@
 
 @import reset
 
-// variables
-
-$freonBlue      =   #0073FF
-$vellkinOrange  =   #ff8c00
-
-$headlineColor  =   $freonBlue
-$textColor      =   darken($freonBlue, 10%)
-
-$linkColor      =   darken($vellkinOrange, 30%)
-$linkColorHover =   $vellkinOrange
-
-
-$ff-sans        =   'Work Sans', Helvetica, Arial, sans-serif
-
-// typography
-
+// base
 body
-    font 10px/1.5 $ff-sans
-    -webkit-text-size-adjust 100%
-    
-$font-scale = 1.618em
-$base-font-multiplier = 1.5
-
+    line-height 1.75
 h1
-    font-size $font-scale ** 3 * $base-font-multiplier
+    font-size 2.25em
 h2
-    font-size $font-scale ** 3 * $base-font-multiplier
-h3
-    font-size $font-scale ** 2 * $base-font-multiplier
-h4
-    font-size $font-scale ** 1 * $base-font-multiplier
-p, li
-    font-size $font-scale
+    font-size 1.5em
     
-h1, h2, h3, h4, h5, h6
-    color $headlineColor
-p, li
-    color $textColor
+h1, h2, h3
+    line-height 1.25
+    margin-top 1em
+    margin-bottom 1em
     
-a
-    color $linkColor
-    text-decoration none
-    &:hover, &:active
-        color $linkColorHover
-
+p
+    margin-bottom 0.5em
+    
 // layout
-
-.hero
-    align()
-    width 100%
-    padding 0 5%
-    h1, p
-        text-align center
-    h1
-        font-size 9vw
-        font-weight 100
-    p
-        font-size 6vw
-        text-transform lowercase
-
-footer
-    position absolute
-    bottom 0
-    width 100%
-    padding 1em 5%
-    p
-        text-align center
-        font-size 1.2em
+.content
+    padding-left 2em
+    padding-right 2em
+    
