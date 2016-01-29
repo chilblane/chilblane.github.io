@@ -7,21 +7,49 @@
 // base
 body
     line-height 1.75
+    font-family sans-serif
+
+a
+    color #0073FF
+
+// typography
 h1
     font-size 2.25em
 h2
     font-size 1.5em
-    
+
 h1, h2, h3
     line-height 1.25
     margin-top 1em
     margin-bottom 1em
-    
+
 p
     margin-bottom 0.5em
-    
+
+h1, h2, h3, p
+    a
+        &:hover
+            text-decoration underline
+
 // layout
 .content
     padding-left 2em
     padding-right 2em
-    
+
+.center
+    text-align center
+
+
+// inline-block list
+ul.horizontal
+    li
+        display inline-block
+
+
+// specific elements
+ul.roles
+    font-size 1.5em
+    margin-top 1em
+    margin-bottom 1em
+    li
+        padding 0 1em

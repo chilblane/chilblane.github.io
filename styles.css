@@ -7,8 +7,6 @@ html {
 }
 body {
   margin: 0;
-  line-height: 1;
-  font-family: sans-serif;
 }
 ul,
 ol {
@@ -63,6 +61,10 @@ button {
 }
 body {
   line-height: 1.75;
+  font-family: sans-serif;
+}
+a {
+  color: #0073ff;
 }
 h1 {
   font-size: 2.25em;
@@ -80,7 +82,27 @@ h3 {
 p {
   margin-bottom: 0.5em;
 }
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+p a:hover {
+  text-decoration: underline;
+}
 .content {
   padding-left: 2em;
   padding-right: 2em;
+}
+.center {
+  text-align: center;
+}
+ul.horizontal li {
+  display: inline-block;
+}
+ul.roles {
+  font-size: 1.5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+ul.roles li {
+  padding: 0 1em;
 }
