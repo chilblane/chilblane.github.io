@@ -1,9 +1,9 @@
 {
   "name": "chilblane.com",
   "description": "Chilblane Website",
-  "version": "0.0.1",
+  "version": "0.1",
   "author": "Daniel Singer",
-  "devDependencies": {
+  "dependencies": {
     "babelify": "^6.0.2",
     "grunt": "~0.4.5",
     "grunt-browserify": "^3.8.0",
