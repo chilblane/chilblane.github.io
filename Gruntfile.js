@@ -102,7 +102,7 @@ module.exports = function(grunt) {
     grunt.registerTask('build', function() {
 
         var tasks = [];
-        tasks.push('copy', 'compile-handlebars:main', 'stylus:development', 'browserify');
+        tasks.push('copy', 'compile-handlebars:main', 'stylus:development');
         grunt.task.run(tasks);
     });
 
