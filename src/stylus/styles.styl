@@ -4,52 +4,75 @@
 
 @import reset
 
+// variables
+
+$bp-large = 400px // mobile to "non-mobile" breakpoint
+$max-width = 1000px // max content width of website
+
 // base
 body
-    line-height 1.75
+    font-size 15px
+    line-height 1.5
     font-family sans-serif
 
 a
     color #0073FF
 
+.container
+    +above($bp-large)
+        padding-left "calc(50% - %s)" % ($max-width/2)
+        padding-right "calc(50% - %s)" % ($max-width/2)
+
 // typography
 h1
+    font-weight 400
     font-size 2.25em
-h2
-    font-size 1.5em
-
-h1, h2, h3
     line-height 1.25
-    margin-top 1em
+h3
     margin-bottom 1em
+    &:not(:first-child)
+        margin-top 1em
 
 p
     margin-bottom 0.5em
 
-h1, h2, h3, p
+h1, h2, h3, p, li
     a
         &:hover
             text-decoration underline
 
-// layout
-.content
-    padding-left 2em
-    padding-right 2em
+// grids
+.grid
+    cf()
 
-.center
-    text-align center
-
+.content.grid
+    > .column
+        padding 1em 0
+    +above($bp-large)
+        > .column.left
+            col(1/3, cycle: 2)
+        > .column.right
+            col(2/3, cycle: 2)
 
 // inline-block list
 ul.horizontal
     li
         display inline-block
 
-
 // specific elements
-ul.roles
-    font-size 1.5em
-    margin-top 1em
+.hero
+    background black
+    padding-top 2em
+    padding-bottom 2em
     margin-bottom 1em
+    h1, p
+        color white
+    p
+        font-size 0.8em
+
+footer.site-footer
+    padding-top 1em
+    padding-bottom 1em
     li
-        padding 0 1em
+        padding-right 2em
+
