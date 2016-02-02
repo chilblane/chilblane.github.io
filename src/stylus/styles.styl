@@ -5,29 +5,44 @@
 @import reset
 
 // variables
+$bp-large   = 640px // mobile to "normal" breakpoint
+$bp-xlarge  = 940px // larger width
 
-$bp-large = 400px // mobile to "non-mobile" breakpoint
-$max-width = 1000px // max content width of website
+$color-ice  = #0073ff
+$color-fire = #ffc800
 
 // base
 body
     font-size 15px
     line-height 1.5
-    font-family sans-serif
+    font-family 'Work Sans', Verdana, sans-serif
 
+a, a:hover
+    text-decoration none
 a
-    color #0073FF
+    color $color-ice
+a:hover
+    color darken($color-ice, 30%)
 
 .container
+    padding-left 2em
+    padding-right 2em
     +above($bp-large)
-        padding-left "calc(50% - %s)" % ($max-width/2)
-        padding-right "calc(50% - %s)" % ($max-width/2)
+        padding-left "calc(50% - %s)" % (($bp-large - 40px)/2)
+        padding-right "calc(50% - %s)" % (($bp-large - 40px)/2)
+    +above($bp-xlarge)
+        padding-left "calc(50% - %s)" % (($bp-xlarge - 40px)/2)
+        padding-right "calc(50% - %s)" % (($bp-xlarge - 40px)/2)
 
 // typography
 h1
-    font-weight 400
-    font-size 2.25em
+    font-size 1.5em ** 3
     line-height 1.25
+h2
+    font-size 1.5em ** 1
+    line-height 1.25
+    text-transform uppercase
+    opacity 0.6
 h3
     margin-bottom 1em
     &:not(:first-child)
@@ -38,8 +53,9 @@ p
 
 h1, h2, h3, p, li
     a
-        &:hover
-            text-decoration underline
+        border-bottom 2px solid currentColor
+    em
+        color darken($color-fire, 40%)
 
 // grids
 .grid
@@ -67,12 +83,23 @@ ul.horizontal
     margin-bottom 1em
     h1, p
         color white
+        text-transform uppercase
     p
-        font-size 0.8em
+        font-size 1.5em
+        font-weight bold
 
 footer.site-footer
     padding-top 1em
     padding-bottom 1em
-    li
-        padding-right 2em
+    p
+        position relative
+        padding-top 0.5em
+        &:before
+            content ''
+            position absolute
+            top 0
+            left 0
+            height 1px
+            width 3em
+            border-top 1px solid currentColor
 
