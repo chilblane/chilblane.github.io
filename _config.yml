@@ -1,6 +1,7 @@
 # Server
 url: http://www.chilblane.com
 baseurl: ""
+exclude: [assets]
 
 # Page meta
 title: Daniel Singer | Front-End Developer & UX Designer

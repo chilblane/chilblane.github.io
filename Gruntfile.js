@@ -25,6 +25,14 @@ module.exports = function(grunt) {
             }
         },
 
+        jekyll: {
+            serve: {
+                options: {
+                    serve: true
+                }
+            }
+        },
+
         stylus: {
             options: {
                 compress: false,
@@ -45,37 +53,16 @@ module.exports = function(grunt) {
                     ext:'.css'
                 }]
             }
-        },
-
-        watch: {
-            options: {
-                interrupt: true,
-                spawn: false,
-                livereload: true
-            },
-            js: {
-                files: ['assets/js/**/*.js'],
-                tasks: ['browserify']
-            },
-            stylus: {
-                files: ['assets/stylus/**/*.styl'],
-                tasks: ['stylus']
-            },
-            copy: {
-                files: ['assets/static/**/*.*'],
-                tasks: ['copy']
-            }
         }
     });
 
     grunt.registerTask('build', function() {
 
         var tasks = [];
-        tasks.push('copy', 'stylus:development');
+        tasks.push('copy', 'stylus:development', 'jekyll:serve');
         grunt.task.run(tasks);
     });
 
     grunt.registerTask('default', ['build']);
-    grunt.registerTask('debug', ['default', 'watch']);
 
 };
