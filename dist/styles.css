@@ -154,7 +154,7 @@ li em {
     float: left;
     clear: none;
     text-align: inherit;
-    width: 31.3333333333333%;
+    width: 31.33333333333333%;
     margin-left: 0%;
     margin-right: 3%;
   }
@@ -178,7 +178,7 @@ li em {
     float: left;
     clear: none;
     text-align: inherit;
-    width: 65.6666666666667%;
+    width: 65.66666666666666%;
     margin-left: 0%;
     margin-right: 3%;
   }
@@ -215,21 +215,4 @@ ul.horizontal li {
 .hero p {
   font-size: 1.5em;
   font-weight: bold;
-}
-footer.site-footer {
-  padding-top: 1em;
-  padding-bottom: 1em;
-}
-footer.site-footer p {
-  position: relative;
-  padding-top: 0.5em;
-}
-footer.site-footer p:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 1px;
-  width: 3em;
-  border-top: 1px solid currentColor;
 }

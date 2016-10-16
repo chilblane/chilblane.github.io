@@ -1,9 +1,5 @@
 module.exports = function(grunt) {
-    grunt.loadNpmTasks('grunt-browserify');
-    grunt.loadNpmTasks('grunt-compile-handlebars');
-    grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-stylus');
-    grunt.loadNpmTasks('grunt-contrib-watch');
+    require('load-grunt-tasks')(grunt);
 
     grunt.initConfig({
         browserify: {
@@ -14,22 +10,8 @@ module.exports = function(grunt) {
             },
             build: {
                 files: {
-                    './scripts.js': ['src/js/**/*.js']
+                    'dist/scripts.js': ['assets/js/**/*.js']
                 }
-            }
-        },
-
-        'compile-handlebars': {
-            main: {
-                files: [{
-                    expand: true,
-                    cwd: 'src/pages/',
-                    src: '**/*.hbs',
-                    dest: './',
-                    ext: '.html'
-                }],
-                templateData: {},
-                partials: 'src/partials/**/*.hbs'
             }
         },
 
@@ -37,9 +19,9 @@ module.exports = function(grunt) {
             main: {
                 expand: true,
                 dot: true,
-                cwd: 'src/static',
+                cwd: 'assets/static',
                 src: '**',
-                dest: '/'
+                dest: 'dist/'
             }
         },
 
@@ -57,22 +39,13 @@ module.exports = function(grunt) {
             development: {
                 files: [{
                     expand: true,
-                    cwd: 'src/stylus/',
+                    cwd: 'assets/stylus/',
                     src: ['styles.styl'],
-                    dest: './',
+                    dest: 'dist/',
                     ext:'.css'
                 }]
             }
         },
-
-        // uglify: {
-        //     production: {
-        //         files: {
-        //             'build/js/main.js': ['build/js/main.js']
-        //         }
-        //     }
-
-        // },
 
         watch: {
             options: {
@@ -81,19 +54,15 @@ module.exports = function(grunt) {
                 livereload: true
             },
             js: {
-                files: ['src/js/**/*.js'],
+                files: ['assets/js/**/*.js'],
                 tasks: ['browserify']
             },
             stylus: {
-                files: ['src/stylus/**/*.styl'],
+                files: ['assets/stylus/**/*.styl'],
                 tasks: ['stylus']
             },
-            handlebars: {
-                files: ['src/pages/**', 'src/partials/**/*.hbs'],
-                tasks: ['compile-handlebars']
-            },
             copy: {
-                files: ['src/static/**/*.*'],
+                files: ['assets/static/**/*.*'],
                 tasks: ['copy']
             }
         }
@@ -102,7 +71,7 @@ module.exports = function(grunt) {
     grunt.registerTask('build', function() {
 
         var tasks = [];
-        tasks.push('copy', 'compile-handlebars:main', 'stylus:development');
+        tasks.push('copy', 'stylus:development');
         grunt.task.run(tasks);
     });
 
