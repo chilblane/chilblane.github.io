@@ -1,6 +1,6 @@
 # Jekyll and node
-_site
 node_modules
+.jekyll-metadata
 
 # Other stuff
 *.log
