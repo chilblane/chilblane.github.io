@@ -6,15 +6,15 @@ module.exports = function(grunt) {
         watch: {
             stylus: {
                 files: ['src/stylus/**/*.styl'],
-                tasks: ['stylus:dist']
+                tasks: ['stylus:dist', 'jekyll:dist']
             },
             browserify: {
                 files: ['src/js/**/*.js'],
-                tasks: ['browserify:dist']
+                tasks: ['browserify:dist', 'jekyll:dist']
             },
             copy: {
                 files: ['src/static/**'],
-                tasks: ['copy:dist']
+                tasks: ['copy:dist', 'jekyll:dist']
             },
             jekyll: {
                 files: [
@@ -50,7 +50,7 @@ module.exports = function(grunt) {
             dist: {
                 files: [{
                     src: [
-                        '_site'
+                        'assets/'
                     ]
                 }]
             }
@@ -70,7 +70,7 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: 'src/stylus/',
                     src: ['styles.styl'],
-                    dest: '_site/assets/',
+                    dest: 'assets/',
                     ext:'.css'
                 }]
             }
@@ -83,7 +83,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    '_site/assets/scripts.js': ['src/js/**/*.js']
+                    'assets/scripts.js': ['src/js/**/*.js']
                 }
             }
         },
@@ -93,7 +93,7 @@ module.exports = function(grunt) {
                 dot: true,
                 cwd: 'src/static',
                 src: '**',
-                dest: '_site/assets/'
+                dest: 'assets/'
             }
         },
         jekyll: {
