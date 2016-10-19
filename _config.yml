@@ -1,7 +1,6 @@
 # Server
 url: http://www.chilblane.com
 baseurl: ""
-destination: 'dist'
 exclude: [assets, node_modules, src, CNAME, Gemfile, Gemfile.lock, Gruntfile.js, package.json, README.md]
 keep_files: [assets]
 

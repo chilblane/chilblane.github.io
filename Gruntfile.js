@@ -40,7 +40,7 @@ module.exports = function(grunt) {
             options: {
                 port: 9000,
                 hostname: 'localhost',
-                base: 'dist',
+                base: '_site',
                 livereload: 35729
             },
             server: {
@@ -50,7 +50,7 @@ module.exports = function(grunt) {
             dist: {
                 files: [{
                     src: [
-                        'dist/*'
+                        '_site'
                     ]
                 }]
             }
@@ -70,7 +70,7 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: 'src/stylus/',
                     src: ['styles.styl'],
-                    dest: 'dist/assets/',
+                    dest: '_site/assets/',
                     ext:'.css'
                 }]
             }
@@ -83,7 +83,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    'dist/assets/scripts.js': ['src/js/**/*.js']
+                    '_site/assets/scripts.js': ['src/js/**/*.js']
                 }
             }
         },
@@ -93,7 +93,7 @@ module.exports = function(grunt) {
                 dot: true,
                 cwd: 'src/static',
                 src: '**',
-                dest: 'dist/'
+                dest: '_site/assets/'
             }
         },
         jekyll: {
