@@ -89,7 +89,7 @@ module.exports = function(grunt) {
                 dot: true,
                 cwd: 'src/static',
                 src: '**',
-                dest: 'dist/assets/'
+                dest: 'dist/'
             }
         },
         jekyll: {
@@ -105,10 +105,10 @@ module.exports = function(grunt) {
 
     grunt.registerTask('build', [
         'clean:dist',
-        'jekyll:dist',
         'stylus:dist',
         'browserify:dist',
-        'copy:dist'
+        'copy:dist',
+        'jekyll:dist'
     ]);
 
     grunt.registerTask('develop', ['build', 'serve']);

@@ -3,8 +3,8 @@ url: http://www.chilblane.com
 baseurl: ""
 source: 'src/pages'
 destination: 'dist'
-exclude: [assets]
-keep_files: [assets]
+exclude: [CNAME]
+keep_files: [assets, CNAME]
 
 # Page meta
 title: Daniel Singer | Front-End Developer & UX Designer
