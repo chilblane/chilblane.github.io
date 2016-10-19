@@ -17,7 +17,11 @@ module.exports = function(grunt) {
                 tasks: ['copy:dist']
             },
             jekyll: {
-                files: ['src/pages/**/*.html'],
+                files: [
+                    'index.html',
+                    '_includes/*',
+                    '_layouts/*'
+                ],
                 tasks: ['jekyll:dist']
             },
             livereload: {
