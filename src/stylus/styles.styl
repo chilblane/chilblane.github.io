@@ -2,73 +2,13 @@
 @import jeet
 @import rupture
 
-@import reset
+@import 'reset'
+@import 'variables'
+@import 'base'
+@import 'typography'
+@import 'grid'
 
-// variables
-$bp-large   = 640px // mobile to "normal" breakpoint
-$bp-xlarge  = 940px // larger width
 
-$color-ice  = #0073ff
-$color-fire = #ffc800
-
-// base
-body
-    font-size 15px
-    line-height 1.5
-    font-family -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
-
-a, a:hover
-    text-decoration none
-a
-    color $color-ice
-a:hover
-    color darken($color-ice, 30%)
-
-.container
-    padding-left 2em
-    padding-right 2em
-    +above($bp-large)
-        padding-left "calc(50% - %s)" % (($bp-large - 40px)/2)
-        padding-right "calc(50% - %s)" % (($bp-large - 40px)/2)
-    +above($bp-xlarge)
-        padding-left "calc(50% - %s)" % (($bp-xlarge - 40px)/2)
-        padding-right "calc(50% - %s)" % (($bp-xlarge - 40px)/2)
-
-// typography
-h1
-    font-size 1.5em ** 3
-    line-height 1.25
-h2
-    font-size 1.5em ** 1
-    line-height 1.25
-    text-transform uppercase
-    opacity 0.6
-h3
-    margin-bottom 1em
-    &:not(:first-child)
-        margin-top 1em
-
-p
-    margin-bottom 0.5em
-
-h1, h2, h3, p, li
-    a
-        border-bottom 2px solid currentColor
-    em
-        color darken($color-fire, 40%)
-
-// grids
-.grid
-    cf()
-
-.content.grid
-    > .column
-        padding 1em 0
-    +above($bp-large)
-        > .column.left
-            col(1/3, cycle: 2)
-        > .column.right
-            col(2/3, cycle: 2)
 
 // inline-block list
 ul.horizontal
