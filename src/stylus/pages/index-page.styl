@@ -1,0 +1,54 @@
+$tile-size-p = 20vw
+$tile-size-l = 15vh
+
+html.index,
+html.index body {
+    height: 100%;
+}
+
+.index-content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: fade-out($color-ice, 95%);
+}
+.index-name {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    align-content: space-around;
+    text-transform: uppercase;
+    line-height: 1;
+    color: desaturate(fade-out($color-ice, 50%),50%);
+    &__tile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: fade-out($color-ice, 95%);
+        border-radius: 5%;
+    }
+}
++portrait() {
+    .index-name {
+        width: $tile-size-p * 3.6;
+        height: $tile-size-p * 4.8;
+    }
+    .index-name__tile {
+        height: $tile-size-p;
+        min-width: $tile-size-p;
+        font-size: $tile-size-p;
+    }
+}
++landscape() {
+    .index-name {
+        max-width: $tile-size-l * 6.7;
+        height: $tile-size-l * 2.3;
+    }
+    .index-name__tile {
+        height: $tile-size-l;
+        min-width: $tile-size-l;
+        font-size: $tile-size-l;
+    }
+}
