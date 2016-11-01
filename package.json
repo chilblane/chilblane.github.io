@@ -14,7 +14,6 @@
     "grunt-contrib-stylus": "^1.2.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-jekyll": "^0.4.4",
-    "jeet": "^6.1.5",
     "load-grunt-tasks": "^3.5.2",
     "nib": "^1.1.2",
     "rupture": "^0.6.2",

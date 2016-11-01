@@ -61,7 +61,6 @@ module.exports = function(grunt) {
                 "include css": true,
                 paths: [
                     "node_modules/grunt-contrib-stylus/node-modules",
-                    "node_modules/jeet/stylus",
                     "node_modules/rupture"
                 ]
             },
