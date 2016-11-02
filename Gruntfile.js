@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
     require('time-grunt')(grunt);
     require('load-grunt-tasks')(grunt);
-
+    var serveStatic = require('serve-static');
     grunt.initConfig({
         watch: {
             stylus: {
@@ -41,8 +41,26 @@ module.exports = function(grunt) {
                 port: 9000,
                 hostname: '0.0.0.0',
                 base: '_site',
-                livereload: 35729
+                livereload: 35729,
+                middleware: function(connect, options, middlewares) {
+                    return [
+                        function(req, res, next) {
+                            var suffix = '.html',
+                                url = req.url,
+                                urlLength = url.length;
+                            if (urlLength > 1 && url.indexOf('.') === -1) {
+                                req.url += suffix;
+                            }
+                            next();
+                        },
+                        serveStatic(options.base[0]),
+                    ];
+                }
             },
+            rules: [{
+                from: '(^((?!css|html|js|img|fonts|\/$).)*$)',
+                to: "$1.html"
+            }],
             server: {
             }
         },
