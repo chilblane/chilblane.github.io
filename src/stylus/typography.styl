@@ -1,25 +1,36 @@
-// typography
+// typography, powered by typebase.css
 h1 {
-    font-size: 1.5em ** 3;
-    line-height: 1.25;
+    font-size: 3 * $font-scale * 1rem;
+    line-height: 1;
+    font-family: $font-work-sans;
+    text-transform: uppercase;
 }
 h2 {
-    font-size: 1.5em ** 1;
-    line-height: 1.25;
-    text-transform: uppercase;
-    opacity: 0.6;
+    font-size: 2 * $font-scale * 1rem;
+    line-height: 2 * $leading;
+    margin-top: 2 * $leading;
+    color: $color-ice-fade;
 }
 h3 {
-    margin-bottom: 1em;
-    &:not(:first-child) {
-        margin-top: 1em;
-    }
+    font-size: 1 * $font-scale * 1rem;
+    margin-top:  $leading;
+    line-height:  $leading;
 }
 p {
-    margin-bottom: 0.5em;
+    margin-top: $leading;
+    line-height: $leading;
+}
+ul,
+ol {
+    margin-top: $leading;
+    margin-bottom: $leading;
+    li {
+        line-height: $leading;
+    }
 }
 h1, h2, h3, p, li {
     a {
         border-bottom: 2px solid currentColor;
+        font-weight: bold;
     }
 }

@@ -1,7 +1,6 @@
 // base
 body {
-    font-size: 15px;
-    line-height: 1.5;
+    font-size: ($base-font-size / 16) * 100%;
     font-family: $font-system;
 }
 
@@ -10,22 +9,15 @@ a:hover {
     text-decoration: none;
 }
 a {
-    color: $color-ice;
+    color: darken(desaturate($color-fire, 30%),10%);
     &:hover,
     &:focus {
-        color: darken($color-ice, 30%);
+        color: $color-fire;
     }
 }
 
 .container {
-    padding-left: 2em;
-    padding-right: 2em;
-    +above($bp-large) {
-        padding-left: "calc(50% - %s)" % (($bp-large - 40px)/2);
-        padding-right: "calc(50% - %s)" % (($bp-large - 40px)/2);
-    }
-    +above($bp-xlarge) {
-        padding-left: "calc(50% - %s)" % (($bp-xlarge - 40px)/2);
-        padding-right: "calc(50% - %s)" % (($bp-xlarge - 40px)/2);
-    }
+    max-width: 860px;
+    margin-left: auto;
+    margin-right: auto;
 }

@@ -1,0 +1,50 @@
+.page {
+    background-color: darken($color-ice, 70%);
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: url('/assets/pattern-ice.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        opacity: 0.5;
+    }
+    .hero {
+        position: relative;
+        color: white;
+        text-align: center;
+        padding-top: 3em;
+        padding-bottom: 3em;
+    }
+    main {
+        position: relative;
+        background-color: white;
+        padding: 2em;
+        box-shadow: 0 2px 2px black;
+    }
+}
+
+main.about {
+    .lead {
+        text-align: center;
+        margin-top: 0;
+        font-size: $font-scale * 1rem;
+        color: fade-out($color-ice-fade, 50%);
+        strong {
+            color: $color-ice-fade;
+        }
+    }
+}
+
+footer p {
+    color: white;
+    text-align: center;
+    font-size: ($font-scale / 3) * 1rem;
+    margin-top: 0;
+}
