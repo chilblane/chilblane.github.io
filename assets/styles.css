@@ -169,8 +169,8 @@ html.index body {
   border-radius: 3px;
   color: rgba(64,121,191,0.9);
   background-color: rgba(64,121,191,0.2);
-  -webkit-box-shadow: inset 0 2px 7px rgba(0,0,0,0.1);
-  box-shadow: inset 0 2px 7px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
   text-shadow: 0 1px 1px rgba(229,241,255,0.9);
   font-weight: 400;
 }
@@ -225,47 +225,58 @@ html.index body {
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: rgba(229,241,255,0.7);
-  background-color: rgba(64,121,191,0.2);
+  color: rgba(229,241,255,0.95);
+  background-image: -webkit-radial-gradient(transparent, rgba(64,121,191,0.3));
+  background-image: -moz-radial-gradient(transparent, rgba(64,121,191,0.3));
+  background-image: -o-radial-gradient(transparent, rgba(64,121,191,0.3));
+  background-image: -ms-radial-gradient(transparent, rgba(64,121,191,0.3));
+  background-image: radial-gradient(transparent, rgba(64,121,191,0.3));
   border-radius: 5%;
   border: 0;
-  -webkit-box-shadow: inset 0 2px 7px rgba(0,0,0,0.1);
-  box-shadow: inset 0 2px 7px rgba(0,0,0,0.1);
-  text-shadow: 0 2px 7px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+  text-shadow: 0 1px 3px rgba(0,0,0,0.2);
   cursor: default;
 }
 a.index-name__tile {
-  -webkit-transition-property: color, background-color;
-  -moz-transition-property: color, background-color;
-  -o-transition-property: color, background-color;
-  -ms-transition-property: color, background-color;
-  transition-property: color, background-color;
+  cursor: pointer;
+  color: rgba(255,249,229,0.95);
+  background-color: rgba(64,121,191,0.4);
+  -webkit-transition-property: color, text-shadow;
+  -moz-transition-property: color, text-shadow;
+  -o-transition-property: color, text-shadow;
+  -ms-transition-property: color, text-shadow;
+  transition-property: color, text-shadow;
   -webkit-transition-timing-function: ease-out;
   -moz-transition-timing-function: ease-out;
   -o-transition-timing-function: ease-out;
   -ms-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
-  -webkit-transition-duration: 1s;
-  -moz-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  -ms-transition-duration: 1s;
-  transition-duration: 1s;
-  -webkit-animation: link-pulse 2s ease-in-out infinite alternate;
-  -moz-animation: link-pulse 2s ease-in-out infinite alternate;
-  -o-animation: link-pulse 2s ease-in-out infinite alternate;
-  -ms-animation: link-pulse 2s ease-in-out infinite alternate;
-  animation: link-pulse 2s ease-in-out infinite alternate;
-  cursor: pointer;
-  color: rgba(229,241,255,0.7);
+  -webkit-transition-duration: 1s, 1s;
+  -moz-transition-duration: 1s, 1s;
+  -o-transition-duration: 1s, 1s;
+  -ms-transition-duration: 1s, 1s;
+  transition-duration: 1s, 1s;
+  -webkit-transition-delay: 0.5s, 0;
+  -moz-transition-delay: 0.5s, 0;
+  -o-transition-delay: 0.5s, 0;
+  -ms-transition-delay: 0.5s, 0;
+  transition-delay: 0.5s, 0;
 }
 a.index-name__tile:hover,
 a.index-name__tile:focus {
-  background-color: rgba(179,140,0,0.7);
-  -webkit-transition-duration: 1.5s;
-  -moz-transition-duration: 1.5s;
-  -o-transition-duration: 1.5s;
-  -ms-transition-duration: 1.5s;
-  transition-duration: 1.5s;
+  color: #fff;
+  -webkit-transition-duration: 1s, 1.5s;
+  -moz-transition-duration: 1s, 1.5s;
+  -o-transition-duration: 1s, 1.5s;
+  -ms-transition-duration: 1s, 1.5s;
+  transition-duration: 1s, 1.5s;
+  -webkit-transition-delay: 0, 0;
+  -moz-transition-delay: 0, 0;
+  -o-transition-delay: 0, 0;
+  -ms-transition-delay: 0, 0;
+  transition-delay: 0, 0;
+  text-shadow: 0 0 0.1em #fff, 0 0 0.2em #ffc800, 0 0 1em #ffc800, 0 0 3em #ffc800;
 }
 @media only screen and (orientation: portrait) {
   .index-name {
@@ -305,42 +316,6 @@ a.index-name__tile:focus {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
   filter: alpha(opacity=50);
   pointer-events: none;
-}
-@-moz-keyframes link-pulse {
-  from {
-    color: rgba(229,241,255,0.7);
-  }
-  to {
-    color: #fff;
-    text-shadow: 0 0 10px #fff;
-  }
-}
-@-webkit-keyframes link-pulse {
-  from {
-    color: rgba(229,241,255,0.7);
-  }
-  to {
-    color: #fff;
-    text-shadow: 0 0 10px #fff;
-  }
-}
-@-o-keyframes link-pulse {
-  from {
-    color: rgba(229,241,255,0.7);
-  }
-  to {
-    color: #fff;
-    text-shadow: 0 0 10px #fff;
-  }
-}
-@keyframes link-pulse {
-  from {
-    color: rgba(229,241,255,0.7);
-  }
-  to {
-    color: #fff;
-    text-shadow: 0 0 10px #fff;
-  }
 }
 .sr-only {
   position: absolute;
