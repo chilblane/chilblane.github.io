@@ -42,6 +42,47 @@ main.about {
     }
 }
 
+.skills,
+.tools {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
+}
+.skills {
+    flex-wrap: wrap;
+}
+.skills li {
+    display: block;
+    width: 100%;
+    padding: 1em;
+    margin: 0.5em 0;
+    background-color: fade-out($color-ice-light, 50%);
+    border: 2px solid $color-ice-light;
+    border-radius: 3px;
+    text-align: center;
+    color: $color-ice-fade;
+    +above(400px) {
+        width: 48%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    +above(640px) {
+        width: 32%;
+    }
+}
+.tools {
+    align-items: center;
+    max-width: 20em;
+}
+.tools li {
+    display: block;
+    max-width: 3em;
+    &:not(:first-child) {
+        margin-left: 1em;
+    }
+}
+
 footer p {
     color: white;
     text-align: center;
