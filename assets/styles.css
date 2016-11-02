@@ -131,6 +131,7 @@ html.index body {
 }
 .index-content {
   height: 100%;
+  position: relative;
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
@@ -149,7 +150,12 @@ html.index body {
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  background-color: rgba(0,115,255,0.05);
+  background-color: #e5f1ff;
+  background-image: -webkit-radial-gradient(#e5f1ff 0%, #4079bf 200%);
+  background-image: -moz-radial-gradient(#e5f1ff 0%, #4079bf 200%);
+  background-image: -o-radial-gradient(#e5f1ff 0%, #4079bf 200%);
+  background-image: -ms-radial-gradient(#e5f1ff 0%, #4079bf 200%);
+  background-image: radial-gradient(#e5f1ff 0%, #4079bf 200%);
 }
 .index-name {
   display: -webkit-box;
@@ -181,7 +187,6 @@ html.index body {
   align-content: space-around;
   text-transform: uppercase;
   line-height: 1;
-  color: rgba(64,121,191,0.5);
 }
 .index-name__tile {
   display: -webkit-box;
@@ -202,8 +207,35 @@ html.index body {
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  background-color: rgba(0,115,255,0.05);
+  color: rgba(64,121,191,0.7);
+  background-color: rgba(0,115,255,0.1);
   border-radius: 5%;
+  cursor: default;
+  -webkit-transition-property: color, background-color;
+  -moz-transition-property: color, background-color;
+  -o-transition-property: color, background-color;
+  -ms-transition-property: color, background-color;
+  transition-property: color, background-color;
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  -ms-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  -ms-transition-duration: 1s;
+  transition-duration: 1s;
+}
+.index-name__tile:hover,
+.index-name__tile:focus {
+  background-color: rgba(255,200,0,0.5);
+  color: #bfa440;
+  -webkit-transition-duration: 1.5s;
+  -moz-transition-duration: 1.5s;
+  -o-transition-duration: 1.5s;
+  -ms-transition-duration: 1.5s;
+  transition-duration: 1.5s;
 }
 @media only screen and (orientation: portrait) {
   .index-name {
@@ -226,6 +258,23 @@ html.index body {
     min-width: 15vh;
     font-size: 15vh;
   }
+}
+.ice-sheet {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("/assets/pattern-ice.svg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  pointer-events: none;
 }
 .sr-only {
   position: absolute;

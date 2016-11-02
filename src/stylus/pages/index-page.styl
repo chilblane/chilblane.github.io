@@ -8,10 +8,12 @@ html.index body {
 
 .index-content {
     height: 100%;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: fade-out($color-ice, 95%);
+    background-color: $color-ice-light;
+    background-image: radial-gradient($color-ice-light 0%, $color-ice-shadow 200%);
 }
 .index-name {
     display: flex;
@@ -21,34 +23,58 @@ html.index body {
     align-content: space-around;
     text-transform: uppercase;
     line-height: 1;
-    color: desaturate(fade-out($color-ice, 50%),50%);
     &__tile {
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: fade-out($color-ice, 95%);
+        color: desaturate(fade-out($color-ice, 30%),50%);
+        background-color: fade-out($color-ice, 90%);
         border-radius: 5%;
+        cursor: default;
+        transition-property: color, background-color;
+        transition-timing-function: ease-out;
+        transition-duration: 1s;
+        &:hover,
+        &:focus {
+            background-color: fade-out($color-fire, 50%);
+            color: desaturate($color-fire,50%);
+            transition-duration: 1.5s;
+        }
     }
 }
 +portrait() {
     .index-name {
         width: $tile-size-p * 3.6;
         height: $tile-size-p * 4.8;
-    }
-    .index-name__tile {
-        height: $tile-size-p;
-        min-width: $tile-size-p;
-        font-size: $tile-size-p;
+        &__tile {
+            height: $tile-size-p;
+            min-width: $tile-size-p;
+            font-size: $tile-size-p;
+        }
     }
 }
 +landscape() {
     .index-name {
         max-width: $tile-size-l * 6.7;
         height: $tile-size-l * 2.3;
+        &__tile {
+            height: $tile-size-l;
+            min-width: $tile-size-l;
+            font-size: $tile-size-l;
+        }
     }
-    .index-name__tile {
-        height: $tile-size-l;
-        min-width: $tile-size-l;
-        font-size: $tile-size-l;
-    }
+}
+
+.ice-sheet {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url('/assets/pattern-ice.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0.5;
+    pointer-events: none;
 }
