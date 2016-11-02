@@ -312,7 +312,7 @@ a.index-name__tile:focus {
   }
   to {
     color: #fff;
-    text-shadow: 0 0 10px #fff, 0 0 30px rgba(255,200,0,0.5);
+    text-shadow: 0 0 10px #fff;
   }
 }
 @-webkit-keyframes link-pulse {
@@ -321,7 +321,7 @@ a.index-name__tile:focus {
   }
   to {
     color: #fff;
-    text-shadow: 0 0 10px #fff, 0 0 30px rgba(255,200,0,0.5);
+    text-shadow: 0 0 10px #fff;
   }
 }
 @-o-keyframes link-pulse {
@@ -330,7 +330,7 @@ a.index-name__tile:focus {
   }
   to {
     color: #fff;
-    text-shadow: 0 0 10px #fff, 0 0 30px rgba(255,200,0,0.5);
+    text-shadow: 0 0 10px #fff;
   }
 }
 @keyframes link-pulse {
@@ -339,7 +339,7 @@ a.index-name__tile:focus {
   }
   to {
     color: #fff;
-    text-shadow: 0 0 10px #fff, 0 0 30px rgba(255,200,0,0.5);
+    text-shadow: 0 0 10px #fff;
   }
 }
 .sr-only {
