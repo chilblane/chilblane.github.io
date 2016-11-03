@@ -25,6 +25,15 @@ html.index body {
         text-shadow: 0 1px 1px fade-out($color-ice-light, 10%);
         font-weight: 400;
         text-transform: lowercase;
+        a {
+            color: inherit;
+            border: 0;
+            font-weight: inherit;
+            &:hover,
+            &:focus {
+                color: darken($color-fire-shadow, 20%);
+            }
+        }
     }
 }
 .index-name {
