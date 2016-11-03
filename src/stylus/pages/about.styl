@@ -1,5 +1,5 @@
 .page {
-    background-color: darken($color-ice, 70%);
+    background-color: darken($color-ice, 80%);
     position: relative;
     &:before {
         content: '';
@@ -13,28 +13,28 @@
         background-repeat: no-repeat;
         background-position: center center;
         background-attachment: fixed;
-        opacity: 0.3;
+        opacity: 0.4;
     }
     .hero {
         position: relative;
         color: white;
         text-align: center;
-        padding-top: 3em;
-        padding-bottom: 3em;
+        padding-top: $leading * 6em;
+        padding-bottom: $leading;
         h1 {
-            text-shadow: 0 0 2px fade-out(black, 50%);
+            text-shadow: 0 2px 2px fade-out(black, 50%);
+        }
+        p {
+            font-size: $font-scale * 1rem;
+            color: fade-out(white, 50%);
+            text-shadow: 0 1px 1px fade-out(black, 50%);
+            strong {
+                color: fade-out(white, 20%);
+            }
         }
     }
     main {
         position: relative;
-    }
-    .lead {
-        text-align: center;
-        font-size: $font-scale * 1rem;
-        color: fade-out($color-ice-fade, 50%);
-        strong {
-            color: $color-ice-fade;
-        }
     }
 }
 
@@ -43,13 +43,13 @@ main section {
     margin-bottom: $leading;
     &.opaque {
         background-color: white;
-        box-shadow: 0 0 2px fade-out(black, 50%);
+        box-shadow: 0 2px 2px fade-out(black, 50%);
     }
     &.transparent {
         color: white;
         h2 {
             color: inherit;
-            text-shadow: 0 0 2px fade-out(black, 50%);
+            text-shadow: 0 2px 2px fade-out(black, 50%);
         }
     }
 }
@@ -67,17 +67,12 @@ main section {
 .skills li {
     display: block;
     width: 100%;
-    padding: $leading;
     margin: $leading * 0.5 0;
-    background-color: fade-out($color-ice-light, 70%);
-    border: 2px solid $color-ice-light;
-    border-radius: 3px;
-    text-align: center;
-    color: $color-ice-light;
-    box-shadow: 0 0 2px fade-out(black, 50%);
+    icebox();
     +above(400px) {
         width: 48%;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
     }
@@ -97,9 +92,29 @@ main section {
     }
 }
 
+.portfolio {
+    + .portfolio {
+        margin-top: $leading;
+        border-top: 2px solid $color-ice-light;
+    }
+    &__preview {
+        display: block;
+        max-width: 450px;
+        border: 2px solid $link-color;
+        padding: 1px;
+        margin-top: $leading;
+        border-radius: 3px;
+        &:hover,
+        &:focus {
+            border-color: $link-color-hover;
+        }
+    }
+}
+
 footer p {
     color: white;
     text-align: center;
     font-size: ($font-scale / 3) * 1rem;
     margin-top: 0;
+    padding-bottom: $leading;
 }
