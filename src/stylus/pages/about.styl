@@ -56,14 +56,31 @@
 
 main section {
     padding: 1px $leading $leading * 2;
-    margin-bottom: $leading;
+    h2 {
+        display: flex;
+        align-items: baseline;
+        &:after {
+            content: '';
+            flex-grow: 1;
+            height: 3px;
+            position: relative;
+            margin-left: $leading * 0.25;
+        }
+    }
     &.opaque {
         background-color: white;
         box-shadow: 0 2px 2px fade-out(black, 50%);
+        margin-bottom: $leading * 3em;
+        h2:after {
+            background-color: $color-ice-light;
+        }
     }
     &.transparent {
         color: white;
-        h2 {
+        h2:after {
+            background-color: fade-out(white, 70%);
+        }
+        h2, h3 {
             color: inherit;
             text-shadow: 0 2px 2px fade-out(black, 50%);
         }
@@ -109,20 +126,25 @@ main section {
 }
 
 .portfolio {
-    + .portfolio {
-        margin-top: $leading;
-        border-top: 2px solid $color-ice-light;
-    }
+    margin-top: $leading * 3;
     &__preview {
         display: block;
-        max-width: 450px;
-        border: 2px solid $link-color;
-        padding: 1px;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
         margin-top: $leading;
-        border-radius: 3px;
-        &:hover,
-        &:focus {
-            border-color: $link-color-hover;
+        box-shadow: 0 2px 2px fade-out(black, 50%);
+        order: 2;
+    }
+    +above($bp-large) {
+        display: flex;
+        align-items: center;
+        &__description {
+            margin-right: $leading;
+        }
+        &__preview {
+            max-width: 450px;
         }
     }
 }

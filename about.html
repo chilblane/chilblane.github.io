@@ -15,14 +15,14 @@ layout: page
 </div>
 <main class='container about'>
     <section class='opaque'>
-        <h2>hello</h2>
+        <h2><span>hello</span></h2>
         <p>I'm a web designer and developer focusing on front-end web, user experience, and marketing, based in Scottsdale, Arizona. I've recently finished several great years of work at <a href='https://www.axosoft.com/' target='_blank' rel='noopener'>Axosoft</a>, and I'm looking for new opportunities.</p>
         <p>I'm passionate about consistency, scalability, and performance. <em>I believe your web presence and application is your brand</em>, your users are your top priority, and even the smallest details are important.</p>
-        <h2>what i do</h2>
+        <h2><span>what i do</span></h2>
         <p>My work has involved focus on maintaining product websites, including design, coding, messaging, project management, and analytics. I've also worked with graphic and print design, branding, social media, and more.</p>
     </section>
     <section class='transparent'>
-        <h2>strengths &amp; expertise</h2>
+        <h2><span>strengths &amp; expertise</span></h2>
         <ul class='skills'>
             <li>product website design</li>
             <li>account creation UX</li>
@@ -37,13 +37,17 @@ layout: page
             <li>project management</li>
             <li>Google Analytics</li>
         </ul>
-        <h2>i want to explore</h2>
+    </section>
+    <section class='transparent'>
+        <h2><span>i want to explore</span></h2>
         <ul class='skills'>
             <li>web application UX</li>
             <li>Javascript frameworks</li>
             <li>Webpack and other bundlers</li>
         </ul>
-        <h2>preferred tools</h2>
+    </section>
+    <section class='transparent'>
+        <h2><span>preferred tools</span></h2>
         <ul class='tools'>
             <li>
                 <img src='/assets/logos/sketchapp.svg' alt='Sketch' title='Sketch'>
@@ -62,42 +66,46 @@ layout: page
             </li>
         </ul>
     </section>
-    <section class='opaque'>
-        <h2>recent work</h2>
+    <section class='transparent'>
+        <h2><span>recent work</span></h2>
         <div class='portfolio'>
-            <h3>Axosoft product site</h3>
-            <a class='portfolio__preview' href='https://www.axosoft.com/' target='_blank' rel='noopener'>
-                <img src='/assets/work/axosoft-website.png' srcset='/assets/work/axosoft-website@2x.png 2x' alt='Axosoft.com Index Page, November 2016'>
-            </a>
-            <p>Axosoft.com is the marketing site for the Axosoft product, but includes some company-specific pages. As project manager and lead designer, I worked with other members of the marketing team to create designs, copy, graphics, and code.</p>
-            <p>Axosoft.com was the first project to use a new CSS framework I wrote called Axostyle. This framework is now in place across many of Axosoft's web properties.</p>
-            <p>The website, especially the index page and the trial signup page, underwent constant improvement. I used Google Analytics and other tools to look for new opportunities to improve our lead acquisition funnel.</p>
+            <img src='/assets/work/axosoft-website.png' srcset='/assets/work/axosoft-website@2x.png 2x' alt='Axosoft.com Index Page, November 2016' class='portfolio__preview'>
+            <div class='portfolio__description'>
+                <h3>Axosoft product site</h3>
+                <p><a href='https://www.axosoft.com/' target='_blank' rel='noopener'>www.axosoft.com</a></p>
+                <p>Axosoft.com is the marketing site for the Axosoft product, but includes some company-specific pages. As project manager and lead designer, I worked with other members of the marketing team to create designs, copy, graphics, and code.</p>
+                <p>Axosoft.com was the first project to use a new CSS framework I wrote called Axostyle. This framework is now in place across many of Axosoft's web properties.</p>
+                <p>The website, especially the index page and the trial signup page, underwent constant improvement. I used Google Analytics and other tools to look for new opportunities to improve the lead acquisition funnel.</p>
+            </div>
         </div>
         <div class='portfolio'>
-            <h3>Axosoft blog</h3>
-            <a class='portfolio__preview' href='https://blog.axosoft.com/' target='_blank' rel='noopener'>
-                <img src='/assets/work/axosoft-blog.png' srcset='/assets/work/axosoft-blog@2x.png 2x' alt='Axosoft blog article, November 2016'>
-            </a>
-            <p>The Axosoft blog redesign was a fun and challenging project. My goal was to modernize the home of Axosoft's new content strategy, while adhering to the Axostyle principles that established their online brand. I worked with the in-house Wordpress developer to come up with a theme that was not only a great experience for readers, but easy to use for editors, too.</p>
+            <img src='/assets/work/axosoft-blog.png' srcset='/assets/work/axosoft-blog@2x.png 2x' alt='Axosoft blog article, November 2016' class='portfolio__preview'>
+            <div class='portfolio__description'>
+                <h3>Axosoft blog</h3>
+                <p><a href='https://blog.axosoft.com/' target='_blank' rel='noopener'>blog.axosoft.com</a></p>
+                <p>The Axosoft blog redesign was a fun and challenging project. My goal was to modernize the home of Axosoft's new content strategy, while adhering to the Axostyle principles that established their online brand. I worked with the in-house Wordpress developer to come up with a theme that was not only a great experience for readers, but easy to use for editors, too.</p>
+            </div>
         </div>
         <div class='portfolio'>
-            <h3>Axosoft support site</h3>
-            <a class='portfolio__preview' href='https://support.axosoft.com/' target='_blank' rel='noopener'>
-                <img src='/assets/work/axosoft-support.png' srcset='/assets/work/axosoft-support@2x.png 2x' alt='Axosoft documentation page, November 2016'>
-            </a>
-            <p>Axosoft had a pressing need for product documentation that was easy to navigate and search, and easy to maintain solely by their support team. We identified a static site generator and server that compiled Markdown articles into pages and adapted it to Axostyle.</p>
-            <p>A matching <a href='https://support.gitkraken.com/' target='_blank' rel='noopener'>GitKraken support site</a> was later released.</p>
+            <img src='/assets/work/axosoft-support.png' srcset='/assets/work/axosoft-support@2x.png 2x' alt='Axosoft documentation page, November 2016' class='portfolio__preview'>
+            <div class='portfolio__description'>
+                <h3>Axosoft support site</h3>
+                <p><a href='https://support.axosoft.com/' target='_blank' rel='noopener'>support.axosoft.com</a></p>
+                <p>Axosoft had a pressing need for product documentation that was easy to navigate and search, and easy to maintain solely by their support team. We identified a static site generator and server that compiled Markdown articles into pages and adapted it to Axostyle.</p>
+                <p>A matching <a href='https://support.gitkraken.com/' target='_blank' rel='noopener'>GitKraken support site</a> was later released.</p>
+            </div>
         </div>
         <div class='portfolio'>
-            <h3>GitKraken product site</h3>
-            <a class='portfolio__preview' href='https://www.gitkraken.com/' target='_blank' rel='noopener'>
-                <img src='/assets/work/gitkraken-website.png' srcset='/assets/work/gitkraken-website@2x.png 2x' alt='GitKraken.com Index Page, November 2016'>
-            </a>
-            <p>GitKraken.com is the marketing site for the new Git GUI app. From an aesthetic perspective, this site was very experimental and unusual to capture the GitKraken branding. It was also an ongoing design challenge as its requirements and content grew based on the product's needs.</p>
+            <img src='/assets/work/gitkraken-website.png' srcset='/assets/work/gitkraken-website@2x.png 2x' alt='GitKraken.com Index Page, November 2016' class='portfolio__preview'>
+            <div class='portfolio__description'>
+                <h3>GitKraken product site</h3>
+                <p><a href='https://www.gitkraken.com/' target='_blank' rel='noopener'>www.gitkraken.com</a></p>
+                <p>GitKraken.com is the marketing site for the new Git GUI app. From an aesthetic perspective, this site was very experimental and unusual to capture the GitKraken branding. It was also an ongoing design challenge as its requirements and content grew based on the product's needs.</p>
+            </div>
         </div>
     </section>
     <section class='transparent'>
-        <h2>what next?</h2>
+        <h2><span>what next?</span></h2>
         <ul class='skills contact'>
             <li>
                 <a href='mailto:daniel@chilblane.com'><strong>Email</strong></a>
