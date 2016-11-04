@@ -102,12 +102,16 @@ main section {
     width: 100%;
     margin: $leading * 0.5 0;
     icebox();
+    .fa {
+        font-size: 2em;
+        margin-bottom: 0.5 * $leading;
+    }
     +above(440px) {
         width: 48%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
     }
     +above(640px) {
         width: 32%;

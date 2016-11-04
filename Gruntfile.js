@@ -80,7 +80,8 @@ module.exports = function(grunt) {
                 "include css": true,
                 paths: [
                     "node_modules/grunt-contrib-stylus/node-modules",
-                    "node_modules/rupture"
+                    "node_modules/rupture",
+                    "node_modules/font-awesome-stylus"
                 ]
             },
             dist: {
@@ -112,6 +113,13 @@ module.exports = function(grunt) {
                 cwd: 'src/static',
                 src: '**',
                 dest: 'assets/'
+            },
+            fa: {
+                expand: true,
+                dot: true,
+                cwd: 'node_modules/font-awesome-stylus/fonts',
+                src: '**',
+                dest: 'assets/fonts'
             }
         },
         jekyll: {
@@ -130,6 +138,7 @@ module.exports = function(grunt) {
         'stylus:dist',
         'browserify:dist',
         'copy:dist',
+        'copy:fa',
         'jekyll:dist'
     ]);
 
