@@ -130,7 +130,10 @@ main section {
 }
 
 .portfolio {
-    margin-top: $leading * 3;
+    margin-top: $leading;
+    &:not(:first-of-type) {
+        margin-top: $leading * 3;
+    }
     &__preview {
         display: block;
         max-width: 100%;

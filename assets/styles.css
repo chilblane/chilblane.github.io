@@ -2630,6 +2630,9 @@ main section.transparent h3 {
   margin-left: 1em;
 }
 .portfolio {
+  margin-top: 1.5rem;
+}
+.portfolio:not(:first-of-type) {
   margin-top: 4.5rem;
 }
 .portfolio__preview {
