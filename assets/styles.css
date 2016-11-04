@@ -2469,7 +2469,7 @@ li a {
 .page .hero p {
   font-size: 1.414rem;
   color: #e5f1ff;
-  text-shadow: 0 0 10px #000;
+  text-shadow: 0 0 5px #000;
 }
 .page .hero p strong {
   color: #fff;
