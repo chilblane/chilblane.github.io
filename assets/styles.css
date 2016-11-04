@@ -2670,9 +2670,11 @@ main section.transparent h3 {
     max-width: 450px;
   }
 }
+.contact a {
+  border: 0;
+}
 .contact__text {
   display: block;
-  margin-top: 0.75rem;
 }
 footer p {
   color: #fff;
