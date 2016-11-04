@@ -1,0 +1,171 @@
+.page {
+    background-color: darken($color-ice, 80%);
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: url('/assets/pattern-ice.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        opacity: 0.4;
+    }
+    .hero {
+        position: relative;
+        color: white;
+        text-align: center;
+        padding: 0 $leading;
+        max-height: 500px;
+        &__image {
+            max-width: 30em;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &__copy {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding-bottom: $leading;
+        }
+        h1 {
+            text-shadow: 0 0 20px black;
+        }
+        p {
+            font-size: $font-scale * 1rem;
+            color: $color-ice-light;
+            text-shadow: 0 0 5px black;
+            strong {
+                color: white;
+            }
+            span {
+                display: inline-block;
+                margin: 0 1em;
+            }
+        }
+    }
+    main {
+        position: relative;
+    }
+}
+
+main section {
+    padding: 1px $leading $leading * 2;
+    h2 {
+        display: flex;
+        align-items: baseline;
+        &:after {
+            content: '';
+            flex-grow: 1;
+            height: 3px;
+            position: relative;
+            margin-left: $leading * 0.25;
+        }
+    }
+    &.opaque {
+        background-color: white;
+        box-shadow: 0 2px 2px fade-out(black, 50%);
+        margin-bottom: $leading * 3em;
+        h2:after {
+            background-color: $color-ice-light;
+        }
+    }
+    &.transparent {
+        color: white;
+        h2:after {
+            background-color: fade-out(white, 70%);
+        }
+        h2, h3 {
+            color: inherit;
+            text-shadow: 0 2px 2px fade-out(black, 50%);
+        }
+    }
+}
+
+
+.skills,
+.tools {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
+}
+.skills {
+    flex-wrap: wrap;
+}
+.skills li {
+    display: block;
+    width: 100%;
+    margin: $leading * 0.5 0;
+    icebox();
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    .fa {
+        font-size: 2em;
+        margin-bottom: 0.5 * $leading;
+    }
+    +above(440px) {
+        width: 48%;
+    }
+    +above(640px) {
+        width: 32%;
+    }
+}
+.tools {
+    align-items: center;
+    max-width: 20em;
+}
+.tools li {
+    display: block;
+    max-width: 3em;
+    &:not(:first-child) {
+        margin-left: 1em;
+    }
+}
+
+.portfolio {
+    margin-top: $leading * 3;
+    &__preview {
+        display: block;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+        margin-top: $leading;
+        box-shadow: 0 2px 2px fade-out(black, 50%);
+        order: 2;
+    }
+    +above($bp-large) {
+        display: flex;
+        align-items: center;
+        &__description {
+            margin-right: $leading;
+        }
+        &__preview {
+            max-width: 450px;
+        }
+    }
+}
+
+.contact {
+    a {
+        border: 0;
+    }
+    &__text {
+        display: block;
+    }
+}
+
+footer p {
+    color: white;
+    text-align: center;
+    font-size: ($font-scale / 3) * 1rem;
+    margin-top: 0;
+    padding-bottom: $leading;
+}

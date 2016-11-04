@@ -7,4 +7,14 @@ Now built with Grunt and Jekyll.
 
 Because the site uses Jekyll and Grunt, you'll need to make sure you have Ruby and Node.js installed.
 
-More instructions whenever, once I actually try clone and install this repo in a fresh environment.
+Once you've done so:
+
+1. Install Grunt CLI: `npm i -g grunt-cli`
+2. Install Bundler: `gem install bundler`
+3. Install ruby gems: `bundle install`
+4. Install node modules: `npm i`
+
+## Building and running
+
+`grunt` will build the site and serve it to `http://localhost:9000`.
+You can split these tasks into `grunt build` and `grunt serve`.
