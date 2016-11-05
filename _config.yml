@@ -5,8 +5,8 @@ exclude: [node_modules, src, CNAME, Gemfile, Gemfile.lock, Gruntfile.js, package
 permalink: /:title
 
 # Page meta
-title: Daniel Singer
-description: Personal website of Daniel Singer, front-end developer & UX designer. Not a paid actor.
+title: Daniel Singer | Front-End Design
+description: Web designer and developer focusing on front-end web, user experience, and marketing, based in Scottsdale, Arizona.
 twitter: chilblane
 authors: Daniel Singer
 og_image: /assets/og-image.png
