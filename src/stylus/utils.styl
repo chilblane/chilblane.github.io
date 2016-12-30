@@ -8,3 +8,25 @@
     padding: 0;
     border: 0;
 }
+.centered {
+    text-align: center;
+}
+.full-width {
+    width: 100%;
+}
+
+spacing-types   = 'm' 'margin', 'p' 'padding';
+spacing-sizes   = 'z' 0, 'xs' 0.25, 's' 0.5, 'm' 1, 'l' 2;
+spacing-dir     = 't' 'top', 'l' 'left', 'r' 'right', 'b' 'bottom';
+for type in spacing-types {
+    for size in spacing-sizes {
+        for dir in spacing-dir {
+            .{type[0]}{dir[0]}{size[0]} {
+                {type[1]}-{dir[1]}: size[1] * $leading !important;
+            }
+        }
+        .{type[0]}{size[0]} {
+            {type[1]}: size[1] * $leading !important;
+        }
+    }
+}
