@@ -65,39 +65,49 @@ button {
   border: 0;
   padding: 0;
 }
-body {
+fieldset {
+  padding: 0;
+  border: 0;
+}
+html {
   font-size: 93.75%;
   font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background-color: #000b19;
+  color: #fff;
+}
+@media only screen and (min-width: 48em) {
+  html {
+    font-size: 125%;
+  }
 }
 a,
 a:hover {
   text-decoration: none;
 }
 a {
-  color: #c3a022;
+  color: #3083e9;
 }
 a:hover,
 a:focus {
-  color: #ffc800;
-}
-.container {
-  max-width: calc(800px + 6rem);
-  margin-left: auto;
-  margin-right: auto;
+  color: #4f96ec;
 }
 h1 {
   font-size: 4.242rem;
   line-height: 1;
+  font-weight: 300;
 }
 h2 {
   font-size: 2.828rem;
   line-height: 3rem;
   margin-top: 3rem;
+  font-weight: 300;
 }
 h3 {
   font-size: 1.414rem;
   margin-top: 1.5rem;
   line-height: 1.5rem;
+  color: #9fbcdf;
+  font-weight: 400;
 }
 p {
   margin-top: 1.5rem;
@@ -118,6 +128,11 @@ p a,
 li a {
   border-bottom: 2px solid currentColor;
   font-weight: bold;
+}
+h3,
+p,
+li {
+  letter-spacing: 0.05em;
 }
 /*
  *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
@@ -2419,19 +2434,74 @@ li a {
 .button,
 button {
   display: inline-block;
-  padding: 0.5em 1em;
-  border: 2px solid currentColor;
+  padding: 0.75em 1em;
   border-radius: 3px;
   font-weight: 700;
   text-align: center;
+  -webkit-transition-property: background-color, color;
+  -moz-transition-property: background-color, color;
+  -o-transition-property: background-color, color;
+  -ms-transition-property: background-color, color;
+  transition-property: background-color, color;
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  -ms-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  -ms-transition-duration: 0.2s;
+  transition-duration: 0.2s;
 }
 .button--small,
 button--small {
   font-size: 0.707rem;
 }
+.button--link,
+button--link {
+  background-color: #3083e9;
+  color: #fff;
+}
+.button--link:hover,
+button--link:hover,
+.button--link:focus,
+button--link:focus {
+  background-color: #4f96ec;
+  color: #fff;
+}
+.button--secondary,
+button--secondary {
+  background-color: rgba(229,241,255,0.3);
+  color: #fff;
+}
+.button--secondary:hover,
+button--secondary:hover,
+.button--secondary:focus,
+button--secondary:focus {
+  background-color: rgba(229,241,255,0.6);
+  color: #fff;
+}
+.button--primary,
+button--primary {
+  background-color: #b38c00;
+  color: #fff;
+}
+.button--primary:hover,
+button--primary:hover,
+.button--primary:focus,
+button--primary:focus {
+  background-color: #cca000;
+  color: #fff;
+}
 .form {
   width: 100%;
-  max-width: 400px;
+  background-color: rgba(229,241,255,0.1);
+  padding: 1px 1.5rem 1.5rem;
+  border-radius: 5px;
+}
+.form fieldset {
+  max-width: calc(15em + 6rem);
   margin-left: auto;
   margin-right: auto;
 }
@@ -2450,11 +2520,50 @@ textarea {
   padding: 0.4em 0.75rem;
   font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: inherit;
+  background-color: rgba(229,241,255,0.1);
+  color: #fff;
+  border: 1px solid transparent;
+}
+input[type='text']:focus,
+input[type='email']:focus,
+textarea:focus {
+  border-color: #9fbcdf;
 }
 .site-footer {
   text-align: center;
   width: 100%;
   padding-bottom: 1.5rem;
+}
+.grid {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.grid__column {
+  padding-right: 2em;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -o-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: 0;
+  flex-basis: 0;
+  min-width: 20em;
+}
+.hero p {
+  text-transform: lowercase;
+  color: #9fbcdf;
 }
 .panel {
   display: -webkit-box;
@@ -2482,52 +2591,43 @@ textarea {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   min-height: 100vh;
-  padding: 1px 1.5rem 3rem;
+  padding: 1.5rem 1.5rem 3rem;
 }
 .panel:nth-of-type(even) {
-  background-color: #eee;
+  background-color: rgba(229,241,255,0.1);
 }
 .panel__content {
   width: 100%;
-  max-width: 1200px;
+  max-width: 80em;
 }
 .panel h2 {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: box;
-  display: flex;
-  -webkit-box-align: baseline;
-  -moz-box-align: baseline;
-  -o-box-align: baseline;
-  -ms-flex-align: baseline;
-  -webkit-align-items: baseline;
-  align-items: baseline;
-  margin-bottom: 3rem;
+  margin-bottom: 2.25rem;
+  display: inline-block;
 }
 .panel h2:after {
   content: '';
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  -o-box-flex: 1;
-  -ms-box-flex: 1;
-  box-flex: 1;
-  -webkit-flex-grow: 1;
-  flex-grow: 1;
+  display: block;
+  margin-top: 0.75rem;
+  width: 100%;
   height: 3px;
-  position: relative;
-  margin-left: 0.375rem;
-  background-color: #ddd;
+  background-color: rgba(229,241,255,0.3);
 }
-.panel--narrow .panel__content {
-  max-width: 700px;
+.panel--45em .panel__content {
+  max-width: 45em;
+}
+.panel--60em .panel__content {
+  max-width: 60em;
 }
 .portfolio__pane {
+  padding-bottom: 3rem;
   margin-top: 1.5rem;
 }
 .portfolio__pane:not(:first-of-type) {
-  border-top: 1px solid #ddd;
+  border-top: 3px solid rgba(229,241,255,0.1);
+  padding-top: 3rem;
+}
+.portfolio h3 {
+  text-align: center;
 }
 .portfolio__preview {
   display: block;
@@ -2536,7 +2636,7 @@ textarea {
   margin-right: auto;
   height: auto;
   margin-top: 1.5rem;
-  border: 1px solid #eee;
+  border: 1px solid #9fbcdf;
 }
 .social {
   text-align: center;
@@ -2561,6 +2661,9 @@ textarea {
   margin: -1px;
   padding: 0;
   border: 0;
+}
+.nowrap {
+  white-space: nowrap;
 }
 .centered {
   text-align: center;

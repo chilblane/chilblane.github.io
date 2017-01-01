@@ -1,7 +1,12 @@
 // base
-body {
+html {
     font-size: ($base-font-size / 16) * 100%;
-    font-family: $font-work-sans;
+    font-family: $ff;
+    background-color: $color-ice-dark;
+    color: white;
+    +above(48em) {
+        font-size: (20 / 16) * 100%;
+    }
 }
 
 a,
@@ -14,10 +19,4 @@ a {
     &:focus {
         color: $link-color-hover;
     }
-}
-
-.container {
-    max-width: "calc(800px + %s)" % ($leading * 4); ;
-    margin-left: auto;
-    margin-right: auto;
 }

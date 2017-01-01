@@ -1,8 +1,13 @@
 .form {
     width: 100%;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
+    background-color: $color-ice-glass;
+    padding: 1px $leading $leading;
+    border-radius: 5px;
+    fieldset {
+        max-width: "calc(15em + %s)" % ($leading * 4);
+        margin-left: auto;
+        margin-right: auto;
+    }
     &__control {
         margin-top: $leading;
     }
@@ -19,6 +24,12 @@ textarea {
     display: block;
     width: 100%;
     padding: 0.4em $leading * 0.5;
-    font-family: $font-work-sans;
+    font-family: $ff;
     font-size: inherit;
+    background-color: $color-ice-glass;
+    color: white;
+    border: 1px solid transparent;
+    &:focus {
+        border-color: $color-ice-fade;
+    }
 }

@@ -1,9 +1,14 @@
 .portfolio {
     &__pane {
+        padding-bottom: 2 * $leading;
         margin-top: $leading;
         &:not(:first-of-type) {
-            border-top: 1px solid #ddd;
+            border-top: 3px solid $color-ice-glass;
+            padding-top: 2 * $leading;
         }
+    }
+    h3 {
+        text-align: center;
     }
     &__preview {
         display: block;
@@ -12,6 +17,6 @@
         margin-right: auto;
         height: auto;
         margin-top: $leading;
-        border: 1px solid #eee;
+        border: 1px solid $color-ice-fade;
     }
 }
