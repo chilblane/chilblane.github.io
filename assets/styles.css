@@ -134,6 +134,59 @@ p,
 li {
   letter-spacing: 0.05em;
 }
+.panel {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  padding: 1.5rem 1.5rem 3rem;
+}
+.panel:nth-of-type(even) {
+  background-color: rgba(229,241,255,0.1);
+}
+.panel__content {
+  width: 100%;
+  max-width: 80em;
+}
+.panel h2 {
+  margin-bottom: 2.25rem;
+  display: inline-block;
+}
+.panel h2:after {
+  content: '';
+  display: block;
+  margin-top: 0.75rem;
+  width: 100%;
+  height: 3px;
+  background-color: rgba(229,241,255,0.3);
+}
+.panel--45em .panel__content {
+  max-width: 45em;
+}
+.panel--60em .panel__content {
+  max-width: 60em;
+}
 /*
  *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -2564,59 +2617,6 @@ textarea:focus {
 .hero p {
   text-transform: lowercase;
   color: #9fbcdf;
-}
-.panel {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: box;
-  display: flex;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  -o-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  -o-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-box-lines: multiple;
-  -moz-box-lines: multiple;
-  -o-box-lines: multiple;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  min-height: 100vh;
-  padding: 1.5rem 1.5rem 3rem;
-}
-.panel:nth-of-type(even) {
-  background-color: rgba(229,241,255,0.1);
-}
-.panel__content {
-  width: 100%;
-  max-width: 80em;
-}
-.panel h2 {
-  margin-bottom: 2.25rem;
-  display: inline-block;
-}
-.panel h2:after {
-  content: '';
-  display: block;
-  margin-top: 0.75rem;
-  width: 100%;
-  height: 3px;
-  background-color: rgba(229,241,255,0.3);
-}
-.panel--45em .panel__content {
-  max-width: 45em;
-}
-.panel--60em .panel__content {
-  max-width: 60em;
 }
 .portfolio__pane {
   padding-bottom: 3rem;
