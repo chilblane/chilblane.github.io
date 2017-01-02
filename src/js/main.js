@@ -1,5 +1,5 @@
 (function(window, document) {
-    // i am empty
+    var $ = require('jquery');
 
     if( ~['complete', 'interactive'].indexOf(document.readyState)) {
         init();
