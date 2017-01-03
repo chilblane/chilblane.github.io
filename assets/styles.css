@@ -72,6 +72,7 @@ fieldset {
 html,
 body {
   height: 100%;
+  position: relative;
 }
 html {
   font-size: 93.75%;
@@ -83,9 +84,6 @@ html {
   html {
     font-size: 125%;
   }
-}
-body {
-  position: relative;
 }
 a,
 a:hover {
@@ -2747,7 +2745,7 @@ textarea:focus {
   position: fixed;
   top: 0;
   left: 100%;
-  width: 100%;
+  width: 150%;
   bottom: 0;
   padding-top: 4.5rem;
   background: -webkit-linear-gradient(left, transparent, rgba(0,0,0,0.9));
@@ -2755,11 +2753,11 @@ textarea:focus {
   background: -o-linear-gradient(left, transparent, rgba(0,0,0,0.9));
   background: -ms-linear-gradient(left, transparent, rgba(0,0,0,0.9));
   background: linear-gradient(to right, transparent, rgba(0,0,0,0.9));
-  -webkit-transition: left 0.3s ease-in;
-  -moz-transition: left 0.3s ease-in;
-  -o-transition: left 0.3s ease-in;
-  -ms-transition: left 0.3s ease-in;
-  transition: left 0.3s ease-in;
+  -webkit-transition: left 0.3s ease-out;
+  -moz-transition: left 0.3s ease-out;
+  -o-transition: left 0.3s ease-out;
+  -ms-transition: left 0.3s ease-out;
+  transition: left 0.3s ease-out;
 }
 .mobile-nav ul {
   position: relative;
@@ -2815,12 +2813,17 @@ textarea:focus {
   width: 100%;
 }
 .js-nav-open .mobile-nav {
-  left: 0%;
+  left: -50%;
   -webkit-transition-timing-function: ease-out;
   -moz-transition-timing-function: ease-out;
   -o-transition-timing-function: ease-out;
   -ms-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
+  -webkit-transition-duration: 0.6s;
+  -moz-transition-duration: 0.6s;
+  -o-transition-duration: 0.6s;
+  -ms-transition-duration: 0.6s;
+  transition-duration: 0.6s;
 }
 .js-nav-open .mobile-nav li {
   left: 0;
@@ -2836,39 +2839,39 @@ textarea:focus {
   transition-duration: 0.7s;
 }
 .js-nav-open .mobile-nav li:nth-of-type(2) {
-  -webkit-transition-delay: 0.2s;
-  -moz-transition-delay: 0.2s;
-  -o-transition-delay: 0.2s;
-  -ms-transition-delay: 0.2s;
-  transition-delay: 0.2s;
+  -webkit-transition-delay: 0.1s;
+  -moz-transition-delay: 0.1s;
+  -o-transition-delay: 0.1s;
+  -ms-transition-delay: 0.1s;
+  transition-delay: 0.1s;
 }
 .js-nav-open .mobile-nav li:nth-of-type(3) {
-  -webkit-transition-delay: 0.35s;
-  -moz-transition-delay: 0.35s;
-  -o-transition-delay: 0.35s;
-  -ms-transition-delay: 0.35s;
-  transition-delay: 0.35s;
+  -webkit-transition-delay: 0.25s;
+  -moz-transition-delay: 0.25s;
+  -o-transition-delay: 0.25s;
+  -ms-transition-delay: 0.25s;
+  transition-delay: 0.25s;
 }
 .js-nav-open .mobile-nav li:nth-of-type(4) {
-  -webkit-transition-delay: 0.5s;
-  -moz-transition-delay: 0.5s;
-  -o-transition-delay: 0.5s;
-  -ms-transition-delay: 0.5s;
-  transition-delay: 0.5s;
+  -webkit-transition-delay: 0.4s;
+  -moz-transition-delay: 0.4s;
+  -o-transition-delay: 0.4s;
+  -ms-transition-delay: 0.4s;
+  transition-delay: 0.4s;
 }
 .js-nav-open .mobile-nav li:nth-of-type(5) {
-  -webkit-transition-delay: 0.65s;
-  -moz-transition-delay: 0.65s;
-  -o-transition-delay: 0.65s;
-  -ms-transition-delay: 0.65s;
-  transition-delay: 0.65s;
+  -webkit-transition-delay: 0.55s;
+  -moz-transition-delay: 0.55s;
+  -o-transition-delay: 0.55s;
+  -ms-transition-delay: 0.55s;
+  transition-delay: 0.55s;
 }
 .js-nav-open .mobile-nav li.back-to-top {
-  -webkit-transition-delay: 1.4s;
-  -moz-transition-delay: 1.4s;
-  -o-transition-delay: 1.4s;
-  -ms-transition-delay: 1.4s;
-  transition-delay: 1.4s;
+  -webkit-transition-delay: 1.3s;
+  -moz-transition-delay: 1.3s;
+  -o-transition-delay: 1.3s;
+  -ms-transition-delay: 1.3s;
+  transition-delay: 1.3s;
   -webkit-transition-property: opacity;
   -moz-transition-property: opacity;
   -o-transition-property: opacity;
