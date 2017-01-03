@@ -78,6 +78,7 @@ html {
   font-size: 93.75%;
   font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   background-color: #000b19;
+  background-image: url("/assets/pattern-hex.svg");
   color: #fff;
 }
 @media only screen and (min-width: 48em) {
@@ -190,7 +191,7 @@ li {
   max-width: 60em;
 }
 main .panel:nth-of-type(odd) {
-  background-color: rgba(229,241,255,0.1);
+  background-color: #16212f;
 }
 /*
  *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
@@ -2618,7 +2619,7 @@ textarea:focus {
   min-width: 20em;
 }
 .hero {
-  background-color: #000b19;
+  background-color: transparent;
 }
 .hero p {
   text-transform: lowercase;
