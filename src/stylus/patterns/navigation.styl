@@ -1,7 +1,9 @@
 // measurements for nav
 $nav-height = 3 * $leading
-$nav-button-size = 2.5 * $leading
+$nav-button-size = 'calc(%s - 2px)' % (2.5 * $leading)
 $mobile-nav-duration = 0.3s
+
+$nav-breakpoint = 48em
 
 .nav {
     position: fixed;
@@ -37,6 +39,9 @@ $mobile-nav-duration = 0.3s
         transition-duration: $mobile-nav-duration, 0.4s;
         transition-timing-function: ease-out, ease-out;
         cursor: pointer;
+        +above($nav-breakpoint) {
+            display: none;
+        }
         &:hover,
         &:focus {
             background-color: darken($link-color-hover, 30%);
@@ -89,6 +94,9 @@ $mobile-nav-duration = 0.3s
     padding-top: $nav-height;
     background: linear-gradient(to right, transparent, fade-out(black, 10%));
     transition: left $mobile-nav-duration ease-out;
+    +above($nav-breakpoint) {
+        display: none;
+    }
     ul {
         position: relative;
         margin-top: 0;
