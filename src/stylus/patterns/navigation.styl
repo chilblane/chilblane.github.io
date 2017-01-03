@@ -3,8 +3,6 @@ $nav-height = 3 * $leading
 $nav-button-size = 'calc(%s - 2px)' % (2.5 * $leading)
 $mobile-nav-duration = 0.3s
 
-$nav-breakpoint = 48em
-
 .nav {
     position: fixed;
     display: flex;
@@ -33,6 +31,8 @@ $nav-breakpoint = 48em
         }
         li {
             display: inline-block;
+            text-transform: lowercase;
+            letter-spacing: 0.2em;
         }
         a {
             position: relative;
@@ -150,6 +150,8 @@ $nav-breakpoint = 48em
         left: 100%;
         text-align: right;
         font-size: 1 * $font-scale * 1rem;
+        text-transform: lowercase;
+        letter-spacing: 0.2em;
         margin-top:  $leading;
         text-shadow: 0 0 2px black;
         transition: left $mobile-nav-duration ease-in;

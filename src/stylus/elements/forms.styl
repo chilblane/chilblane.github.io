@@ -1,8 +1,6 @@
 .form {
     width: 100%;
-    background-color: $color-bg-glass;
     padding: 1px $leading $leading;
-    border-radius: 5px;
     fieldset {
         max-width: "calc(15em + %s)" % ($leading * 4);
         margin-left: auto;
@@ -16,6 +14,8 @@
 label {
     display: block;
     margin-bottom: 0.25 * $leading;
+    text-transform: lowercase;
+    color: $color-bg-fade;
 }
 
 input[type='text'],

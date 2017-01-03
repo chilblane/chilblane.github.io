@@ -1,0 +1,21 @@
+.form--space {
+    position: relative;
+    background-color: $color-bg-dark;
+    background-image: url('/assets/pattern-stars.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: auto 125%;
+    animation: aesthetics-space 20s steps(4, end) infinite;
+    border-radius: 5px;
+    box-shadow: 0 2px 1px 1px $color-bg-glass;
+}
+
+@keyframes aesthetics-space {
+    0%, 100% {
+        background-position: 50% 40%;
+    }
+    50% {
+        background-position: 50% 60%;
+    }
+}

@@ -1,3 +1,5 @@
+$color-bg-panel = mix($color-bg-dark, $color-bg-light, 90%)
+
 .panel {
     display: flex;
     justify-content: center;
@@ -12,6 +14,7 @@
     h2 {
         margin-bottom: 1.5 * $leading;
         display: inline-block;
+        text-transform: lowercase;
         &:after {
             content: '';
             display: block;
@@ -32,6 +35,9 @@
         }
     }
     main &:nth-of-type(odd) {
-        background-color: mix($color-bg-dark, $color-bg-light, 90%);
+        background-color: $color-bg-panel;
+        background-image: radial-gradient($color-bg-panel, $color-bg-dark);
+        background-size: 150% 150%;
+        background-position: center center;
     }
 }
