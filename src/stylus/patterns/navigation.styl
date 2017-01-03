@@ -1,0 +1,167 @@
+// measurements for nav
+$nav-height = 3 * $leading
+$nav-button-size = 2.5 * $leading
+$mobile-nav-duration = 0.3s
+
+.nav {
+    position: fixed;
+    height: $nav-height;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    &__logo {
+        font-size: 1 * $font-scale * 1rem;
+        line-height: $nav-height;
+        height: $nav-height;
+        transition: opacity $mobile-nav-duration ease-out;
+        opacity: 0;
+        .js-nav-open & {
+            opacity: 1;
+        }
+    }
+    &__menu-button {
+        position: absolute;
+        right: 0;
+        display: inline-block;
+        line-height: $nav-button-size;
+        height: $nav-button-size;
+        width: $nav-button-size;
+        margin: 0.25 * $leading;
+        border: 2px solid $color-ice-glass;
+        border-radius: 50%;
+        background-color: darken($link-color, 50%);
+        material-shadow();
+        text-transform: uppercase;
+        text-align: center;
+        transition-property: transform, background-color;
+        transition-duration: $mobile-nav-duration, 0.4s;
+        transition-timing-function: ease-out, ease-out;
+        cursor: pointer;
+        &:hover,
+        &:focus {
+            background-color: darken($link-color-hover, 30%);
+        }
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            display: block;
+            left: 50%;
+            background-color: white;
+            width: 0.7em;
+            margin-left: -0.3em;
+            border-radius: 2px;
+            opacity: 0;
+            transition-property: opacity, top, bottom;
+            transition-duration: $mobile-nav-duration;
+            transition-timing-function: ease-out;
+        }
+        &:before {
+            top: 50%;
+            height: 1em;
+        }
+        &:after {
+            bottom: 50%;
+            height: 0.75em;
+        }
+        .js-nav-open & {
+            transform: rotate(45deg);
+            &:before,
+            &:after {
+                opacity: 0.1;
+            }
+            &:before {
+                top: 10%;
+            }
+            &:after {
+                bottom: 10%;
+            }
+        }
+    }
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    bottom: 0;
+    padding-top: $nav-height;
+    background: linear-gradient(to right, transparent, fade-out(black, 10%));
+    transition: left $mobile-nav-duration ease-in;
+    ul {
+        position: relative;
+        margin-top: 0;
+        padding-left: 0;
+    }
+    li {
+        position: relative;
+        display: block;
+        left: 100%;
+        text-align: right;
+        margin-top:  $leading;
+        text-shadow: 0 0 2px black;
+        transition: left $mobile-nav-duration ease-in;
+        &:not(.back-to-top) {
+            font-size: 1 * $font-scale * 1rem;
+        }
+        &.back-to-top {
+            opacity: 0;
+        }
+        a {
+            position: relative;
+            display: inline-block;
+            border: 0;
+            font-weight: 400;
+            color: white;
+            margin-right: 0.5 * $leading;
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                right: 0;
+                margin-top: 3px;
+                width: 0;
+                height: 3px;
+                background-color: fade-out($color-ice-fade, 30%);
+                transition: width 0.4s ease-out;
+            }
+            &:hover,
+            &:focus {
+                &:after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .js-nav-open & {
+        left: 0%;
+        transition-timing-function: ease-out;
+        li {
+            left: 0;
+            transition-timing-function: ease-out;
+            transition-duration: 0.7s;
+        }
+        li:nth-of-type(2) {
+            transition-delay: 0.2s;
+        }
+        li:nth-of-type(3) {
+            transition-delay: 0.35s;
+        }
+        li:nth-of-type(4) {
+            transition-delay: 0.5s;
+        }
+        li:nth-of-type(5) {
+            transition-delay: 0.65s;
+        }
+        li.back-to-top {
+            transition-delay: 1.4s;
+            transition-property: opacity;
+            opacity: 1;
+        }
+    }
+}
+
+.js-nav-open {
+    overflow: hidden;
+}

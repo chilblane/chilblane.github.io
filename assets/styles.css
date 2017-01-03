@@ -69,6 +69,10 @@ fieldset {
   padding: 0;
   border: 0;
 }
+html,
+body {
+  height: 100%;
+}
 html {
   font-size: 93.75%;
   font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -79,6 +83,9 @@ html {
   html {
     font-size: 125%;
   }
+}
+body {
+  position: relative;
 }
 a,
 a:hover {
@@ -162,9 +169,6 @@ li {
   min-height: 100vh;
   padding: 1.5rem 1.5rem 3rem;
 }
-.panel:nth-of-type(even) {
-  background-color: rgba(229,241,255,0.1);
-}
 .panel__content {
   width: 100%;
   max-width: 80em;
@@ -186,6 +190,9 @@ li {
 }
 .panel--60em .panel__content {
   max-width: 60em;
+}
+main .panel:nth-of-type(odd) {
+  background-color: rgba(229,241,255,0.1);
 }
 /*
  *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
@@ -2614,9 +2621,267 @@ textarea:focus {
   flex-basis: 0;
   min-width: 20em;
 }
+.hero {
+  background-color: #000b19;
+}
 .hero p {
   text-transform: lowercase;
   color: #9fbcdf;
+}
+.nav {
+  position: fixed;
+  height: 4.5rem;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+.nav__logo {
+  font-size: 1.414rem;
+  line-height: 4.5rem;
+  height: 4.5rem;
+  -webkit-transition: opacity 0.3s ease-out;
+  -moz-transition: opacity 0.3s ease-out;
+  -o-transition: opacity 0.3s ease-out;
+  -ms-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
+.js-nav-open .nav__logo {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+.nav__menu-button {
+  position: absolute;
+  right: 0;
+  display: inline-block;
+  line-height: 3.75rem;
+  height: 3.75rem;
+  width: 3.75rem;
+  margin: 0.375rem;
+  border: 2px solid rgba(229,241,255,0.1);
+  border-radius: 50%;
+  background-color: #0d407f;
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-transition-property: -webkit-transform, background-color;
+  -moz-transition-property: -moz-transform, background-color;
+  -o-transition-property: -o-transform, background-color;
+  -ms-transition-property: -ms-transform, background-color;
+  transition-property: transform, background-color;
+  -webkit-transition-duration: 0.3s, 0.4s;
+  -moz-transition-duration: 0.3s, 0.4s;
+  -o-transition-duration: 0.3s, 0.4s;
+  -ms-transition-duration: 0.3s, 0.4s;
+  transition-duration: 0.3s, 0.4s;
+  -webkit-transition-timing-function: ease-out, ease-out;
+  -moz-transition-timing-function: ease-out, ease-out;
+  -o-transition-timing-function: ease-out, ease-out;
+  -ms-transition-timing-function: ease-out, ease-out;
+  transition-timing-function: ease-out, ease-out;
+  cursor: pointer;
+}
+.nav__menu-button:hover,
+.nav__menu-button:focus {
+  background-color: #1566c7;
+}
+.nav__menu-button:before,
+.nav__menu-button:after {
+  content: '';
+  position: absolute;
+  display: block;
+  left: 50%;
+  background-color: #fff;
+  width: 0.7em;
+  margin-left: -0.3em;
+  border-radius: 2px;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -webkit-transition-property: opacity, top, bottom;
+  -moz-transition-property: opacity, top, bottom;
+  -o-transition-property: opacity, top, bottom;
+  -ms-transition-property: opacity, top, bottom;
+  transition-property: opacity, top, bottom;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -ms-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  -ms-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.nav__menu-button:before {
+  top: 50%;
+  height: 1em;
+}
+.nav__menu-button:after {
+  bottom: 50%;
+  height: 0.75em;
+}
+.js-nav-open .nav__menu-button {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.js-nav-open .nav__menu-button:before,
+.js-nav-open .nav__menu-button:after {
+  opacity: 0.1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+  filter: alpha(opacity=10);
+}
+.js-nav-open .nav__menu-button:before {
+  top: 10%;
+}
+.js-nav-open .nav__menu-button:after {
+  bottom: 10%;
+}
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  bottom: 0;
+  padding-top: 4.5rem;
+  background: -webkit-linear-gradient(left, transparent, rgba(0,0,0,0.9));
+  background: -moz-linear-gradient(left, transparent, rgba(0,0,0,0.9));
+  background: -o-linear-gradient(left, transparent, rgba(0,0,0,0.9));
+  background: -ms-linear-gradient(left, transparent, rgba(0,0,0,0.9));
+  background: linear-gradient(to right, transparent, rgba(0,0,0,0.9));
+  -webkit-transition: left 0.3s ease-in;
+  -moz-transition: left 0.3s ease-in;
+  -o-transition: left 0.3s ease-in;
+  -ms-transition: left 0.3s ease-in;
+  transition: left 0.3s ease-in;
+}
+.mobile-nav ul {
+  position: relative;
+  margin-top: 0;
+  padding-left: 0;
+}
+.mobile-nav li {
+  position: relative;
+  display: block;
+  left: 100%;
+  text-align: right;
+  margin-top: 1.5rem;
+  text-shadow: 0 0 2px #000;
+  -webkit-transition: left 0.3s ease-in;
+  -moz-transition: left 0.3s ease-in;
+  -o-transition: left 0.3s ease-in;
+  -ms-transition: left 0.3s ease-in;
+  transition: left 0.3s ease-in;
+}
+.mobile-nav li:not(.back-to-top) {
+  font-size: 1.414rem;
+}
+.mobile-nav li.back-to-top {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
+.mobile-nav li a {
+  position: relative;
+  display: inline-block;
+  border: 0;
+  font-weight: 400;
+  color: #fff;
+  margin-right: 0.75rem;
+}
+.mobile-nav li a:after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  margin-top: 3px;
+  width: 0;
+  height: 3px;
+  background-color: rgba(159,188,223,0.7);
+  -webkit-transition: width 0.4s ease-out;
+  -moz-transition: width 0.4s ease-out;
+  -o-transition: width 0.4s ease-out;
+  -ms-transition: width 0.4s ease-out;
+  transition: width 0.4s ease-out;
+}
+.mobile-nav li a:hover:after,
+.mobile-nav li a:focus:after {
+  width: 100%;
+}
+.js-nav-open .mobile-nav {
+  left: 0%;
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  -ms-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.js-nav-open .mobile-nav li {
+  left: 0;
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  -ms-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  -webkit-transition-duration: 0.7s;
+  -moz-transition-duration: 0.7s;
+  -o-transition-duration: 0.7s;
+  -ms-transition-duration: 0.7s;
+  transition-duration: 0.7s;
+}
+.js-nav-open .mobile-nav li:nth-of-type(2) {
+  -webkit-transition-delay: 0.2s;
+  -moz-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+  -ms-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+.js-nav-open .mobile-nav li:nth-of-type(3) {
+  -webkit-transition-delay: 0.35s;
+  -moz-transition-delay: 0.35s;
+  -o-transition-delay: 0.35s;
+  -ms-transition-delay: 0.35s;
+  transition-delay: 0.35s;
+}
+.js-nav-open .mobile-nav li:nth-of-type(4) {
+  -webkit-transition-delay: 0.5s;
+  -moz-transition-delay: 0.5s;
+  -o-transition-delay: 0.5s;
+  -ms-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+.js-nav-open .mobile-nav li:nth-of-type(5) {
+  -webkit-transition-delay: 0.65s;
+  -moz-transition-delay: 0.65s;
+  -o-transition-delay: 0.65s;
+  -ms-transition-delay: 0.65s;
+  transition-delay: 0.65s;
+}
+.js-nav-open .mobile-nav li.back-to-top {
+  -webkit-transition-delay: 1.4s;
+  -moz-transition-delay: 1.4s;
+  -o-transition-delay: 1.4s;
+  -ms-transition-delay: 1.4s;
+  transition-delay: 1.4s;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  -ms-transition-property: opacity;
+  transition-property: opacity;
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+.js-nav-open {
+  overflow: hidden;
 }
 .portfolio__pane {
   padding-bottom: 3rem;

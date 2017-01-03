@@ -1,4 +1,8 @@
 // base
+html,
+body {
+    height: 100%;
+}
 html {
     font-size: ($base-font-size / 16) * 100%;
     font-family: $ff;
@@ -7,6 +11,9 @@ html {
     +above(48em) {
         font-size: (20 / 16) * 100%;
     }
+}
+body {
+    position: relative;
 }
 
 a,
