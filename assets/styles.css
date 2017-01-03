@@ -2617,8 +2617,6 @@ textarea:focus {
   box-flex: 1;
   -webkit-flex-grow: 1;
   flex-grow: 1;
-  -webkit-flex-basis: 0;
-  flex-basis: 0;
   min-width: 20em;
 }
 .hero {
