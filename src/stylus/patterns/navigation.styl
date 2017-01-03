@@ -149,15 +149,10 @@ $nav-breakpoint = 48em
         display: block;
         left: 100%;
         text-align: right;
+        font-size: 1 * $font-scale * 1rem;
         margin-top:  $leading;
         text-shadow: 0 0 2px black;
         transition: left $mobile-nav-duration ease-in;
-        &:not(.back-to-top) {
-            font-size: 1 * $font-scale * 1rem;
-        }
-        &.back-to-top {
-            opacity: 0;
-        }
         a {
             position: relative;
             display: inline-block;
@@ -204,11 +199,6 @@ $nav-breakpoint = 48em
         }
         li:nth-of-type(5) {
             transition-delay: 0.55s;
-        }
-        li.back-to-top {
-            transition-delay: 1.3s;
-            transition-property: opacity;
-            opacity: 1;
         }
     }
 }

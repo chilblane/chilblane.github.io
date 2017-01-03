@@ -2848,6 +2848,7 @@ textarea:focus {
   display: block;
   left: 100%;
   text-align: right;
+  font-size: 1.414rem;
   margin-top: 1.5rem;
   text-shadow: 0 0 2px #000;
   -webkit-transition: left 0.3s ease-in;
@@ -2855,14 +2856,6 @@ textarea:focus {
   -o-transition: left 0.3s ease-in;
   -ms-transition: left 0.3s ease-in;
   transition: left 0.3s ease-in;
-}
-.mobile-nav li:not(.back-to-top) {
-  font-size: 1.414rem;
-}
-.mobile-nav li.back-to-top {
-  opacity: 0;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: alpha(opacity=0);
 }
 .mobile-nav li a {
   position: relative;
@@ -2944,21 +2937,6 @@ textarea:focus {
   -o-transition-delay: 0.55s;
   -ms-transition-delay: 0.55s;
   transition-delay: 0.55s;
-}
-.js-nav-open .mobile-nav li.back-to-top {
-  -webkit-transition-delay: 1.3s;
-  -moz-transition-delay: 1.3s;
-  -o-transition-delay: 1.3s;
-  -ms-transition-delay: 1.3s;
-  transition-delay: 1.3s;
-  -webkit-transition-property: opacity;
-  -moz-transition-property: opacity;
-  -o-transition-property: opacity;
-  -ms-transition-property: opacity;
-  transition-property: opacity;
-  opacity: 1;
-  -ms-filter: none;
-  filter: none;
 }
 .js-nav-open {
   overflow: hidden;
