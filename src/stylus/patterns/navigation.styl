@@ -7,6 +7,9 @@ $nav-breakpoint = 48em
 
 .nav {
     position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: $nav-height;
     left: 0;
     right: 0;
@@ -19,6 +22,45 @@ $nav-breakpoint = 48em
         opacity: 0;
         .js-nav-open & {
             opacity: 1;
+        }
+    }
+    &__links {
+        padding-left: 0;
+        margin: 0;
+        display: none;
+        +above($nav-breakpoint) {
+            display: block;
+        }
+        li {
+            display: inline-block;
+        }
+        a {
+            position: relative;
+            display: inline-block;
+            border: 0;
+            font-weight: 400;
+            color: white;
+            margin-right: 0.5 * $leading;
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 50%;
+                right: 50%;
+                margin-top: 3px;
+                height: 3px;
+                background-color: fade-out($color-ice-fade, 30%);
+                transition-duration: 0.2s;
+                transition-timing-function: ease-out;
+                transition-property: left, right;
+            }
+            &:hover,
+            &:focus {
+                &:after {
+                    left: 0;
+                    right: 0;
+                }
+            }
         }
     }
     &__menu-button {
@@ -127,17 +169,17 @@ $nav-breakpoint = 48em
                 content: '';
                 display: block;
                 position: absolute;
+                left: 100%;
                 right: 0;
                 margin-top: 3px;
-                width: 0;
                 height: 3px;
                 background-color: fade-out($color-ice-fade, 30%);
-                transition: width 0.4s ease-out;
+                transition: left 0.4s ease-out;
             }
             &:hover,
             &:focus {
                 &:after {
-                    width: 100%;
+                    left: 0;
                 }
             }
         }
