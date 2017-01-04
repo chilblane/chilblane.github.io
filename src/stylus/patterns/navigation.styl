@@ -3,15 +3,32 @@ $nav-height = 3 * $leading
 $nav-button-size = 'calc(%s - 2px)' % (2.5 * $leading)
 $mobile-nav-duration = 0.3s
 
-.nav {
+.nav-header {
     position: fixed;
-    display: flex;
     justify-content: space-between;
     align-items: center;
     height: $nav-height;
     left: 0;
     right: 0;
     z-index: 10;
+    &--mobile {
+        display: flex;
+    }
+    &--desktop {
+        display: none;
+    }
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 100%;
+        bottom: 0;
+        border-bottom: 3px solid white;
+        transition-property: right, border-color, background-color;
+        transition-duration: 0.5s, 0s, 0s;
+        transition-timing-function: ease-in, ease-in-out, ease-in-out;
+        transition-delay: 0.5s, 1s, 1s;
+    }
     &__logo {
         position: relative;
         left: -100%;
@@ -37,16 +54,41 @@ $mobile-nav-duration = 0.3s
                 fill: $color-bg-fade;
             }
         }
-        span {
-        }
         .js-nav-open & {
             opacity: 1;
             left: 0;
+             //opacity, left
             transition-delay: 0s, 0s;
         }
-        +above($nav-breakpoint) {
-            opacity: 1;
-            left: 0;
+    }
+    +above($nav-breakpoint) {
+        &--mobile {
+            display: none;
+        }
+        &--desktop {
+            display: flex;
+        }
+        .nav-header__logo {
+             //opacity, left
+            transition-duration: 0.5s, 0s;
+            transition-delay: 0s, 0.5s;
+        }
+        &.nav-header--stuck {
+            .nav-header__bg {
+                right: 0;
+                background-color: fade-out($color-bg-dark, 10%);
+                border-color: $color-bg-fade;
+                material-shadow();
+                transition-duration: 0.5s, 0.5s, 0.5s;
+                transition-delay: 0s, 0.5s, 0.5s;
+            }
+            .nav-header__logo {
+                opacity: 1;
+                left: 0;
+                 //opacity, left
+                transition-duration: 1s, 0s;
+                transition-delay: 1s, 0s;
+            }
         }
     }
     &__links {

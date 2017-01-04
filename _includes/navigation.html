@@ -1,17 +1,20 @@
-<nav class='nav'>
-    <a class='nav__logo' href='{{ site.baseurl }}/'>
-        <svg width="186" height="190" viewBox="0 0 186 190" xmlns="http://www.w3.org/2000/svg">
-            <path d="M59.42 58.318c6.16-3.694 12.94-6.16 19.805-7.702L93.53 0l14.304 50.616c6.453 1.85 12.996 4.322 18.706 7.702l35.21-29.71-15.404 45.115c3.34 4.404 6.483 9.072 8.803 14.305l30.81-7.703-24.21 24.208c.632 4.8 1.178 9.764 1.1 15.405.078 38.04-31.29 69.322-70.42 69.322-38.26 0-69.63-31.283-69.323-69.322-.307-5.71.253-10.736 1.1-15.405L0 80.325l30.81 7.703c2.24-5.52 5.565-10.39 9.903-14.305L24.208 28.61l35.21 29.708zm40.58 63.65c7.63 11.062 22.675 14.14 33.948 6.818 11.274-7.32 14.582-22.316 7.58-33.786L100 121.968zm-14.808 0c-7.63 11.062-22.675 14.14-33.948 6.818-11.274-7.32-14.582-22.316-7.58-33.786l41.528 26.968zM133.325 144c-.607 17.708-18.356 31.91-39.612 31.91-22.357 0-40.105-14.202-40.713-31.91h80.325z" fill-rule="evenodd"/>
-        </svg>
-        <span>Daniel Singer</span>
+<nav class='nav-header nav-header--desktop js-nav-desktop'>
+    <div class='nav-header__bg'></div>
+    <a class='nav-header__logo' href='{{ site.baseurl }}/'>
+        {% include logo-nav.html %}
     </a>
-    <ul class='nav__links'>
+    <ul class='nav-header__links'>
         <li><a href='#about'>About</a></li>
         <li><a href='#expertise'>Expertise</a></li>
         <li><a href='#work'>Work</a></li>
         <li><a href='#contact'>Contact</a></li>
     </ul>
-    <span class='nav__menu-button js-nav-menu-btn'>menu</span>
+</nav>
+<nav class='nav-header nav-header--mobile'>
+    <a class='nav-header__logo' href='{{ site.baseurl }}/'>
+        {% include logo-nav.html %}
+    </a>
+    <span class='nav-header__menu-button js-nav-menu-btn'>menu</span>
 </nav>
 <nav class='mobile-nav'>
     <ul class='js-mobile-nav-list'>
