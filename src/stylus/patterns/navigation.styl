@@ -1,6 +1,7 @@
 // measurements for nav
 $nav-height = 3 * $leading
 $nav-button-size = 'calc(%s - 2px)' % (2.5 * $leading)
+$color-bg-navbar = fade-out($color-bg-dark, 10%)
 $mobile-nav-duration = 0.3s
 
 .nav-header {
@@ -13,6 +14,10 @@ $mobile-nav-duration = 0.3s
     z-index: 10;
     &--mobile {
         display: flex;
+        transition: background-color $mobile-nav-duration ease-out;
+        .js-nav-open & {
+            background-color: $color-bg-navbar;
+        }
     }
     &--desktop {
         display: none;
@@ -40,6 +45,7 @@ $mobile-nav-duration = 0.3s
         height: $nav-height;
         color: white;
         letter-spacing: 0.1em;
+        text-shadow: 0 0 5px black;
         transition-property: opacity, left;
         transition-duration: $mobile-nav-duration, 0s;
         transition-timing-function: ease-out, ease-out;
@@ -78,7 +84,7 @@ $mobile-nav-duration = 0.3s
             .nav-header__bg {
                 top: 0;
                 right: 0;
-                background-color: fade-out($color-bg-dark, 10%);
+                background-color: $color-bg-navbar;
                 border-color: $color-bg-glass;
                 material-shadow();
                 transition-duration: 0.5s, 0s, 0.5s, 0.5s, 0.5s;
@@ -111,7 +117,7 @@ $mobile-nav-duration = 0.3s
             border: 0;
             font-weight: 400;
             color: white;
-            margin-right: 0.5 * $leading;
+            margin-right: $leading;
             &:after {
                 content: '';
                 display: block;
