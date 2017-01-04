@@ -13,13 +13,24 @@ $mobile-nav-duration = 0.3s
     right: 0;
     z-index: 10;
     &__logo {
+        position: relative;
+        left: -100%;
         font-size: 1 * $font-scale * 1rem;
         line-height: $nav-height;
         height: $nav-height;
-        transition: opacity $mobile-nav-duration ease-out;
+        transition-property: opacity, left;
+        transition-duration: $mobile-nav-duration, 0s;
+        transition-timing-function: ease-out, ease-out;
+        transition-delay: 0s, $mobile-nav-duration;
         opacity: 0;
         .js-nav-open & {
             opacity: 1;
+            left: 0;
+            transition-delay: 0s, 0s;
+        }
+        +above($nav-breakpoint) {
+            opacity: 1;
+            left: 0;
         }
     }
     &__links {

@@ -2655,14 +2655,31 @@ textarea:focus {
   z-index: 10;
 }
 .nav__logo {
+  position: relative;
+  left: -100%;
   font-size: 1.414rem;
   line-height: 4.5rem;
   height: 4.5rem;
-  -webkit-transition: opacity 0.3s ease-out;
-  -moz-transition: opacity 0.3s ease-out;
-  -o-transition: opacity 0.3s ease-out;
-  -ms-transition: opacity 0.3s ease-out;
-  transition: opacity 0.3s ease-out;
+  -webkit-transition-property: opacity, left;
+  -moz-transition-property: opacity, left;
+  -o-transition-property: opacity, left;
+  -ms-transition-property: opacity, left;
+  transition-property: opacity, left;
+  -webkit-transition-duration: 0.3s, 0s;
+  -moz-transition-duration: 0.3s, 0s;
+  -o-transition-duration: 0.3s, 0s;
+  -ms-transition-duration: 0.3s, 0s;
+  transition-duration: 0.3s, 0s;
+  -webkit-transition-timing-function: ease-out, ease-out;
+  -moz-transition-timing-function: ease-out, ease-out;
+  -o-transition-timing-function: ease-out, ease-out;
+  -ms-transition-timing-function: ease-out, ease-out;
+  transition-timing-function: ease-out, ease-out;
+  -webkit-transition-delay: 0s, 0.3s;
+  -moz-transition-delay: 0s, 0.3s;
+  -o-transition-delay: 0s, 0.3s;
+  -ms-transition-delay: 0s, 0.3s;
+  transition-delay: 0s, 0.3s;
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
@@ -2671,6 +2688,20 @@ textarea:focus {
   opacity: 1;
   -ms-filter: none;
   filter: none;
+  left: 0;
+  -webkit-transition-delay: 0s, 0s;
+  -moz-transition-delay: 0s, 0s;
+  -o-transition-delay: 0s, 0s;
+  -ms-transition-delay: 0s, 0s;
+  transition-delay: 0s, 0s;
+}
+@media only screen and (min-width: 50em) {
+  .nav__logo {
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+    left: 0;
+  }
 }
 .nav__links {
   padding-left: 0;
