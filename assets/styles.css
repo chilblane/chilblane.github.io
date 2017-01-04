@@ -204,6 +204,8 @@ main .panel:nth-of-type(odd) {
   -moz-background-size: 150% 150%;
   background-size: 150% 150%;
   background-position: center center;
+  border-top: 1px solid rgba(229,241,255,0.1);
+  border-bottom: 1px solid #000;
 }
 /*
  *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
@@ -3152,8 +3154,8 @@ textarea:focus {
   -ms-animation: aesthetics-space 20s steps(4, end) infinite;
   animation: aesthetics-space 20s steps(4, end) infinite;
   border-radius: 5px;
-  -webkit-box-shadow: 0 2px 1px 1px rgba(229,241,255,0.1);
-  box-shadow: 0 2px 1px 1px rgba(229,241,255,0.1);
+  -webkit-box-shadow: 0 1px 0px 1px rgba(229,241,255,0.1);
+  box-shadow: 0 1px 0px 1px rgba(229,241,255,0.1);
 }
 @-moz-keyframes aesthetics-space {
   0%, 100% {
