@@ -15,14 +15,30 @@ $mobile-nav-duration = 0.3s
     &__logo {
         position: relative;
         left: -100%;
+        display: flex;
+        align-items: center;
         font-size: 1 * $font-scale * 1rem;
         line-height: $nav-height;
         height: $nav-height;
+        color: white;
+        letter-spacing: 0.1em;
         transition-property: opacity, left;
         transition-duration: $mobile-nav-duration, 0s;
         transition-timing-function: ease-out, ease-out;
         transition-delay: 0s, $mobile-nav-duration;
         opacity: 0;
+        svg {
+            height: 0.5 * $nav-height;
+            width: 0.5 * $nav-height;
+            margin-top: -0.25em;
+            margin-left: 0.5em;
+            margin-right: 0.5em;
+            path {
+                fill: $color-bg-fade;
+            }
+        }
+        span {
+        }
         .js-nav-open & {
             opacity: 1;
             left: 0;
