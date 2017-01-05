@@ -7,4 +7,28 @@
     background-position: 50% 50%;
     border-radius: 5px;
     box-shadow: 0 1px 0px 1px $color-bg-glass;
+    .form__footer {
+        position: relative;
+        button {
+            position: relative;
+            z-index: 5;
+        }
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 0.1em;
+            background-color: $color-purple;
+            box-shadow: 0 0 3em $color-purple, 0 0 1em $color-purple, 0 0 0.5em $color-purple;
+            opacity: 0.4;
+        }
+        &:before {
+            top: 33%;
+        }
+        &:after {
+            bottom: 33%;
+        }
+    }
 }

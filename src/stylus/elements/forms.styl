@@ -1,13 +1,17 @@
 .form {
     width: 100%;
-    padding: 1px $leading $leading;
     fieldset {
         max-width: "calc(15em + %s)" % ($leading * 4);
+        padding: 0 $leading;
         margin-left: auto;
         margin-right: auto;
     }
     &__control {
         margin-top: $leading;
+    }
+    &__footer {
+        text-align: center;
+        padding-bottom: $leading;
     }
 }
 
