@@ -4,6 +4,10 @@
     padding-right: 0;
     padding-bottom: 0;
     border-top: 1px solid $color-bg-glass;
+    .panel__content {
+        padding-left: $leading;
+        padding-right: $leading;
+    }
     &__inner {
         width: 100%;
         display: flex;
@@ -12,8 +16,7 @@
     }
     &__pane {
         width: 100%;
-        padding-top: 3 * $leading;
-        padding-bottom: 3 * $leading;
+        padding: 3 * $leading $leading;
         display: flex;
         flex-direction: column;
         background-image: linear-gradient($color-bg-dark, $color-bg-separator);
@@ -27,7 +30,9 @@
         font-size: 0.5 * $font-scale * 1rem;
         line-height: 0.5 * $leading;
         span {
-            padding: 0.2em 0.6em 0.3em;
+            position: relative;
+            display: inline-block;
+            padding: 0.2em 0.6em 0.2em 1.5em;
             color: $color-bg-fade;
             background-color: $color-bg-glass;
             border: 1px solid $color-bg-glass;
@@ -35,8 +40,17 @@
             border-radius: 1em 0.5em 0.5em 1em;
             margin: 0.25em;
             &:before {
-                content: '\25e6';
+                content: '';
+                display: inline-block;
+                position: absolute;
+                left: 0.5em;
+                top: 0.5em;
                 margin-right: 0.5em;
+                width: 0.5em;
+                height: 0.5em;
+                border-radius: 50%;
+                border: 1px solid fade-out($color-bg-fade, 50%);
+                background-color: mix($color-bg-separator, $color-bg-dark, 66%);
             }
         }
     }
