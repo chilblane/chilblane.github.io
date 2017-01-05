@@ -4,11 +4,26 @@
     padding: 0;
     li {
         display: inline-block;
-        font-size: 1 * $font-scale * 1rem;
-        line-height: $leading;
-        margin: 0 0.4em;
+        font-size: 2em;
+        height: 2em;
+        width: 2em;
+        line-height: 2;
+        text-align: center;
+        background-color: $color-bg-dark;
+        background-image: url('/assets/pattern-stars.png');
+        background-position: center center;
+        border-radius: 50%;
+        box-shadow: 0 1px 0px 1px $color-bg-glass;
+        text-align: center;
     }
     a {
         border: 0;
+        color: darken($color-purple, 30%);
+        text-shadow: 0 0 1em $color-purple;
+        transition: color 0.5s ease;
+        &:hover,
+        &:focus {
+            color: darken($color-purple, 20%);
+        }
     }
 }
