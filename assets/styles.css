@@ -2657,7 +2657,7 @@ textarea:focus {
 .site-footer {
   text-align: center;
   width: 100%;
-  padding-bottom: 1.5rem;
+  padding: 0 1.5rem 1.5rem;
 }
 .grid {
   display: -webkit-box;
@@ -2837,11 +2837,6 @@ textarea:focus {
 }
 .nav-header__logo span {
   color: #fff;
-  -webkit-transition: color 0.4s ease;
-  -moz-transition: color 0.4s ease;
-  -o-transition: color 0.4s ease;
-  -ms-transition: color 0.4s ease;
-  transition: color 0.4s ease;
   text-shadow: 0 0 0.1em currentColor;
 }
 .nav-header__logo svg {
