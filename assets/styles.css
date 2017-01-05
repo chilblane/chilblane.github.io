@@ -2842,10 +2842,7 @@ textarea:focus {
   -o-transition: color 0.4s ease;
   -ms-transition: color 0.4s ease;
   transition: color 0.4s ease;
-}
-.nav-header__logo:hover span,
-.nav-header__logo:focus span {
-  color: #9fbcdf;
+  text-shadow: 0 0 0.1em currentColor;
 }
 .nav-header__logo svg {
   height: 2.25rem;
