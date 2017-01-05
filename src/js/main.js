@@ -2,19 +2,40 @@
     var $ = require('jquery');
     require('jquery.scrollto');
 
-    var $body           = $('body'),
+    var $window         = $(window),
+        $body           = $('body'),
         navMenuBtn      = $('.js-nav-menu-btn'),
         mobileNavList   = $('.js-mobile-nav-list li'),
         mobileNavLinks  = $('.js-mobile-nav-list li a'),
-        stickyHeader    = $('.js-nav-desktop');
+        stickyHeader    = $('.js-nav-desktop'),
+        animEl          = $('.js-anim-el');
 
     function init() {
         animateScroll();
         navMenuBtn.on('click', toggleMenu);
         mobileNavLinks.on('click', toggleMenu);
-        stickyNav(stickyHeader);
-        $(window).bind("scroll mousewheel DOMMouseScroll resize", function() {
+        $window.on('scroll resize', function() {
             stickyNav(stickyHeader);
+            checkIfInView();
+        });
+        $window.trigger('scroll');
+    }
+
+    function checkIfInView() {
+        var windowHeight = $window.height(),
+            windowTopPos = $window.scrollTop(),
+            windowBotPos = windowTopPos + windowHeight;
+
+        $.each(animEl, function() {
+            var el = $(this),
+                elHeight = el.outerHeight(),
+                elTopPos = el.offset().top,
+                elBotPos = elTopPos + elHeight;
+            if(elBotPos >= windowTopPos && elTopPos <= windowBotPos && !el.hasClass('in-view')) {
+                el.addClass('in-view');
+            // } else {
+            //     el.removeClass('in-view');
+            }
         });
     }
 

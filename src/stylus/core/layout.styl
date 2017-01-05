@@ -19,9 +19,19 @@ $color-bg-panel = mix($color-bg-dark, $color-bg-light, 90%)
             content: '';
             display: block;
             margin-top: 0.5 * $leading;
-            width: 100%;
+            width: 0%;
             height: 3px;
+            background-color: white;
+            box-shadow: 0 0 3px white;
+        }
+        &.in-view:after {
+            width: 100%;
             background-color: $color-bg-separator;
+            box-shadow: none;
+            transition-property: width, background-color, box-shadow;
+            transition-duration: 0.5s, 0.5s, 0.5s;
+            transition-delay: 0.7s, 1.2s, 1.2s;
+            transition-timing-function: ease-in, ease, ease;
         }
     }
     &--45em {

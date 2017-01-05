@@ -12,14 +12,14 @@ layout: home
 <main>
     <section class='panel panel--45em' id='about'>
         <div class='panel__content'>
-            <h2>Hello,</h2>
+            <h2 class='js-anim-el'>Hello,</h2>
             <p>I’m a web designer and developer focused on marketing and product sites, based in Scottsdale, Arizona, and currently looking for new opportunities.</p>
             <p>I’m passionate about consistency, scalability, and performance. I believe your web presence and application is your brand, your users are your top priority, and even the smallest details are important.</p>
         </div>
     </section>
     <section class='panel panel--45em' id='what-i-do'>
         <div class='panel__content'>
-            <h2>What I do:</h2>
+            <h2 class='js-anim-el'>What I do:</h2>
             <h3>Marketing web design</h3>
             <p>I create brand experiences that delight, inform, and encourage website visitors to convert into users, utilizing modern and responsible practices and UX.</p>
             <h3>Front-end development</h3>
@@ -30,7 +30,7 @@ layout: home
     </section>
     <section class='panel' id='expertise'>
         <div class='panel__content'>
-            <h2>My Expertise:</h2>
+            <h2 class='js-anim-el'>My Expertise:</h2>
             <div class='grid'>
                 <div class='grid__column'>
                     <h3>Development</h3>
@@ -82,7 +82,7 @@ layout: home
     </section>
     <section class='panel portfolio panel--45em' id='work'>
         <div class='panel__content'>
-            <h2>Selected work:</h2>
+            <h2 class='js-anim-el'>Selected work:</h2>
             <div class='portfolio__pane'>
                 <h3>Axosoft v17</h3>
                 <img src='/assets/work/axosoft-app.png' srcset='/assets/work/axosoft-app@2x.png 2x' alt='Axosoft main workspace mockup, September 2016' class='portfolio__preview'>
@@ -113,24 +113,24 @@ layout: home
     </section>
     <section class='panel panel--45em' id='contact'>
         <div class='panel__content'>
-            <h2>Reach out.</h2>
+            <h2 class='js-anim-el'>Reach out.</h2>
             <form class='form form--space' autocomplete='off' action='https://formspree.io/daniel@chilblane.com' method='post'>
                 <fieldset>
                     <div class='form__control'>
                         <label for='contact-name'>Name</label>
-                        <input type='text' name='name' id='contact-name'>
+                        <input type='text' name='name' id='contact-name' required>
                     </div>
                     <div class='form__control'>
                         <label for='contact-email'>Email</label>
-                        <input type='email' name='_replyto' id='contact-email'>
+                        <input type='email' name='_replyto' id='contact-email' required>
                     </div>
                     <div class='form__control'>
                         <label for='contact-subject'>Subject</label>
-                        <input type='text' name='_subject' id='contact-subject'>
+                        <input type='text' name='_subject' id='contact-subject' required>
                     </div>
                     <div class='form__control'>
                         <label for='contact-message'>Message</label>
-                        <textarea name='subject' id='contact-message' rows='5'></textarea>
+                        <textarea name='subject' id='contact-message' rows='5' required></textarea>
                     </div>
                     <button type='submit' name='submit' class='button--primary full-width mtm'>
                         Send me a message <i class='fa fa-rocket'></i>
