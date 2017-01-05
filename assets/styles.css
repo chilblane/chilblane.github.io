@@ -237,14 +237,14 @@ li {
 }
 .panel--wave {
   background-color: #16212f;
-  background-image: -webkit-repeating-linear-gradient(120deg, transparent 0px, transparent 2px, #000b19 3px), url("/assets/pattern-wave.svg");
-  background-image: -moz-repeating-linear-gradient(120deg, transparent 0px, transparent 2px, #000b19 3px), url("/assets/pattern-wave.svg");
-  background-image: -o-repeating-linear-gradient(120deg, transparent 0px, transparent 2px, #000b19 3px), url("/assets/pattern-wave.svg");
-  background-image: -ms-repeating-linear-gradient(120deg, transparent 0px, transparent 2px, #000b19 3px), url("/assets/pattern-wave.svg");
-  background-image: repeating-linear-gradient(-30deg, transparent 0px, transparent 2px, #000b19 3px), url("/assets/pattern-wave.svg");
-  -webkit-background-size: cover, cover;
-  -moz-background-size: cover, cover;
-  background-size: cover, cover;
+  background-image: -webkit-linear-gradient(transparent 0px, transparent 2px, #000b19 3px), url("/assets/pattern-wave.svg");
+  background-image: -moz-linear-gradient(transparent 0px, transparent 2px, #000b19 3px), url("/assets/pattern-wave.svg");
+  background-image: -o-linear-gradient(transparent 0px, transparent 2px, #000b19 3px), url("/assets/pattern-wave.svg");
+  background-image: -ms-linear-gradient(transparent 0px, transparent 2px, #000b19 3px), url("/assets/pattern-wave.svg");
+  background-image: linear-gradient(transparent 0px, transparent 2px, #000b19 3px), url("/assets/pattern-wave.svg");
+  -webkit-background-size: auto 3px, cover;
+  -moz-background-size: auto 3px, cover;
+  background-size: auto 3px, cover;
   background-position: center center, center center;
   border-top: 1px solid rgba(229,241,255,0.1);
   border-bottom: 1px solid #000;
@@ -2845,9 +2845,6 @@ textarea:focus {
   margin-top: -0.25em;
   margin-left: 0.5em;
   margin-right: 0.5em;
-}
-.nav-header__logo svg path {
-  fill: #9fbcdf;
 }
 .js-nav-open .nav-header__logo {
   opacity: 1;
