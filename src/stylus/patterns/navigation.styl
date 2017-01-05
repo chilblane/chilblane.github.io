@@ -1,7 +1,7 @@
 // measurements for nav
 $nav-height = 3 * $leading
 $nav-button-size = 'calc(%s - 2px)' % (2.5 * $leading)
-$color-bg-navbar = fade-out($color-bg-dark, 10%)
+$color-bg-navbar = fade-out($color-bg-dark, 20%)
 $mobile-nav-duration = 0.3s
 
 .nav-header {
@@ -43,7 +43,6 @@ $mobile-nav-duration = 0.3s
         font-size: 1 * $font-scale * 1rem;
         line-height: $nav-height;
         height: $nav-height;
-        color: white;
         letter-spacing: 0.1em;
         text-shadow: 0 0 5px black;
         transition-property: opacity, left;
@@ -51,6 +50,16 @@ $mobile-nav-duration = 0.3s
         transition-timing-function: ease-out, ease-out;
         transition-delay: 0s, $mobile-nav-duration;
         opacity: 0;
+        span {
+            color: white;
+            transition: color 0.4s ease;
+        }
+        &:hover,
+        &:focus {
+            span {
+                color: $color-bg-fade;
+            }
+        }
         svg {
             height: 0.5 * $nav-height;
             width: 0.5 * $nav-height;
