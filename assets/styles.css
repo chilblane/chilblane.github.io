@@ -221,13 +221,24 @@ li {
 .panel--60em .panel__content {
   max-width: 60em;
 }
-main .panel:nth-of-type(odd) {
+.panel--hex {
+  background-image: -webkit-radial-gradient(circle at top right, rgba(229,241,255,0.1), transparent);
+  background-image: -moz-radial-gradient(circle at top right, rgba(229,241,255,0.1), transparent);
+  background-image: -o-radial-gradient(circle at top right, rgba(229,241,255,0.1), transparent);
+  background-image: -ms-radial-gradient(circle at top right, rgba(229,241,255,0.1), transparent);
+  background-image: radial-gradient(circle at top right, rgba(229,241,255,0.1), transparent);
+}
+.panel--wave {
   background-color: #16212f;
-  background-image: url("/assets/pattern-wave.svg");
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  background-position: center center;
+  background-image: -webkit-repeating-linear-gradient(120deg, transparent 0px, transparent 2px, #000b19 3px), url("/assets/pattern-wave.svg");
+  background-image: -moz-repeating-linear-gradient(120deg, transparent 0px, transparent 2px, #000b19 3px), url("/assets/pattern-wave.svg");
+  background-image: -o-repeating-linear-gradient(120deg, transparent 0px, transparent 2px, #000b19 3px), url("/assets/pattern-wave.svg");
+  background-image: -ms-repeating-linear-gradient(120deg, transparent 0px, transparent 2px, #000b19 3px), url("/assets/pattern-wave.svg");
+  background-image: repeating-linear-gradient(-30deg, transparent 0px, transparent 2px, #000b19 3px), url("/assets/pattern-wave.svg");
+  -webkit-background-size: cover, cover;
+  -moz-background-size: cover, cover;
+  background-size: cover, cover;
+  background-position: center center, center center;
   border-top: 1px solid rgba(229,241,255,0.1);
   border-bottom: 1px solid #000;
 }
@@ -2647,6 +2658,9 @@ textarea:focus {
   flex-grow: 1;
   min-width: 20em;
 }
+.hello {
+  background-color: #000b19;
+}
 .hero {
   position: relative;
   overflow: hidden;
@@ -2727,26 +2741,29 @@ textarea:focus {
   border-bottom: 3px solid #fff;
   -webkit-box-shadow: 0 0 3px #fff;
   box-shadow: 0 0 3px #fff;
-  -webkit-transition-property: right, top, box-shadow, border-color, background-color;
-  -moz-transition-property: right, top, box-shadow, border-color, background-color;
-  -o-transition-property: right, top, box-shadow, border-color, background-color;
-  -ms-transition-property: right, top, box-shadow, border-color, background-color;
-  transition-property: right, top, box-shadow, border-color, background-color;
-  -webkit-transition-duration: 0.5s, 0s, 0s, 0s, 0s;
-  -moz-transition-duration: 0.5s, 0s, 0s, 0s, 0s;
-  -o-transition-duration: 0.5s, 0s, 0s, 0s, 0s;
-  -ms-transition-duration: 0.5s, 0s, 0s, 0s, 0s;
-  transition-duration: 0.5s, 0s, 0s, 0s, 0s;
-  -webkit-transition-timing-function: ease-in, linear, ease-out, ease-out, ease-out;
-  -moz-transition-timing-function: ease-in, linear, ease-out, ease-out, ease-out;
-  -o-transition-timing-function: ease-in, linear, ease-out, ease-out, ease-out;
-  -ms-transition-timing-function: ease-in, linear, ease-out, ease-out, ease-out;
-  transition-timing-function: ease-in, linear, ease-out, ease-out, ease-out;
-  -webkit-transition-delay: 0.5s, 1s, 1s, 1s, 1s;
-  -moz-transition-delay: 0.5s, 1s, 1s, 1s, 1s;
-  -o-transition-delay: 0.5s, 1s, 1s, 1s, 1s;
-  -ms-transition-delay: 0.5s, 1s, 1s, 1s, 1s;
-  transition-delay: 0.5s, 1s, 1s, 1s, 1s;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -webkit-transition-property: right, top, box-shadow, border-color, background-color, opacity;
+  -moz-transition-property: right, top, box-shadow, border-color, background-color, opacity;
+  -o-transition-property: right, top, box-shadow, border-color, background-color, opacity;
+  -ms-transition-property: right, top, box-shadow, border-color, background-color, opacity;
+  transition-property: right, top, box-shadow, border-color, background-color, opacity;
+  -webkit-transition-duration: 0s, 0s, 0s, 0s, 0s, 0.7s;
+  -moz-transition-duration: 0s, 0s, 0s, 0s, 0s, 0.7s;
+  -o-transition-duration: 0s, 0s, 0s, 0s, 0s, 0.7s;
+  -ms-transition-duration: 0s, 0s, 0s, 0s, 0s, 0.7s;
+  transition-duration: 0s, 0s, 0s, 0s, 0s, 0.7s;
+  -webkit-transition-timing-function: ease-in, linear, ease-out, ease-out, ease-out, ease;
+  -moz-transition-timing-function: ease-in, linear, ease-out, ease-out, ease-out, ease;
+  -o-transition-timing-function: ease-in, linear, ease-out, ease-out, ease-out, ease;
+  -ms-transition-timing-function: ease-in, linear, ease-out, ease-out, ease-out, ease;
+  transition-timing-function: ease-in, linear, ease-out, ease-out, ease-out, ease;
+  -webkit-transition-delay: 1.2s, 1.2s, 1.2s, 1.2s, 1.2s, 0.5s;
+  -moz-transition-delay: 1.2s, 1.2s, 1.2s, 1.2s, 1.2s, 0.5s;
+  -o-transition-delay: 1.2s, 1.2s, 1.2s, 1.2s, 1.2s, 0.5s;
+  -ms-transition-delay: 1.2s, 1.2s, 1.2s, 1.2s, 1.2s, 0.5s;
+  transition-delay: 1.2s, 1.2s, 1.2s, 1.2s, 1.2s, 0.5s;
 }
 .nav-header__logo {
   position: relative;
@@ -2856,16 +2873,19 @@ textarea:focus {
     border-color: rgba(229,241,255,0.1);
     -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    -webkit-transition-duration: 0.5s, 0s, 0.5s, 0.5s, 0.5s;
-    -moz-transition-duration: 0.5s, 0s, 0.5s, 0.5s, 0.5s;
-    -o-transition-duration: 0.5s, 0s, 0.5s, 0.5s, 0.5s;
-    -ms-transition-duration: 0.5s, 0s, 0.5s, 0.5s, 0.5s;
-    transition-duration: 0.5s, 0s, 0.5s, 0.5s, 0.5s;
-    -webkit-transition-delay: 0s, 0.5s, 0.5s, 0.5s, 0.5s;
-    -moz-transition-delay: 0s, 0.5s, 0.5s, 0.5s, 0.5s;
-    -o-transition-delay: 0s, 0.5s, 0.5s, 0.5s, 0.5s;
-    -ms-transition-delay: 0s, 0.5s, 0.5s, 0.5s, 0.5s;
-    transition-delay: 0s, 0.5s, 0.5s, 0.5s, 0.5s;
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+    -webkit-transition-duration: 0.5s, 0s, 0.5s, 0.5s, 0.5s, 0s;
+    -moz-transition-duration: 0.5s, 0s, 0.5s, 0.5s, 0.5s, 0s;
+    -o-transition-duration: 0.5s, 0s, 0.5s, 0.5s, 0.5s, 0s;
+    -ms-transition-duration: 0.5s, 0s, 0.5s, 0.5s, 0.5s, 0s;
+    transition-duration: 0.5s, 0s, 0.5s, 0.5s, 0.5s, 0s;
+    -webkit-transition-delay: 0s, 0.5s, 0.5s, 0.5s, 0.5s, 0s;
+    -moz-transition-delay: 0s, 0.5s, 0.5s, 0.5s, 0.5s, 0s;
+    -o-transition-delay: 0s, 0.5s, 0.5s, 0.5s, 0.5s, 0s;
+    -ms-transition-delay: 0s, 0.5s, 0.5s, 0.5s, 0.5s, 0s;
+    transition-delay: 0s, 0.5s, 0.5s, 0.5s, 0.5s, 0s;
   }
   .nav-header.nav-header--stuck .nav-header__logo {
     opacity: 1;
@@ -3162,6 +3182,9 @@ textarea:focus {
 }
 .js-nav-open {
   overflow: hidden;
+}
+.portfolio {
+  background-color: #000b19;
 }
 .portfolio__pane {
   padding-bottom: 3rem;
