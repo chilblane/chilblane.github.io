@@ -49,8 +49,8 @@ $color-bg-panel = mix($color-bg-dark, $color-bg-light, 90%)
     }
     &--wave {
         background-color: $color-bg-panel;
-        background-image: repeating-linear-gradient(-30deg, transparent 0px, transparent 2px, $color-bg-dark 3px), url('/assets/pattern-wave.svg');
-        background-size: cover, cover;
+        background-image: linear-gradient(transparent 0px, transparent 2px, $color-bg-dark 3px), url('/assets/pattern-wave.svg');
+        background-size: auto 3px, cover;
         background-position: center center, center center;
         border-top: 1px solid $color-bg-glass;
         border-bottom: 1px solid black;
