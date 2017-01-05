@@ -223,14 +223,10 @@ li {
 }
 main .panel:nth-of-type(odd) {
   background-color: #16212f;
-  background-image: -webkit-radial-gradient(#16212f, #000b19);
-  background-image: -moz-radial-gradient(#16212f, #000b19);
-  background-image: -o-radial-gradient(#16212f, #000b19);
-  background-image: -ms-radial-gradient(#16212f, #000b19);
-  background-image: radial-gradient(#16212f, #000b19);
-  -webkit-background-size: 150% 150%;
-  -moz-background-size: 150% 150%;
-  background-size: 150% 150%;
+  background-image: url("/assets/pattern-wave.svg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
   background-position: center center;
   border-top: 1px solid rgba(229,241,255,0.1);
   border-bottom: 1px solid #000;
