@@ -9,9 +9,9 @@ button {
     transition-timing-function: ease-out, ease;
     transition-duration: 0.2s, 0.2s;
     border: 2px solid currentColor;
-    box-shadow: 0 0 3px black;
+    box-shadow: 0 3px 3px fade-out(black, 76%);
     &:active {
-        box-shadow: 0 0 3px black, inset 0 0.5em 0.5em fade-out(black, 90%);
+        box-shadow: 0 3px 3px fade-out(black, 76%), inset 0 0.5em 0.5em fade-out(black, 90%);
     }
     &--small {
         font-size: 0.5 * $font-scale * 1rem;
