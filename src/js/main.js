@@ -25,8 +25,7 @@
         var windowHeight = $window.height(),
             windowTopPos = $window.scrollTop(),
             windowBotPos = windowTopPos + windowHeight;
-            // adjust to center 2/3 of window
-            windowTopPos = windowTopPos + (windowHeight / 3);
+            // adjust to top 2/3 of window
             windowBotPos = windowBotPos - (windowHeight / 3);
 
         $.each(animEl, function() {
