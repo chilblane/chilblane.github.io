@@ -18,3 +18,11 @@ Once you've done so:
 
 `grunt` will build the site and serve it to `http://localhost:9000`.
 You can split these tasks into `grunt build` and `grunt serve`.
+
+## Acknowledgments
+
+The website uses the following code, snippets, and guides:
+
+- jQuery
+- [jQuery.scrollTo](https://github.com/flesler/jquery.scrollTo)
+- [`function check_if_in_view()`](https://www.sitepoint.com/scroll-based-animations-jquery-css3/)
