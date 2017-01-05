@@ -2569,6 +2569,13 @@ button {
   -ms-transition-duration: 0.2s, 0.2s;
   transition-duration: 0.2s, 0.2s;
   border: 2px solid currentColor;
+  -webkit-box-shadow: 0 0 3px #000;
+  box-shadow: 0 0 3px #000;
+}
+.button:active,
+button:active {
+  -webkit-box-shadow: 0 0 3px #000, inset 0 0.5em 0.5em rgba(0,0,0,0.1);
+  box-shadow: 0 0 3px #000, inset 0 0.5em 0.5em rgba(0,0,0,0.1);
 }
 .button--small,
 button--small {
@@ -2590,8 +2597,6 @@ button--link:focus {
 .button--link:active,
 button--link:active {
   background-color: #207ff3;
-  -webkit-box-shadow: inset 0 0.5em 0.5em rgba(0,0,0,0.1);
-  box-shadow: inset 0 0.5em 0.5em rgba(0,0,0,0.1);
 }
 .button--primary,
 button--primary {
@@ -2609,8 +2614,6 @@ button--primary:focus {
 .button--primary:active,
 button--primary:active {
   background-color: #990091;
-  -webkit-box-shadow: inset 0 0.5em 0.5em rgba(0,0,0,0.1);
-  box-shadow: inset 0 0.5em 0.5em rgba(0,0,0,0.1);
 }
 .form {
   width: 100%;
