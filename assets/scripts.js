@@ -10460,6 +10460,9 @@ return jQuery;
         var windowHeight = $window.height(),
             windowTopPos = $window.scrollTop(),
             windowBotPos = windowTopPos + windowHeight;
+        // adjust to center 2/3 of window
+        windowTopPos = windowTopPos + windowHeight / 3;
+        windowBotPos = windowBotPos - windowHeight / 3;
 
         $.each(animEl, function () {
             var el = $(this),
@@ -10468,8 +10471,6 @@ return jQuery;
                 elBotPos = elTopPos + elHeight;
             if (elBotPos >= windowTopPos && elTopPos <= windowBotPos && !el.hasClass('in-view')) {
                 el.addClass('in-view');
-                // } else {
-                //     el.removeClass('in-view');
             }
         });
     }
