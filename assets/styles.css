@@ -2657,6 +2657,7 @@ textarea:focus {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  text-shadow: 0 0 2px #000;
 }
 .hero .panel__content {
   position: relative;
@@ -2669,10 +2670,10 @@ textarea:focus {
 }
 .moon {
   position: absolute;
-  width: 50vh;
-  height: 50vh;
-  top: 25%;
-  right: -33%;
+  width: 80vh;
+  height: 80vh;
+  top: 10%;
+  right: -50vh;
   background-color: #000b19;
   border: 1px solid rgba(229,241,255,0.1);
   -webkit-box-shadow: 0 0 100em rgba(229,241,255,0.1), 0 0 10em #9fbcdf, 0 0 1em #9fbcdf, inset 0 0 10em rgba(159,188,223,0.25);

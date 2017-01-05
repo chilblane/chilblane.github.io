@@ -6,7 +6,7 @@
     </radialGradient>
     <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="b">
         <stop stop-color="#16212f" offset="0%"/>
-        <stop stop-color="#000b19" offset="100%"/>
+        <stop stop-color="#000b19" offset="80%"/>
     </linearGradient>
   </defs>
   <g fill="none" fill-rule="evenodd">
