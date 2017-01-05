@@ -1,23 +1,44 @@
 .portfolio {
     background-color: $color-bg-dark;
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
     &__pane {
-        padding-bottom: 2 * $leading;
+        padding-bottom: 3 * $leading;
         margin-top: $leading;
-        &:not(:first-of-type) {
-            border-top: 3px solid $color-bg-separator;
-            padding-top: 2 * $leading;
-        }
+        display: flex;
+        flex-direction: column;
     }
     h3 {
         text-align: center;
     }
-    &__preview {
-        display: block;
-        max-width: 100%;
+    p {
+        max-width: 45em;
+        margin-top: 2 * $leading;
         margin-left: auto;
         margin-right: auto;
-        height: auto;
-        margin-top: $leading;
-        border: 1px solid $color-bg-fade;
+    }
+    &__preview {
+        max-width: calc(65em + 2px); // 64em + 1em + 2px
+        padding: 0.5em;
+        background-color: $color-bg-glass;
+        background-image: linear-gradient(120deg,
+            transparent 0%,
+            fade-out(white, 95%) 50%,
+            transparent 50%,
+            transparent 100%);
+        border: 1px solid $color-bg-glass;
+        border-radius: 0.5em;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: $leading;
+        box-shadow: 0 0 10em $color-bg-glass;
+    }
+    &__image {
+        display: block;
+        img-fluid();
+        border: 2px solid black;
     }
 }

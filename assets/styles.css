@@ -117,6 +117,11 @@ h3 {
   color: #9fbcdf;
   font-weight: 400;
 }
+h1,
+h2,
+h3 {
+  text-shadow: 0 0 0.1em currentColor;
+}
 p {
   margin-top: 1.5rem;
   line-height: 1.5rem;
@@ -3193,25 +3198,73 @@ textarea:focus {
 .portfolio {
   background-color: #000b19;
 }
-.portfolio__pane {
-  padding-bottom: 3rem;
-  margin-top: 1.5rem;
+.portfolio__inner {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: distribute;
+  -moz-box-pack: distribute;
+  -o-box-pack: distribute;
+  -ms-flex-pack: distribute;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
 }
-.portfolio__pane:not(:first-of-type) {
-  border-top: 3px solid #2c3e53;
-  padding-top: 3rem;
+.portfolio__pane {
+  padding-bottom: 4.5rem;
+  margin-top: 1.5rem;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -o-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 .portfolio h3 {
   text-align: center;
 }
-.portfolio__preview {
-  display: block;
-  max-width: 100%;
+.portfolio p {
+  max-width: 45em;
+  margin-top: 3rem;
   margin-left: auto;
   margin-right: auto;
+}
+.portfolio__preview {
+  max-width: calc(65em + 2px);
+  padding: 0.5em;
+  background-color: rgba(229,241,255,0.1);
+  background-image: -webkit-linear-gradient(330deg, transparent 0%, rgba(255,255,255,0.05) 50%, transparent 50%, transparent 100%);
+  background-image: -moz-linear-gradient(330deg, transparent 0%, rgba(255,255,255,0.05) 50%, transparent 50%, transparent 100%);
+  background-image: -o-linear-gradient(330deg, transparent 0%, rgba(255,255,255,0.05) 50%, transparent 50%, transparent 100%);
+  background-image: -ms-linear-gradient(330deg, transparent 0%, rgba(255,255,255,0.05) 50%, transparent 50%, transparent 100%);
+  background-image: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.05) 50%, transparent 50%, transparent 100%);
+  border: 1px solid rgba(229,241,255,0.1);
+  border-radius: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5rem;
+  -webkit-box-shadow: 0 0 10em rgba(229,241,255,0.1);
+  box-shadow: 0 0 10em rgba(229,241,255,0.1);
+}
+.portfolio__image {
+  display: block;
+  max-width: 100%;
   height: auto;
-  margin-top: 1.5rem;
-  border: 1px solid #9fbcdf;
+  border: 2px solid #000;
 }
 .social {
   text-align: center;
@@ -3236,7 +3289,7 @@ textarea:focus {
 .social a {
   border: 0;
   color: #b300a9;
-  text-shadow: 0 0 1em #ff00f2;
+  text-shadow: 0 0 1em currentColor;
   -webkit-transition: color 0.5s ease;
   -moz-transition: color 0.5s ease;
   -o-transition: color 0.5s ease;
