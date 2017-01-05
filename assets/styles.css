@@ -2624,12 +2624,36 @@ textarea:focus {
   min-width: 20em;
 }
 .hero {
-  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(0,115,255,0.1);
+  background-image: url("/assets/pattern-stars.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.hero .panel__content {
+  position: relative;
+  z-index: 5;
 }
 .hero p {
   text-transform: lowercase;
   color: #9fbcdf;
   letter-spacing: 0.4em;
+}
+.moon {
+  position: absolute;
+  width: 50vh;
+  height: 50vh;
+  top: 25%;
+  right: -33%;
+  background-color: #000b19;
+  border: 1px solid rgba(229,241,255,0.1);
+  -webkit-box-shadow: 0 0 100em rgba(229,241,255,0.1), 0 0 10em #9fbcdf, 0 0 1em #9fbcdf, inset 0 0 10em rgba(159,188,223,0.25);
+  box-shadow: 0 0 100em rgba(229,241,255,0.1), 0 0 10em #9fbcdf, 0 0 1em #9fbcdf, inset 0 0 10em rgba(159,188,223,0.25);
+  border-radius: 50%;
 }
 .nav-header {
   position: fixed;
@@ -3156,9 +3180,6 @@ textarea:focus {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  -webkit-background-size: auto 125%;
-  -moz-background-size: auto 125%;
-  background-size: auto 125%;
   border-radius: 5px;
   -webkit-box-shadow: 0 1px 0px 1px rgba(229,241,255,0.1);
   box-shadow: 0 1px 0px 1px rgba(229,241,255,0.1);
