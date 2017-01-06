@@ -510,6 +510,7 @@ textarea:focus {
 }
 .nav-header__logo {
   position: relative;
+  z-index: 10;
   left: -100%;
   display: -webkit-box;
   display: -moz-box;
@@ -1071,9 +1072,9 @@ textarea:focus {
   background-color: #000b19;
   background-image: url("/assets/pattern-stars.png");
   background-position: center center;
-  -webkit-background-size: 1000% 1000%;
-  -moz-background-size: 1000% 1000%;
-  background-size: 1000% 1000%;
+  -webkit-background-size: 1000% auto;
+  -moz-background-size: 1000% auto;
+  background-size: 1000% auto;
   border-radius: 50%;
   -webkit-box-shadow: 0 1px 0px 1px rgba(229,241,255,0.1);
   box-shadow: 0 1px 0px 1px rgba(229,241,255,0.1);
