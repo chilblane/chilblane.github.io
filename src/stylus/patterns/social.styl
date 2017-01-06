@@ -4,26 +4,47 @@
     padding: 0;
     li {
         display: inline-block;
-        font-size: 2em;
-        height: 2em;
-        width: 2em;
-        line-height: 2;
+    }
+    a {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 0;
+        height: 3em;
+        width: 3em;
         text-align: center;
         background-color: $color-bg-dark;
         background-image: url('/assets/pattern-stars.png');
         background-position: center center;
+        background-size: 1000% 1000%;
         border-radius: 50%;
         box-shadow: 0 1px 0px 1px $color-bg-glass;
         text-align: center;
     }
-    a {
-        border: 0;
-        color: darken($color-purple, 30%);
-        text-shadow: 0 0 1em currentColor;
-        transition: color 0.5s ease;
-        &:hover,
-        &:focus {
-            color: darken($color-purple, 20%);
+    svg {
+        bottom: 1em;
+        height: 0.9em;
+        animation: sprite-bounce 4s steps(2) infinite;
+        path {
+            fill: $color-purple;
+            transition: fill 0.4s ease;
         }
     }
+    a:hover,
+    a:focus {
+        svg path {
+            fill: lighten($color-purple, 50%);
+        }
+    }
+}
+
+@keyframes sprite-bounce {
+    0%, 100% {
+        margin-top: -0.1em;
+    }
+    50% {
+        margin-top: 0.1em;
+    }
+
 }
