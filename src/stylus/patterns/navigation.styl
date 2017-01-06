@@ -141,6 +141,9 @@ $mobile-nav-duration = 0.3s
                 }
             }
         }
+        li:last-child a:after {
+            background-color: fade-out($color-purple, 30%);
+        }
     }
     &__menu-button {
         position: absolute;
@@ -259,6 +262,9 @@ $mobile-nav-duration = 0.3s
                     left: 0;
                 }
             }
+        }
+        &:last-child a:after {
+            background-color: fade-out($color-purple, 30%);
         }
     }
     .js-nav-open & {

@@ -685,6 +685,9 @@ textarea:focus {
   left: 0;
   right: 0;
 }
+.nav-header__links li:last-child a:after {
+  background-color: rgba(255,0,242,0.7);
+}
 .nav-header__menu-button {
   position: absolute;
   right: 0;
@@ -853,6 +856,9 @@ textarea:focus {
 .mobile-nav li a:hover:after,
 .mobile-nav li a:focus:after {
   left: 0;
+}
+.mobile-nav li:last-child a:after {
+  background-color: rgba(255,0,242,0.7);
 }
 .js-nav-open .mobile-nav {
   left: -50%;
