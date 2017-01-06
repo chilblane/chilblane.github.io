@@ -2690,8 +2690,9 @@ textarea:focus {
   -webkit-background-size: contain;
   -moz-background-size: contain;
   background-size: contain;
-  background-position: center center;
+  background-position: center left;
   background-repeat: repeat-x;
+  border-top: 1px solid rgba(229,241,255,0.1);
 }
 .hello h2.in-view:after {
   background-color: rgba(229,241,255,0.1);
