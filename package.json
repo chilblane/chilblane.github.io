@@ -19,6 +19,7 @@
     "jquery.scrollto": "^2.1.2",
     "load-grunt-tasks": "^3.5.2",
     "nib": "^1.1.2",
+    "picturefill": "^3.0.2",
     "rupture": "^0.6.2",
     "serve-static": "^1.11.1",
     "time-grunt": "^1.4.0"

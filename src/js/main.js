@@ -1,6 +1,7 @@
 (function(window, document) {
     var $ = require('jquery');
     require('jquery.scrollto');
+    require('picturefill');
 
     var $window         = $(window),
         $body           = $('body'),
