@@ -2686,6 +2686,15 @@ textarea:focus {
 }
 .hello {
   background-color: #000b19;
+  background-image: url("/assets/daniel.gif");
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: repeat-x;
+}
+.hello h2.in-view:after {
+  background-color: rgba(229,241,255,0.1);
 }
 .hero {
   position: relative;
