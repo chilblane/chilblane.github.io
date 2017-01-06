@@ -389,7 +389,11 @@ textarea:focus {
 }
 .hello {
   background-color: #000b19;
-  background-image: url("/assets/daniel.gif");
+  background-image: url("/assets/daniel2.gif"), -webkit-linear-gradient(#000b19, #2c3e53);
+  background-image: url("/assets/daniel2.gif"), -moz-linear-gradient(#000b19, #2c3e53);
+  background-image: url("/assets/daniel2.gif"), -o-linear-gradient(#000b19, #2c3e53);
+  background-image: url("/assets/daniel2.gif"), -ms-linear-gradient(#000b19, #2c3e53);
+  background-image: url("/assets/daniel2.gif"), linear-gradient(#000b19, #2c3e53);
   -webkit-background-size: contain;
   -moz-background-size: contain;
   background-size: contain;
