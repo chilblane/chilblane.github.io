@@ -33,7 +33,7 @@ $mobile-nav-duration = 0.3s
         opacity: 0;
         transition-property: right, top, box-shadow, border-color, background-color, opacity;
         transition-duration: 0s, 0s, 0s, 0s, 0s, 0.7s;
-        transition-timing-function: ease-in, linear, ease-out, ease-out, ease-out, ease;
+        transition-timing-function: cubic-bezier(.31,.02,1,.52), linear, ease-out, ease-out, ease-out, ease;
         transition-delay: 1.2s, 1.2s, 1.2s, 1.2s, 1.2s, 0.5s;
     }
     &__logo {
@@ -89,15 +89,15 @@ $mobile-nav-duration = 0.3s
                 border-color: $color-bg-glass;
                 material-shadow();
                 opacity: 1;
-                transition-duration: 0.5s, 0s, 0.5s, 0.5s, 0.5s, 0s;
-                transition-delay: 0s, 0.5s, 0.5s, 0.5s, 0.5s, 0s;
+                transition-duration: 1.5s, 0s, 0.5s, 0.5s, 0.5s, 0s;
+                transition-delay: 0s, 1.5s, 1.5s, 1.5s, 1.5s, 0s;
             }
             .nav-header__logo {
                 opacity: 1;
                 left: 0;
                  //opacity, left
                 transition-duration: 1s, 0s;
-                transition-delay: 1s, 0s;
+                transition-delay: 2s, 0s;
             }
         }
     }

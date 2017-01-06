@@ -206,21 +206,21 @@ li {
   -o-transition-property: width, background-color, box-shadow;
   -ms-transition-property: width, background-color, box-shadow;
   transition-property: width, background-color, box-shadow;
-  -webkit-transition-duration: 0.5s, 0.5s, 0.5s;
-  -moz-transition-duration: 0.5s, 0.5s, 0.5s;
-  -o-transition-duration: 0.5s, 0.5s, 0.5s;
-  -ms-transition-duration: 0.5s, 0.5s, 0.5s;
-  transition-duration: 0.5s, 0.5s, 0.5s;
-  -webkit-transition-delay: 0.7s, 1.2s, 1.2s;
-  -moz-transition-delay: 0.7s, 1.2s, 1.2s;
-  -o-transition-delay: 0.7s, 1.2s, 1.2s;
-  -ms-transition-delay: 0.7s, 1.2s, 1.2s;
-  transition-delay: 0.7s, 1.2s, 1.2s;
-  -webkit-transition-timing-function: ease-in, ease, ease;
-  -moz-transition-timing-function: ease-in, ease, ease;
-  -o-transition-timing-function: ease-in, ease, ease;
-  -ms-transition-timing-function: ease-in, ease, ease;
-  transition-timing-function: ease-in, ease, ease;
+  -webkit-transition-duration: 1s, 0.5s, 0.5s;
+  -moz-transition-duration: 1s, 0.5s, 0.5s;
+  -o-transition-duration: 1s, 0.5s, 0.5s;
+  -ms-transition-duration: 1s, 0.5s, 0.5s;
+  transition-duration: 1s, 0.5s, 0.5s;
+  -webkit-transition-delay: 1.7s, 2.7s, 2.7s;
+  -moz-transition-delay: 1.7s, 2.7s, 2.7s;
+  -o-transition-delay: 1.7s, 2.7s, 2.7s;
+  -ms-transition-delay: 1.7s, 2.7s, 2.7s;
+  transition-delay: 1.7s, 2.7s, 2.7s;
+  -webkit-transition-timing-function: cubic-bezier(0.31, 0.02, 1, 0.52), ease, ease;
+  -moz-transition-timing-function: cubic-bezier(0.31, 0.02, 1, 0.52), ease, ease;
+  -o-transition-timing-function: cubic-bezier(0.31, 0.02, 1, 0.52), ease, ease;
+  -ms-transition-timing-function: cubic-bezier(0.31, 0.02, 1, 0.52), ease, ease;
+  transition-timing-function: cubic-bezier(0.31, 0.02, 1, 0.52), ease, ease;
 }
 .panel--45em .panel__content {
   max-width: 45em;
@@ -493,11 +493,11 @@ textarea:focus {
   -o-transition-duration: 0s, 0s, 0s, 0s, 0s, 0.7s;
   -ms-transition-duration: 0s, 0s, 0s, 0s, 0s, 0.7s;
   transition-duration: 0s, 0s, 0s, 0s, 0s, 0.7s;
-  -webkit-transition-timing-function: ease-in, linear, ease-out, ease-out, ease-out, ease;
-  -moz-transition-timing-function: ease-in, linear, ease-out, ease-out, ease-out, ease;
-  -o-transition-timing-function: ease-in, linear, ease-out, ease-out, ease-out, ease;
-  -ms-transition-timing-function: ease-in, linear, ease-out, ease-out, ease-out, ease;
-  transition-timing-function: ease-in, linear, ease-out, ease-out, ease-out, ease;
+  -webkit-transition-timing-function: cubic-bezier(0.31, 0.02, 1, 0.52), linear, ease-out, ease-out, ease-out, ease;
+  -moz-transition-timing-function: cubic-bezier(0.31, 0.02, 1, 0.52), linear, ease-out, ease-out, ease-out, ease;
+  -o-transition-timing-function: cubic-bezier(0.31, 0.02, 1, 0.52), linear, ease-out, ease-out, ease-out, ease;
+  -ms-transition-timing-function: cubic-bezier(0.31, 0.02, 1, 0.52), linear, ease-out, ease-out, ease-out, ease;
+  transition-timing-function: cubic-bezier(0.31, 0.02, 1, 0.52), linear, ease-out, ease-out, ease-out, ease;
   -webkit-transition-delay: 1.2s, 1.2s, 1.2s, 1.2s, 1.2s, 0.5s;
   -moz-transition-delay: 1.2s, 1.2s, 1.2s, 1.2s, 1.2s, 0.5s;
   -o-transition-delay: 1.2s, 1.2s, 1.2s, 1.2s, 1.2s, 0.5s;
@@ -604,16 +604,16 @@ textarea:focus {
     opacity: 1;
     -ms-filter: none;
     filter: none;
-    -webkit-transition-duration: 0.5s, 0s, 0.5s, 0.5s, 0.5s, 0s;
-    -moz-transition-duration: 0.5s, 0s, 0.5s, 0.5s, 0.5s, 0s;
-    -o-transition-duration: 0.5s, 0s, 0.5s, 0.5s, 0.5s, 0s;
-    -ms-transition-duration: 0.5s, 0s, 0.5s, 0.5s, 0.5s, 0s;
-    transition-duration: 0.5s, 0s, 0.5s, 0.5s, 0.5s, 0s;
-    -webkit-transition-delay: 0s, 0.5s, 0.5s, 0.5s, 0.5s, 0s;
-    -moz-transition-delay: 0s, 0.5s, 0.5s, 0.5s, 0.5s, 0s;
-    -o-transition-delay: 0s, 0.5s, 0.5s, 0.5s, 0.5s, 0s;
-    -ms-transition-delay: 0s, 0.5s, 0.5s, 0.5s, 0.5s, 0s;
-    transition-delay: 0s, 0.5s, 0.5s, 0.5s, 0.5s, 0s;
+    -webkit-transition-duration: 1.5s, 0s, 0.5s, 0.5s, 0.5s, 0s;
+    -moz-transition-duration: 1.5s, 0s, 0.5s, 0.5s, 0.5s, 0s;
+    -o-transition-duration: 1.5s, 0s, 0.5s, 0.5s, 0.5s, 0s;
+    -ms-transition-duration: 1.5s, 0s, 0.5s, 0.5s, 0.5s, 0s;
+    transition-duration: 1.5s, 0s, 0.5s, 0.5s, 0.5s, 0s;
+    -webkit-transition-delay: 0s, 1.5s, 1.5s, 1.5s, 1.5s, 0s;
+    -moz-transition-delay: 0s, 1.5s, 1.5s, 1.5s, 1.5s, 0s;
+    -o-transition-delay: 0s, 1.5s, 1.5s, 1.5s, 1.5s, 0s;
+    -ms-transition-delay: 0s, 1.5s, 1.5s, 1.5s, 1.5s, 0s;
+    transition-delay: 0s, 1.5s, 1.5s, 1.5s, 1.5s, 0s;
   }
   .nav-header.nav-header--stuck .nav-header__logo {
     opacity: 1;
@@ -625,11 +625,11 @@ textarea:focus {
     -o-transition-duration: 1s, 0s;
     -ms-transition-duration: 1s, 0s;
     transition-duration: 1s, 0s;
-    -webkit-transition-delay: 1s, 0s;
-    -moz-transition-delay: 1s, 0s;
-    -o-transition-delay: 1s, 0s;
-    -ms-transition-delay: 1s, 0s;
-    transition-delay: 1s, 0s;
+    -webkit-transition-delay: 2s, 0s;
+    -moz-transition-delay: 2s, 0s;
+    -o-transition-delay: 2s, 0s;
+    -ms-transition-delay: 2s, 0s;
+    transition-delay: 2s, 0s;
   }
 }
 .nav-header__links {
