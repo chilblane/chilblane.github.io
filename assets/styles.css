@@ -3369,6 +3369,9 @@ textarea:focus {
   -webkit-box-shadow: 0 1px 0px 1px rgba(229,241,255,0.1);
   box-shadow: 0 1px 0px 1px rgba(229,241,255,0.1);
 }
+.form--space label {
+  text-shadow: 0 0 0.1em currentColor;
+}
 .form--space .form__footer {
   position: relative;
 }
@@ -3383,18 +3386,117 @@ textarea:focus {
   left: 0;
   right: 0;
   height: 0.1em;
-  background-color: #ff00f2;
-  -webkit-box-shadow: 0 0 3em #ff00f2, 0 0 1em #ff00f2, 0 0 0.5em #ff00f2;
-  box-shadow: 0 0 3em #ff00f2, 0 0 1em #ff00f2, 0 0 0.5em #ff00f2;
-  opacity: 0.4;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
-  filter: alpha(opacity=40);
+  background-image: -webkit-linear-gradient(left, rgba(255,0,242,0.5) 0%, rgba(255,0,242,0.5) 49%, #ff00f2 50%, rgba(255,0,242,0.5) 51%, rgba(255,0,242,0.5) 100%);
+  background-image: -moz-linear-gradient(left, rgba(255,0,242,0.5) 0%, rgba(255,0,242,0.5) 49%, #ff00f2 50%, rgba(255,0,242,0.5) 51%, rgba(255,0,242,0.5) 100%);
+  background-image: -o-linear-gradient(left, rgba(255,0,242,0.5) 0%, rgba(255,0,242,0.5) 49%, #ff00f2 50%, rgba(255,0,242,0.5) 51%, rgba(255,0,242,0.5) 100%);
+  background-image: -ms-linear-gradient(left, rgba(255,0,242,0.5) 0%, rgba(255,0,242,0.5) 49%, #ff00f2 50%, rgba(255,0,242,0.5) 51%, rgba(255,0,242,0.5) 100%);
+  background-image: linear-gradient(to right, rgba(255,0,242,0.5) 0%, rgba(255,0,242,0.5) 49%, #ff00f2 50%, rgba(255,0,242,0.5) 51%, rgba(255,0,242,0.5) 100%);
+  background-position: 0% 0%;
+  -webkit-background-size: 800% auto;
+  -moz-background-size: 800% auto;
+  background-size: 800% auto;
+  -webkit-box-shadow: 0 0 1em #ff00f2;
+  box-shadow: 0 0 1em #ff00f2;
+  -webkit-animation-duration: 8s;
+  -moz-animation-duration: 8s;
+  -o-animation-duration: 8s;
+  -ms-animation-duration: 8s;
+  animation-duration: 8s;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
 }
 .form--space .form__footer:before {
   top: 33%;
+  -webkit-animation-name: purple-feed;
+  -moz-animation-name: purple-feed;
+  -o-animation-name: purple-feed;
+  -ms-animation-name: purple-feed;
+  animation-name: purple-feed;
 }
 .form--space .form__footer:after {
   bottom: 33%;
+  -webkit-animation-name: purple-feed-reverse;
+  -moz-animation-name: purple-feed-reverse;
+  -o-animation-name: purple-feed-reverse;
+  -ms-animation-name: purple-feed-reverse;
+  animation-name: purple-feed-reverse;
+  -webkit-animation-delay: 4s;
+  -moz-animation-delay: 4s;
+  -o-animation-delay: 4s;
+  -ms-animation-delay: 4s;
+  animation-delay: 4s;
+}
+@-moz-keyframes purple-feed {
+  from {
+    background-position: 100% 0%;
+  }
+  to {
+    background-position: 0% 0%;
+  }
+}
+@-webkit-keyframes purple-feed {
+  from {
+    background-position: 100% 0%;
+  }
+  to {
+    background-position: 0% 0%;
+  }
+}
+@-o-keyframes purple-feed {
+  from {
+    background-position: 100% 0%;
+  }
+  to {
+    background-position: 0% 0%;
+  }
+}
+@keyframes purple-feed {
+  from {
+    background-position: 100% 0%;
+  }
+  to {
+    background-position: 0% 0%;
+  }
+}
+@-moz-keyframes purple-feed-reverse {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 100% 0%;
+  }
+}
+@-webkit-keyframes purple-feed-reverse {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 100% 0%;
+  }
+}
+@-o-keyframes purple-feed-reverse {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 100% 0%;
+  }
+}
+@keyframes purple-feed-reverse {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 100% 0%;
+  }
 }
 .sr-only {
   position: absolute;

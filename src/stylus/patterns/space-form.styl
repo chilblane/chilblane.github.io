@@ -7,6 +7,9 @@
     background-position: 50% 50%;
     border-radius: 5px;
     box-shadow: 0 1px 0px 1px $color-bg-glass;
+    label {
+        text-shadow: 0 0 0.1em currentColor;
+    }
     .form__footer {
         position: relative;
         button {
@@ -20,15 +23,44 @@
             left: 0;
             right: 0;
             height: 0.1em;
-            background-color: $color-purple;
-            box-shadow: 0 0 3em $color-purple, 0 0 1em $color-purple, 0 0 0.5em $color-purple;
-            opacity: 0.4;
+            background-image: linear-gradient(to right,
+                fade-out($color-purple, 50%) 0%,
+                fade-out($color-purple, 50%) 49%,
+                $color-purple 50%,
+                fade-out($color-purple, 50%) 51%,
+                fade-out($color-purple, 50%) 100%);
+            background-position: 0% 0%;
+            background-size: 800% auto;
+            box-shadow: 0 0 1em $color-purple;
+            animation-duration: 8s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
         }
         &:before {
             top: 33%;
+            animation-name: purple-feed;
         }
         &:after {
             bottom: 33%;
+            animation-name: purple-feed-reverse;
+            animation-delay: 4s;
         }
+    }
+}
+
+@keyframes purple-feed {
+    from {
+        background-position: 100% 0%;
+    }
+    to {
+        background-position: 0% 0%;
+    }
+}
+@keyframes purple-feed-reverse {
+    from {
+        background-position: 0% 0%;
+    }
+    to {
+        background-position: 100% 0%;
     }
 }
