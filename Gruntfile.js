@@ -154,7 +154,7 @@ module.exports = function(grunt) {
         'stylus:dist',
         'browserify:dist',
         'copy:dist',
-        'copy:fa',
+        // 'copy:fa',
         'jekyll:dist'
     ]);
 
@@ -163,7 +163,7 @@ module.exports = function(grunt) {
         'stylus:dist',
         'browserify:dist',
         'copy:dist',
-        'copy:fa',
+        // 'copy:fa',
         'csso:dist',
         'uglify:dist',
         'jekyll:dist'
