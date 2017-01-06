@@ -126,6 +126,11 @@ module.exports = function(grunt) {
             dist: {}
         },
         // production tasks
+        csso: {
+            dist: {
+                files: {'assets/styles.css': ['assets/styles.css']}
+            }
+        },
         uglify: {
             dist: {
                 files: [{
@@ -159,6 +164,7 @@ module.exports = function(grunt) {
         'browserify:dist',
         'copy:dist',
         'copy:fa',
+        'csso:dist',
         'uglify:dist',
         'jekyll:dist'
     ]);
