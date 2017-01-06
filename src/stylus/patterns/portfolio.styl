@@ -1,0 +1,84 @@
+.portfolio {
+    background-color: $color-bg-dark;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    border-top: 1px solid $color-bg-glass;
+    .panel__content {
+        padding-left: $leading;
+        padding-right: $leading;
+    }
+    &__inner {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    &__pane {
+        width: 100%;
+        padding: 3 * $leading $leading;
+        display: flex;
+        flex-direction: column;
+        background-image: linear-gradient($color-bg-dark, $color-bg-separator);
+    }
+    h3 {
+        text-align: center;
+    }
+    &__tags {
+        text-align: center;
+        margin-top: $leading;
+        font-size: 0.5 * $font-scale * 1rem;
+        line-height: 0.5 * $leading;
+        span {
+            position: relative;
+            display: inline-block;
+            padding: 0.2em 0.6em 0.2em 1.5em;
+            color: $color-bg-fade;
+            background-color: $color-bg-glass;
+            border: 1px solid $color-bg-glass;
+            text-transform: uppercase;
+            border-radius: 1em 0.5em 0.5em 1em;
+            margin: 0.25em;
+            &:before {
+                content: '';
+                display: inline-block;
+                position: absolute;
+                left: 0.5em;
+                top: 0.5em;
+                margin-right: 0.5em;
+                width: 0.5em;
+                height: 0.5em;
+                border-radius: 50%;
+                border: 1px solid fade-out($color-bg-fade, 50%);
+                background-color: mix($color-bg-separator, $color-bg-dark, 66%);
+            }
+        }
+    }
+    p {
+        max-width: 45em;
+        margin-top: 2 * $leading;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__preview {
+        max-width: calc(65em + 2px); // 64em + 1em + 2px
+        padding: 0.5em;
+        background-color: $color-bg-glass;
+        background-image: linear-gradient(120deg,
+            transparent 0%,
+            fade-out(white, 95%) 50%,
+            transparent 50%,
+            transparent 100%);
+        border: 1px solid $color-bg-glass;
+        border-radius: 0.5em;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: $leading;
+        box-shadow: 0 0 10em $color-bg-glass;
+    }
+    &__image {
+        display: block;
+        img-fluid();
+        border: 2px solid black;
+    }
+}

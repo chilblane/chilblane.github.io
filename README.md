@@ -18,3 +18,14 @@ Once you've done so:
 
 `grunt` will build the site and serve it to `http://localhost:9000`.
 You can split these tasks into `grunt build` and `grunt serve`.
+
+## Acknowledgments
+
+I would like to credit the following resources:
+
+- [jQuery.scrollTo](https://github.com/flesler/jquery.scrollTo)
+- [`function check_if_in_view()`](https://www.sitepoint.com/scroll-based-animations-jquery-css3/)
+- [Picturefill](http://scottjehl.github.io/picturefill/)
+- Hex grid based on [SVG Hexagons Background](https://codepen.io/dudleystorey/pen/YwdYxq)
+- Social icons based on [8-Bit Vector Social Icon Pack
+](http://www.daddydesign.com/wordpress/8-bit-vector-social-icon-pack/)

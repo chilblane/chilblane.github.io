@@ -1,0 +1,58 @@
+$color-bg-panel = mix($color-bg-dark, $color-bg-light, 90%)
+
+.panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    padding: $leading $leading 2 * $leading;
+    &__content {
+        width: 100%;
+        max-width: 80em;
+    }
+    h2 {
+        margin-bottom: 1.5 * $leading;
+        display: inline-block;
+        text-transform: lowercase;
+        &:after {
+            content: '';
+            display: block;
+            margin-top: 0.5 * $leading;
+            width: 0%;
+            height: 3px;
+            background-color: white;
+            box-shadow: 0 0 3px white;
+        }
+        &.in-view:after {
+            width: 100%;
+            background-color: $color-bg-separator;
+            box-shadow: none;
+            transition-property: width, background-color, box-shadow;
+            transition-duration: 1s, 0.5s, 0.5s;
+            transition-delay: 1.7s, 2.7s, 2.7s;
+            transition-timing-function: cubic-bezier(.31,.02,1,.52), ease, ease;
+        }
+    }
+    &--45em {
+        .panel__content {
+            max-width: 45em;
+        }
+    }
+    &--60em {
+        .panel__content {
+            max-width: 60em;
+        }
+    }
+    &--hex {
+        background-image: radial-gradient(circle at top right, $color-bg-glass, transparent);
+    }
+    &--wave {
+        background-color: $color-bg-panel;
+        background-image: linear-gradient(transparent 0px, transparent 2px, $color-bg-dark 3px), url('/assets/pattern-wave.svg');
+        background-size: auto 3px, cover;
+        background-position: center center, center center;
+        border-top: 1px solid $color-bg-glass;
+        border-bottom: 1px solid black;
+    }
+}

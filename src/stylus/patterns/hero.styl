@@ -1,40 +1,31 @@
 .hero {
     position: relative;
-    color: white;
-    text-align: center;
-    padding: 0 $leading;
-    max-height: 100vh;
-    &__image {
-        max-width: 30em;
-        margin-left: auto;
-        margin-right: auto;
+    overflow: hidden;
+    background-color: fade-out($color-ice, 90%);
+    background-image: url('/assets/pattern-stars.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    text-shadow: 0 0 2px black;
+    .panel__content {
         position: relative;
-    }
-    &__copy {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding-bottom: $leading;
-    }
-    &__arrow {
-        font-size: 1.5 * $font-scale * 1rem;
-        margin-top: $leading;
-        opacity: 0.3;
-    }
-    h1 {
-        text-shadow: 0 0 20px black;
+        z-index: 5;
     }
     p {
-        font-size: $font-scale * 1rem;
-        color: $color-ice-light;
-        text-shadow: 0 0 5px black;
-        strong {
-            color: white;
-        }
-        span {
-            display: inline-block;
-            margin: 0 1em;
-        }
+        text-transform: lowercase;
+        color: $color-bg-fade;
+        letter-spacing: 0.4em;
     }
+}
+
+.moon {
+    position: absolute;
+    width: 80vh;
+    height: 80vh;
+    top: 10%;
+    right: -50vh;
+    background-color: $color-bg-dark;
+    border: 1px solid $color-bg-glass;
+    box-shadow: 0 0 100em $color-bg-glass, 0 0 10em $color-bg-fade, 0 0 1em $color-bg-fade, inset 0 0 10em fade-out($color-bg-fade, 75%);
+    border-radius: 50%;
 }
