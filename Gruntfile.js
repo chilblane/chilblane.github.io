@@ -124,6 +124,17 @@ module.exports = function(grunt) {
         },
         jekyll: {
             dist: {}
+        },
+        // production tasks
+        uglify: {
+            dist: {
+                files: [{
+                    expand: true,
+                    cwd: 'assets/',
+                    src: ['*.js'],
+                    dest: 'assets/'
+                }]
+            }
         }
 
     });
@@ -142,7 +153,18 @@ module.exports = function(grunt) {
         'jekyll:dist'
     ]);
 
+    grunt.registerTask('build-prod', [
+        'clean:dist',
+        'stylus:dist',
+        'browserify:dist',
+        'copy:dist',
+        'copy:fa',
+        'uglify:dist',
+        'jekyll:dist'
+    ]);
+
     grunt.registerTask('develop', ['build', 'serve']);
+    grunt.registerTask('production', ['build-prod', 'serve']);
 
     grunt.registerTask('default', ['develop']);
 
