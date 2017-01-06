@@ -21,9 +21,8 @@ You can split these tasks into `grunt build` and `grunt serve`.
 
 ## Acknowledgments
 
-The website uses the following code, resources, and guides:
+I would like to credit the following resources:
 
-- jQuery
 - [jQuery.scrollTo](https://github.com/flesler/jquery.scrollTo)
 - [`function check_if_in_view()`](https://www.sitepoint.com/scroll-based-animations-jquery-css3/)
 - [Picturefill](http://scottjehl.github.io/picturefill/)
