@@ -1,7 +1,7 @@
 {
   "name": "chilblane.com",
   "description": "Chilblane.com Website",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "author": "Daniel Singer",
   "devDependencies": {
     "babelify": "^7.3.0",
