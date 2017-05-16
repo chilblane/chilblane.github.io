@@ -1,17 +1,21 @@
 const React = require('react');
 const { browserHistory, IndexRoute, Router, Route } = require('react-router');
 
-const { About, ErrorPage, Layout } = require('../components');
+const { About, Contact, ErrorPage, Layout, Resume, Work } = require('../components');
 
 const routeConfigs = [
-  // {
-  //   path: 'resume',
-  //   component: Resume
-  // },
-  // {
-  //   path: 'portfolio',
-  //   component: Portfolio
-  // },
+  {
+    path: 'contact',
+    component: Contact
+  },
+  {
+    path: 'resume',
+    component: Resume
+  },
+  {
+    path: 'work',
+    component: Work
+  },
   {
     path: '*',
     component: ErrorPage
@@ -19,11 +23,14 @@ const routeConfigs = [
 ];
 
 module.exports = function () {
+  const routes = routeConfigs.map((route) => {
+    return (<Route path={route.path} component={route.component} key={route.path} />);
+  });
   return (
     <Router history={browserHistory}>
       <Route component={Layout} path='/'>
         <IndexRoute component={About} />
-        {routeConfigs.map(route => (<Route path={route.path} component={route.component} key={route.path} />))}
+        {routes}
       </Route>
     </Router>
   );
