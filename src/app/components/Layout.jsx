@@ -25,7 +25,12 @@ export default function({children}) {
                 <Link to="/resume">Resume</Link>
               </li>
               <li>
-                <Link to="/contact">Contact</Link>
+                <a
+                  href='https://www.github.com/chilblane'
+                  target="_blank"
+                  rel="noopener">
+                    GitHub
+                </a>
               </li>
             </ul>
           </nav>

@@ -9,7 +9,6 @@ import Layout from './Layout';
 import About from './About';
 import Portfolio from './Portfolio';
 import Resume from './Resume';
-import Contact from './Contact';
 import ErrorPage from './ErrorPage';
 
 export default function () {
@@ -21,7 +20,6 @@ export default function () {
           <Route exact path='/portfolio' component={Portfolio} />
           <Route exact path='/portfolio/:project' component={Portfolio} />
           <Route exact path='/resume' component={Resume} />
-          <Route exact path='/contact' component={Contact} />
           <Route path='*' component={ErrorPage} />
         </Switch>
       </Layout>
