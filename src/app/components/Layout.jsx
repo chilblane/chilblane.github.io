@@ -1,26 +1,7 @@
-const React = require('react');
-const { browserHistory } = require('react-router');
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-function navTo(where) {
-  return function (event) {
-    event.preventDefault();
-    browserHistory.push(where);
-    return false;
-  };
-}
-
-
-function NavItem({ onClick, text, url }) {
-  return (
-    <li>
-      <a href={url} onClick={onClick}>
-        {text}
-      </a>
-    </li>
-  );
-}
-
-module.exports = function({children}) {
+export default function({children}) {
   return (
     <div id="layout">
       <div className="sidebar">
@@ -34,10 +15,18 @@ module.exports = function({children}) {
           </header>
           <nav className="sidebar__nav">
             <ul className="clean mtz">
-              <NavItem text='About' onClick={navTo('/')} />
-              <NavItem text='Work' onClick={navTo('/work')} />
-              <NavItem text='Resume' onClick={navTo('/resume')} />
-              <NavItem text='Contact' onClick={navTo('/contact')} />
+              <li>
+                <Link to="/">About</Link>
+              </li>
+              <li>
+                <Link to="/work">Work</Link>
+              </li>
+              <li>
+                <Link to="/resume">Resume</Link>
+              </li>
+              <li>
+                <Link to="/contact">Contact</Link>
+              </li>
             </ul>
           </nav>
         </div>

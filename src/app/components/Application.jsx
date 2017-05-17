@@ -1,37 +1,30 @@
-const React = require('react');
-const { browserHistory, IndexRoute, Router, Route } = require('react-router');
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from 'react-router-dom';
 
-const { About, Contact, ErrorPage, Layout, Resume, Work } = require('../components');
+import Layout from './Layout';
+import About from './About';
+import Work from './Work';
+import Resume from './Resume';
+import Contact from './Contact';
+import ErrorPage from './ErrorPage';
 
-const routeConfigs = [
-  {
-    path: 'contact',
-    component: Contact
-  },
-  {
-    path: 'resume',
-    component: Resume
-  },
-  {
-    path: 'work',
-    component: Work
-  },
-  {
-    path: '*',
-    component: ErrorPage
-  }
-];
-
-module.exports = function () {
-  const routes = routeConfigs.map((route) => {
-    return (<Route path={route.path} component={route.component} key={route.path} />);
-  });
+export default function () {
   return (
-    <Router history={browserHistory}>
-      <Route component={Layout} path='/'>
-        <IndexRoute component={About} />
-        {routes}
-      </Route>
+    <Router>
+      <Layout>
+        <Switch>
+          <Route exact path='/' component={About} />
+          <Route exact path='/work' component={Work} />
+          <Route exact path='/work/:work' component={Work} />
+          <Route exact path='/resume' component={Resume} />
+          <Route exact path='/contact' component={Contact} />
+          <Route path='*' component={ErrorPage} />
+        </Switch>
+      </Layout>
     </Router>
   );
 };

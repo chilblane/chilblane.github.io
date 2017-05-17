@@ -1,6 +1,6 @@
-const React = require('react');
+import React from 'react';
 
-module.exports = function () {
+export default function () {
   return (
     <div id='resume'>
       <h2>Resume</h2>

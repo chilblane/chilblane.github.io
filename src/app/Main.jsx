@@ -1,15 +1,14 @@
-require('babel-polyfill');
-require('../stylus/styles.styl');
+import 'babel-polyfill';
+import '../stylus/styles.styl';
 
-const React = require('react');
-const ReactDOM = require('react-dom');
-
-const { Application } = require('./components');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Application from './components/Application';
 
 function render() {
   ReactDOM.render(
-    <Application />,
-    document.getElementById('app')
+      <Application />,
+      document.getElementById('app')
   );
 }
 
