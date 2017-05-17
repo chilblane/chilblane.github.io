@@ -7,7 +7,7 @@ import {
 
 import Layout from './Layout';
 import About from './About';
-import Work from './Work';
+import Portfolio from './Portfolio';
 import Resume from './Resume';
 import Contact from './Contact';
 import ErrorPage from './ErrorPage';
@@ -18,8 +18,8 @@ export default function () {
       <Layout>
         <Switch>
           <Route exact path='/' component={About} />
-          <Route exact path='/work' component={Work} />
-          <Route exact path='/work/:work' component={Work} />
+          <Route exact path='/portfolio' component={Portfolio} />
+          <Route exact path='/portfolio/:project' component={Portfolio} />
           <Route exact path='/resume' component={Resume} />
           <Route exact path='/contact' component={Contact} />
           <Route path='*' component={ErrorPage} />

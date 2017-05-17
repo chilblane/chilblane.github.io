@@ -19,7 +19,7 @@ export default function({children}) {
                 <Link to="/">About</Link>
               </li>
               <li>
-                <Link to="/work">Work</Link>
+                <Link to="/portfolio">Portfolio</Link>
               </li>
               <li>
                 <Link to="/resume">Resume</Link>
