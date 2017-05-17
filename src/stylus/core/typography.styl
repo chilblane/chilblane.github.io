@@ -1,46 +1,50 @@
 // typography, powered by typebase.css
 h1 {
-    font-size: 3 * $font-scale * 1rem;
-    line-height: 1;
-    font-weight: 300;
-    // letter-spacing: 0.2em;
+  font-size: 3 * $font-scale * 1rem;
+  line-height: 1;
+  font-weight: 200;
+  letter-spacing: 0.05em;
 }
 h2 {
-    font-size: 2 * $font-scale * 1rem;
-    line-height: 2 * $leading;
-    margin-top: 2 * $leading;
-    font-weight: 300;
-    // letter-spacing: 0.2em;
+  font-size: 2 * $font-scale * 1rem;
+  line-height: 2 * $leading;
+  margin-top: 2 * $leading;
+  font-weight: 300;
+  letter-spacing: 0.01em;
 }
 h3 {
-    font-size: 1 * $font-scale * 1rem;
-    margin-top:  $leading;
-    line-height:  $leading;
-    color: $color-bg-fade;
-    font-weight: 400;
+  font-size: 1 * $font-scale * 1rem;
+  margin-top:  $leading;
+  line-height:  $leading;
+  color: $color-bg-fade;
+  font-weight: 400;
 }
 // h1, h2, h3 {
 //     text-shadow: 0 0 0.1em currentColor;
 // }
 p {
-    margin-top: $leading;
-    line-height: $leading;
+  margin-top: $leading;
+  line-height: $leading;
 }
 p.small {
-    font-size: 0.5 * $font-scale * 1rem;
+  font-size: 0.5 * $font-scale * 1rem;
 }
 ul,
 ol {
-    margin-top: $leading;
-    li {
-        line-height: $leading;
-    }
+  margin-top: $leading;
+  li {
+    line-height: $leading;
+  }
+  &.clean {
+    list-style: none;
+    padding-left: 0;
+  }
 }
 h1, h2, h3, p, li {
-    a {
-        border-bottom: 1px solid currentColor;
-        // font-weight: bold;
-    }
+  a {
+    border-bottom: 1px solid currentColor;
+    // font-weight: bold;
+  }
 }
 // h3, p, li {
 //     letter-spacing: 0.05em;

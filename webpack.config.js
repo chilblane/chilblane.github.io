@@ -39,6 +39,10 @@ module.exports = {
             },
           },
         ],
+      },
+      {
+        test: /\.(png|gif)$/,
+        loader: 'file-loader?name=[path][name].[ext]?[hash]'
       }
     ]
   },
