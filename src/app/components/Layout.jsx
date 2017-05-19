@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export default function({children}) {
   return (
@@ -16,21 +16,13 @@ export default function({children}) {
           <nav className="sidebar__nav">
             <ul className="clean mtz">
               <li>
-                <Link to="/">About</Link>
+                <NavLink exact activeClassName="active" to="/">Home</NavLink>
               </li>
               <li>
-                <Link to="/portfolio">Portfolio</Link>
+                <NavLink activeClassName="active" to="/about">About</NavLink>
               </li>
               <li>
-                <Link to="/resume">Resume</Link>
-              </li>
-              <li>
-                <a
-                  href='https://www.github.com/chilblane'
-                  target="_blank"
-                  rel="noopener">
-                    GitHub
-                </a>
+                <NavLink activeClassName="active" to="/resume">Resume</NavLink>
               </li>
             </ul>
           </nav>

@@ -75,6 +75,10 @@ container() {
     &:focus {
       color: $color-bg-light;
     }
+    &.active {
+      color: $color-bg-light;
+      cursor: default;
+    }
   }
   +above($nav-breakpoint) {
     text-align: center;

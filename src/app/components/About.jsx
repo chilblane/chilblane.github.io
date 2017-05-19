@@ -1,12 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 export default function () {
   return (
-    <div id='about' className="pbl">
+    <div id='about' className="page__inner">
       <div className="container">
         <h2>Hello.</h2>
-        <p>I&rsquo;m a web designer and front-end developer based in Scottsdale, Arizona, with experience in product marketing experiences and software user experience. I've done websites, product design, graphic design, branding, email marketing and design, Wordpress design and more. Check out my <Link to="/portfolio">portfolio</Link>.</p>
+        <p>I&rsquo;m a web designer and front-end developer based in Scottsdale, Arizona, with experience in product marketing experiences and software user experience. I've done websites, product design, graphic design, branding, email marketing and design, Wordpress design and more.</p>
         <p>I&rsquo;m passionate about consistency, scalability, and performance, and I am a firm believer that your user experience is your brand.</p>
         <h2>What I do</h2>
         <h3>Marketing web design</h3>
@@ -63,25 +62,6 @@ export default function () {
             </ul>
           </div>
         </div>
-        <h2>Reach out</h2>
-        <ul>
-          <li>
-            <a href='mailto:daniel@chilblane.com'>
-              Email
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/chilblane" target="_blank" rel="noopener">
-              LinkedIn
-            </a>
-          </li>
-          <li>
-            <a href="https://www.twitter.com/chilblane" target="_blank" rel="noopener">
-              Twitter
-            </a>
-          </li>
-        </ul>
-        <p><a href="https://github.com/chilblane/chilblane.github.io" target="_blank" rel="noopener">View the repository</a> for this site.</p>
       </div>
     </div>
   );

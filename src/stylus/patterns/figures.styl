@@ -1,0 +1,17 @@
+.figure {
+  margin-top: 2 * $leading;
+  img {
+    border: 1px solid $color-bg-light;
+  }
+  figcaption {
+    font-size: 0.5 * $font-scale * 1rem;
+    line-height: $leading;
+  }
+  &:after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 3em;
+    background-color: $color-bg-separator;
+  }
+}
