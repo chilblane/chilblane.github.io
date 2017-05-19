@@ -10,7 +10,9 @@ container() {
 }
 
 .page {
-  padding: 0 1.5em;
+  &__inner {
+    padding: 0 1.5em 1em;
+  }
   +above($nav-breakpoint) {
     position: absolute;
     left: $sidebar-width;
