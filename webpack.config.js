@@ -1,14 +1,14 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const path = require('path');
+const webpack = require("webpack");
 
 module.exports = {
   devServer: {
     historyApiFallback: true
   },
-  entry: './src/app/main.jsx',
+  entry: __dirname + "/app/Main.jsx",
   output: {
-    filename: 'static/bundle.js',
-    path: path.resolve(__dirname, 'build')
+    path: __dirname + "/dist",
+    publicPath: "/dist/",
+    filename: "index_bundle.js"
   },
   module: {
     rules: [
@@ -41,6 +41,10 @@ module.exports = {
         ],
       },
       {
+        test: /\.md$/,
+        loader: 'raw-loader'
+      },
+      {
         test: /\.(png|jpg|gif)$/,
         loader: 'file-loader?name=[path][name].[ext]?[hash]'
       }
@@ -52,10 +56,4 @@ module.exports = {
   // eslint: {
   //   configFile: '.eslintrc'
   // },
-  plugins: [
-    new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: 'src/index.html'
-    })
-  ]
 };
