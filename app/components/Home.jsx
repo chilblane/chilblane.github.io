@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'react-simple-image';
+import { Link } from 'react-router-dom';
 
 export default function () {
   return (
@@ -17,19 +18,21 @@ export default function () {
 
         <hr/>
 
-        <figure className="figure">
-          <Image
-            alt="Screen capture of a prototype for a redesigned World of Warcraft Armory"
-            src={require("./../../static/work/armory.jpg")}
-            srcSet={{
-              "320w": require("./../../static/work/armory.jpg"),
-              "640w": require("./../../static/work/armory-medium.jpg"),
-              "1280w": require("./../../static/work/armory-large.jpg"),
-              "2560w": require("./../../static/work/armory-xlarge.jpg")
-            }}
-          />
-          <figcaption>Unofficial World of Warcraft Armory Redesign</figcaption>
-        </figure>
+        <Link to="/portfolio/armory">
+          <figure className="figure">
+            <Image
+              alt="Screen capture of a prototype for a redesigned World of Warcraft Armory"
+              src={require("./../../static/portfolio/armory-header.jpg")}
+              srcSet={{
+                "320w": require("./../../static/portfolio/armory-header-320w.jpg"),
+                "640w": require("./../../static/portfolio/armory-header-640w.jpg"),
+                "1000w": require("./../../static/portfolio/armory-header.jpg"),
+                "2000w": require("./../../static/portfolio/armory-header-2000w.jpg")
+              }}
+            />
+            <figcaption>Unofficial World of Warcraft Armory Redesign</figcaption>
+          </figure>
+        </Link>
 
         <figure className="figure">
           <Image
