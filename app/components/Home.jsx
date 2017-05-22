@@ -34,19 +34,21 @@ export default function () {
           </figure>
         </Link>
 
-        <figure className="figure">
-          <Image
-            alt="Screen capture of a mockup for Axosoft 17"
-            src={require("./../../static/work/axosoft-app.png")}
-            srcSet={{
-              "320w": require("./../../static/work/axosoft-app.png"),
-              "640w": require("./../../static/work/axosoft-app-medium.png"),
-              "1280w": require("./../../static/work/axosoft-app-large.png"),
-              "2560w": require("./../../static/work/axosoft-app-xlarge.png"),
-            }}
-          />
-          <figcaption>Axosoft 17 Design Exploration</figcaption>
-        </figure>
+        <Link to="/portfolio/axosoft-redesign">
+          <figure className="figure">
+            <Image
+              alt="Screen capture of a mockup for Axosoft 17"
+              src={require("./../../static/work/axosoft-app.png")}
+              srcSet={{
+                "320w": require("./../../static/work/axosoft-app.png"),
+                "640w": require("./../../static/work/axosoft-app-medium.png"),
+                "1280w": require("./../../static/work/axosoft-app-large.png"),
+                "2560w": require("./../../static/work/axosoft-app-xlarge.png"),
+              }}
+            />
+            <figcaption>Axosoft 17 Design Exploration</figcaption>
+          </figure>
+        </Link>
 
         <figure className="figure">
           <Image
