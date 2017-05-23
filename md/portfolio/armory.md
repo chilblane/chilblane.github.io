@@ -1,10 +1,8 @@
-## Unofficial World of Warcraft Armory Redesign
-
-### My first unsolicited redesign, working with the design direction and code of an existing site to create an updated user experience
-
-##### Spring 2017
-
-***
+---
+title: Unofficial World of Warcraft Armory Redesign
+description: My first unsolicited redesign, working with the design direction and code of an existing site to create an updated user experience
+projectdate: Spring 2017
+---
 
 ### Background
 

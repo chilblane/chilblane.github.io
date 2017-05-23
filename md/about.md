@@ -1,3 +1,8 @@
+---
+title: About | Daniel Singer
+description: Learn more about Daniel Singer, web designer and front-end developer.
+---
+
 ## Hello.
 
 I’m a web designer and front-end developer based in Scottsdale, Arizona, with experience in product marketing experiences and software user experience. I've done websites, product design, graphic design, branding, email marketing and design, Wordpress design and more.

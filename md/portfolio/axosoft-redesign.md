@@ -1,10 +1,8 @@
-## Axosoft 17 Design Exploration
-
-### How a design exercise in my free time turned into a major facelift for the Axosoft project management tool
-
-##### Fall 2016
-
-***
+---
+title: Axosoft 17 Design Exploration
+description: How a design exercise in my free time turned into a major facelift for the Axosoft project management tool
+projectdate: Fall 2016
+---
 
 ### Background
 

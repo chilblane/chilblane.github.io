@@ -3,8 +3,8 @@ import ReactMarkdown from 'react-markdown';
 import { Helmet } from 'react-helmet';
 
 const md = require('./../../md/about.md');
-const pageTitle = "About | Daniel Singer";
-const pageDescription = "Learn more about Daniel Singer, web designer and front-end developer.";
+const pageTitle = md.metadata.title;
+const pageDescription = md.metadata.description;
 
 export default function () {
   return (
@@ -15,7 +15,7 @@ export default function () {
         <meta property="og:description" content={pageDescription} />
       </Helmet>
       <div className="container">
-        <ReactMarkdown source={md} />
+        <ReactMarkdown source={md.contents} />
       </div>
     </div>
   );

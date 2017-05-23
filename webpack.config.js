@@ -42,7 +42,7 @@ module.exports = {
       },
       {
         test: /\.md$/,
-        loader: 'raw-loader'
+        loader: 'markdown-with-metadata-loader'
       },
       {
         test: /\.(png|jpg|gif)$/,
@@ -52,8 +52,5 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx', '.styl']
-  },
-  // eslint: {
-  //   configFile: '.eslintrc'
-  // },
+  }
 };
