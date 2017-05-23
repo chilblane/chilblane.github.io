@@ -24,9 +24,11 @@ export default function (props) {
         <meta property="og:description" content={pageDescription} />
       </Helmet>
       <div className="container">
-        <h2>{pageTitle}</h2>
-        <h3>{pageDescription}</h3>
-        <h5>{md.metadata.projectdate}</h5>
+        <div className="hero">
+          <h2>{pageTitle}</h2>
+          <p className="lead">{pageDescription}</p>
+          <p className="small">{md.metadata.projectdate}</p>
+        </div>
         <ReactMarkdown source={md.contents} />
       </div>
     </div>

@@ -6,17 +6,19 @@ export default function () {
   return (
     <div id='home' className="page__inner">
       <div className="container">
-        <h2>
-          Your user experience<br/>
-          is your brand.
-        </h2>
-        <p>
-          I design and build for the web,<br/>
-          whether in marketing, product, or everything in-between.
-        </p>
-        <p>My goal is simply to make things better for the user.</p>
-
-        <hr/>
+        <div className="hero">
+          <h2>
+            Your user experience<br/>
+            is your brand.
+          </h2>
+          <p className="lead">
+            I design and build for the web,<br/>
+            whether in marketing, product, or everything in-between.
+          </p>
+          <p className="lead">
+            My goal is simply to make things better for the user.
+          </p>
+        </div>
         <Link to="/portfolio/armory">
           <figure className="figure">
             <Image
