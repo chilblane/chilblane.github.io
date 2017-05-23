@@ -6,6 +6,12 @@ import { Helmet } from 'react-helmet';
 import ErrorPage from './ErrorPage';
 import * as markdownDir from './../../md/portfolio';
 
+function OpenLinksInNewTab(props) {
+  return (
+    <a href={props.href} target="_blank" rel="noopener">{props.children}</a>
+  )
+}
+
 export default function (props) {
   const projectName = props.match.params.project;
   const md = markdownDir[projectName];
@@ -29,7 +35,10 @@ export default function (props) {
           <p className="lead">{pageDescription}</p>
           <p className="small">{md.metadata.projectdate}</p>
         </div>
-        <ReactMarkdown source={md.contents} />
+        <ReactMarkdown
+          source={md.contents}
+          renderers={{Link: OpenLinksInNewTab}}
+        />
       </div>
     </div>
   );
