@@ -16,39 +16,35 @@ export default function () {
             whether in marketing, product, or everything in-between.
           </p>
           <p className="lead">
-            My goal is simply to make things better for the user.
+            My goal is to simply make things better for the user.
           </p>
         </div>
-        <Link to="/portfolio/armory">
-          <figure className="figure">
-            <Image
-              alt="Screen capture of a prototype for a redesigned World of Warcraft Armory"
-              src={require("./../../static/portfolio/armory-header.jpg")}
-              srcSet={{
-                "320w": require("./../../static/portfolio/armory-header-320w.jpg"),
-                "640w": require("./../../static/portfolio/armory-header-640w.jpg"),
-                "1000w": require("./../../static/portfolio/armory-header.jpg"),
-                "2000w": require("./../../static/portfolio/armory-header-2000w.jpg")
-              }}
-            />
-            <figcaption>Unofficial World of Warcraft Armory Redesign</figcaption>
-          </figure>
+        <Link to="/portfolio/armory" className="spotlight">
+          <Image
+            alt="Screen capture of a prototype for a redesigned World of Warcraft Armory"
+            src={require("./../../static/portfolio/armory-header.jpg")}
+            srcSet={{
+              "320w": require("./../../static/portfolio/armory-header-320w.jpg"),
+              "640w": require("./../../static/portfolio/armory-header-640w.jpg"),
+              "1000w": require("./../../static/portfolio/armory-header.jpg"),
+              "2000w": require("./../../static/portfolio/armory-header-2000w.jpg")
+            }}
+          />
+          <span className="spotlight__caption">Unofficial World of Warcraft Armory Redesign</span>
         </Link>
 
-        <Link to="/portfolio/axosoft-redesign">
-          <figure className="figure">
-            <Image
-              alt="Screen capture of a mockup for Axosoft 17"
-              src={require("./../../static/portfolio/axosoft-redesign-main.png")}
-              srcSet={{
-                "320w": require("./../../static/portfolio/axosoft-redesign-main-320w.png"),
-                "640w": require("./../../static/portfolio/axosoft-redesign-main-640w.png"),
-                "1280w": require("./../../static/portfolio/axosoft-redesign-main.png"),
-                "2560w": require("./../../static/portfolio/axosoft-redesign-main-2000w.png"),
-              }}
-            />
-            <figcaption>Axosoft 17 Design Exploration</figcaption>
-          </figure>
+        <Link to="/portfolio/axosoft-redesign" className="spotlight">
+          <Image
+            alt="Screen capture of a mockup for Axosoft 17"
+            src={require("./../../static/portfolio/axosoft-redesign-home.png")}
+            srcSet={{
+              "320w": require("./../../static/portfolio/axosoft-redesign-home-320w.png"),
+              "640w": require("./../../static/portfolio/axosoft-redesign-home-640w.png"),
+              "1280w": require("./../../static/portfolio/axosoft-redesign-home.png"),
+              "2560w": require("./../../static/portfolio/axosoft-redesign-home-2000w.png"),
+            }}
+          />
+          <span className="spotlight__caption">Axosoft 17 Design Exploration</span>
         </Link>
 
         <h3>Additional projects</h3>
