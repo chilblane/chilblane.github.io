@@ -18,7 +18,7 @@ import * as meta from './meta';
 
 export default function () {
   return (
-    <Router id="UA-65603184-1'">
+    <Router id="UA-65603184-1">
       <ScrollToTop>
         <Layout>
           <Helmet
