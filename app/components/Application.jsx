@@ -1,10 +1,10 @@
 import React from 'react';
 import {
-  BrowserRouter as Router,
   Route,
   Switch,
   withRouter
 } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-g-analytics';
 import { Helmet } from 'react-helmet';
 
 import ScrollToTop from './../utils/ScrollToTop.js';
@@ -18,7 +18,7 @@ import * as meta from './meta';
 
 export default function () {
   return (
-    <Router>
+    <Router id="UA-65603184-1'">
       <ScrollToTop>
         <Layout>
           <Helmet
