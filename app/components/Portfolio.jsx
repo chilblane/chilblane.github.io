@@ -1,7 +1,6 @@
 import React from 'react';
 import propTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
-import { Helmet } from 'react-helmet';
 
 import ErrorPage from './ErrorPage';
 import * as markdownDir from './../../md/portfolio';
@@ -24,11 +23,6 @@ export default function (props) {
 
   return (
     <div id='portfolio' className="page__inner pbl">
-      <Helmet title={pageTitle}>
-        <meta property="og:title" content={pageTitle} />
-        <meta name="description" content={pageDescription} />
-        <meta property="og:description" content={pageDescription} />
-      </Helmet>
       <div className="container">
         <div className="hero">
           <h2>{pageTitle}</h2>
