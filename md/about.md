@@ -5,7 +5,7 @@ description: Learn more about Daniel Singer, web designer and front-end develope
 
 ## Hello.
 
-I’m a web designer and front-end developer based in Scottsdale, Arizona, with experience in product marketing experiences and software user experience. I've done websites, product design, graphic design, branding, email marketing and design, Wordpress design and more.
+I’m a web designer and front-end developer based in Scottsdale, Arizona, currently working at OfferPad. I have experience in product marketing experiences and software user experience. I've done websites, product design, graphic design, branding, email marketing and design, Wordpress design and more.
 
 I’m passionate about consistency, scalability, and performance, and I am a firm believer that your user experience is your brand.
 

@@ -86,11 +86,6 @@ export default function () {
               GitHub
             </a>
           </li>
-          <li>
-            <a href="https://www.twitter.com/chilblane" target="_blank" rel="noopener">
-              Twitter
-            </a>
-          </li>
         </ul>
         <p className="small"><a href="https://github.com/chilblane/chilblane.github.io" target="_blank" rel="noopener">View the repository</a> for this site. Built with React.js, Webpack, and Stylus.</p>
       </div>
