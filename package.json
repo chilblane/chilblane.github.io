@@ -1,15 +1,34 @@
 {
-  "name": "chilblane.com",
-  "description": "Chilblane.com Website, Hooray!",
-  "version": "3.0.0",
-  "author": "Daniel Singer <daniel@chilblane.com> (http://www.chilblane.com)",
-  "license": "UNLICENSED",
-  "private": true,
-  "main": "index.js",
-  "scripts": {
-    "start": "webpack-dev-server",
-    "production": "webpack -p"
-  },
-  "dependencies": {
-  }
+    "name": "chilblane.com",
+    "description": "Chilblane.com Website, Hooray!",
+    "version": "4.0.0",
+    "homepage": "http://chilblane.github.io/",
+    "author": "Daniel Singer <daniel@chilblane.com> (http://www.chilblane.com)",
+    "license": "UNLICENSED",
+    "private": true,
+    "dependencies": {
+        "react": "^16.7.0",
+        "react-dom": "^16.7.0",
+        "react-scripts": "2.1.3"
+    },
+    "devDependencies": {
+        "gh-pages": "^2.0.1"
+    },
+    "scripts": {
+        "predeploy": "yarn run build",
+        "deploy": "gh-pages -b master -d build",
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not ie <= 11",
+        "not op_mini all"
+    ]
 }

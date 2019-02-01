@@ -1,0 +1,19 @@
+html,
+body,
+#root {
+    height: 100%;
+}
+
+body {
+    background: black;
+    color: white;
+}
+
+.App {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
