@@ -1,0 +1,51 @@
+$base-font-size: 16;
+$base-line-height: 1.5;
+$leading: $base-line-height * 1rem;
+$font-scale: 1.414;
+
+$font-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+$font-mono: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+$ff: $font-system;
+$ffm: $font-mono;
+
+$color-palette-data: (
+    white: (
+        base: #fff
+    ),
+    blue: (
+        lighter: #aecef5,
+        light: #348ffd,
+        base: #0073ff,
+        dark: #004291,
+        darker: #001835
+    ),
+    orange: (
+        lighter: #ffe0ae,
+        light: #ffa922,
+        base: #ff9c00,
+        dark: #dd8700,
+        darker: #513100
+    )
+);
+
+@function color($hue, $value: base) {
+    $fetched-color: map-get(map-get($color-palette-data, $hue), $value);
+    @if map-has-key($color-palette-data, $fetched-color) {
+        $fetched-color: map-get(
+            map-get($color-palette-data, $fetched-color),
+            $value
+        );
+    }
+    @if type-of($fetched-color) ==color {
+        @return $fetched-color;
+    } @else {
+        @error 'Color `#{$hue} - #{$value}` not found.';
+    }
+}
+
+$bg-color: color(blue, darker);
+$text-color: color(blue, lighter);
+
+$link-color: color(orange);
+$link-color-hover: color(orange, lighter);

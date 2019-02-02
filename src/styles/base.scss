@@ -1,0 +1,35 @@
+@import './settings.scss';
+
+html,
+body,
+#root {
+    height: 100%;
+}
+
+body {
+    font-size: ($base-font-size / 16) * 100%;
+    font-family: $ff;
+    background-color: color(blue, darker);
+    color: color(blue, lighter);
+}
+
+.App {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+a {
+    color: $link-color;
+    &:hover,
+    &:focus {
+        color: $link-color-hover;
+    }
+}
