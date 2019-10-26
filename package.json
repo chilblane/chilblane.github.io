@@ -1,0 +1,30 @@
+{
+    "name": "chilblane.com",
+    "description": "Chilblane.com Website, Hooray!",
+    "version": "5.0.0",
+    "homepage": "http://chilblane.github.io/",
+    "author": "Daniel Singer <daniel@chilblane.com> (http://www.chilblane.com)",
+    "license": "UNLICENSED",
+    "private": true,
+    "dependencies": {
+    },
+    "devDependencies": {
+        "gh-pages": "^2.0.1",
+        "prettier": "^1.16.3"
+    },
+    "scripts": {
+        "predeploy": "yarn run build",
+        "deploy": "gh-pages -b master -d build",
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "format": "prettier --write '**/*.{js,jsx,json,css,scss,md}'"
+    },
+    "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not ie <= 11",
+        "not op_mini all"
+    ]
+}
