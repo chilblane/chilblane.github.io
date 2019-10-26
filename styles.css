@@ -1,0 +1,111 @@
+html,
+body {
+    height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol';
+    font-size: 1rem;
+    background-color: #eaf3ff;
+    color: #001633;
+}
+
+a {
+    text-decoration: none;
+    color: #0073ff;
+}
+a:hover,
+a:focus {
+    text-decoration: underline;
+    color: #004499;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    height: 100%;
+}
+
+.content-box {
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    flex: 0 1 auto;
+    background-color: #d5e4f7;
+}
+
+h1,
+h2 {
+    margin: 0;
+    font-weight: 400;
+}
+
+@media (orientation: portrait) {
+    .wrapper {
+        padding: 5vw;
+    }
+    .content-box {
+        height: 90vw;
+        width: 90vw;
+        padding: 5vw;
+    }
+    h1 {
+        font-size: 10vw;
+        margin-bottom: 3vw;
+    }
+
+    h2,
+    .content-box p {
+        font-size: 5vw;
+    }
+}
+
+@media (orientation: landscape) {
+    .wrapper {
+        padding: 5vh;
+        justify-content: center;
+    }
+    .content-box {
+        height: 90vh;
+        width: 90vh;
+        padding: 5vh;
+    }
+    h1 {
+        font-size: 10vh;
+        margin-bottom: 3vh;
+    }
+
+    h2,
+    .content-box p {
+        font-size: 5vh;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #001633;
+        color: #cce2ff;
+    }
+
+    .content-box {
+        background-color: #00224c;
+    }
+
+    a {
+        color: #ff9c00;
+    }
+
+    a:hover,
+    a:focus {
+        color: #ffe1b2;
+    }
+}
